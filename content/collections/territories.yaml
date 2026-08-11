@@ -1,0 +1,12 @@
+title: Territories
+sites:
+  - default
+propagate: false
+template: territory-detail-new
+layout: layout
+revisions: false
+route: '/nuestros-territorios-progreso/{slug}'
+sort_dir: desc
+date_behavior:
+  past: public
+  future: private

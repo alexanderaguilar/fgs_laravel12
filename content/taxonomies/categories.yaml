@@ -1,0 +1,9 @@
+title: Categories
+preview_targets:
+  -
+    label: Term
+    url: '{permalink}'
+template: default
+layout: layout
+sites:
+  - default

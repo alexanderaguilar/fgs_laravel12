@@ -1,0 +1,15 @@
+title: Posts
+sites:
+  - default
+propagate: false
+template: post-detail
+layout: layout
+revisions: false
+route: '/{slug}'
+date: true
+sort_dir: desc
+date_behavior:
+  past: public
+  future: private
+taxonomies:
+  - categories

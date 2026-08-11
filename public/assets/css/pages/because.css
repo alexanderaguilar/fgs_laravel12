@@ -1,0 +1,223 @@
+/* Because page */
+
+/* --- Estilos para la sección de animación 3D --- */
+        #animation-viewport {
+            height: 300vh;
+            position: relative;
+            background-image: url('/assets/img/canvas_landing.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        #webgl-canvas {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 1;
+        }
+        
+        /* --- Estilos para el overlay y las tarjetas de video --- */
+        #content-section {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem; /* Espacio entre las tarjetas */
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        #content-section.visible {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .video-card {
+            height: 70vh;
+            width: 30%; /* Ancho ajustado para alineación */
+            max-width: 380px; /* Ancho máximo */
+            border-radius: .1rem;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; /* Alinea el contenido al final (abajo) */
+            padding: 1.5rem;
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .video-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        .video-card h3 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .video-card p {
+            font-size: 1rem;
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* --- Estilos Generales y de Componentes --- */
+        #main-content {
+            position: relative; /* Asegura que el contenido principal se muestre después de la animación */
+            z-index: 5;
+            background-color: #f8f9fa;
+        }
+        .main-title {
+            font-weight: 900;
+            color: var(--primary-color);
+        }
+        
+        .section-title {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        .carousel-item img {
+            border-radius: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
+        .carousel-item .col-12[data-bs-toggle="modal"] {
+            cursor: pointer;
+        }
+        .carousel-caption-custom {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 1rem;
+            text-align: center;
+        }
+        
+        /* --- Estilos para los controles del carrusel --- */
+        #fundacionCarousel {
+            padding-bottom: 60px; /* Espacio para los controles */
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            top: auto;
+            bottom: 0;
+            width: auto;
+    background: #167ac6;
+    border-radius: 30px;
+    padding: 10px;
+        }
+        .carousel-control-prev {
+            left: 50%;
+            transform: translateX(-120%);
+        }
+        .carousel-control-next {
+            right: 50%;
+            transform: translateX(120%);
+        }
+
+        .company-logo {
+            max-height: 100px;
+            object-fit: contain;
+            scale: 1;
+            transition: all 0.3s ease;
+        }
+        .company-logo:hover {
+            scale: 1.1;
+        }
+        .cta-section {
+            background-color: #1d8effaa;
+            background-blend-mode: multiply;
+            background-size: cover;
+            background-position: center;
+            border-radius: 1rem;
+            background-image: url('/assets/img/footer_landing_pas.jpg');
+        }
+        .cta-text {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .cta-logo {
+            max-height: 60px;
+        }
+        .modal-video .modal-content {
+            background: transparent;
+            border: none;
+        }
+        .modal-video .modal-body {
+            padding: 0;
+        }
+        .modal-video .btn-close {
+            position: absolute;
+            top: -25px;
+            right: 0;
+            z-index: 10;
+            filter: invert(1) grayscale(100%) brightness(200%);
+        }
+
+        /* --- Estilos para el indicador de scroll --- */
+        .scroll-down-indicator {
+            position: sticky;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            width: 300px;
+            height: 50px;
+            visibility: hidden; /* Oculto por defecto */
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-down-indicator.visible {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+
+        /* Media query para dispositivos móviles */
+        @media (max-width: 768px) {
+            #content-section {
+                flex-direction: column; /* Apila las tarjetas verticalmente */
+            }
+            .video-card {
+                width: 80%; /* Aumenta el ancho de las tarjetas */
+                height: 40vh; /* Ajusta la altura */
+            }
+            .scroll-down-indicator {
+                width: 80%;
+                transform: translateX(-10%) !important;
+            }
+            .carousel-control-prev {
+                transform: translateX(-60px);
+            }
+            .carousel-control-next {
+                transform: translateX(60px);
+            }
+        }

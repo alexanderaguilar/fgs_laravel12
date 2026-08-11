@@ -1,0 +1,46 @@
+title: Logo Item
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+          -
+            handle: logo
+            field:
+              type: assets
+              max_files: 1
+              container: assets
+          -
+            handle: website
+            field:
+              type: text
+          -
+            handle: description
+            field:
+              type: textarea
+          -
+            handle: display_rank
+            field:
+              type: integer
+              default: 0
+          -
+            handle: activity
+            field:
+              type: integer
+              display: Activity group
+              instructions: '1-5 company activity groups'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug

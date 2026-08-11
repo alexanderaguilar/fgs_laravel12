@@ -1,0 +1,599 @@
+/* FGS about / conocenos */
+
+/* Estilos para la Línea de Tiempo Vertical */
+    .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* La línea vertical */
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: #e9ecef;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+        border-radius: 3px;
+    }
+
+    /* Contenedor de cada evento */
+    .timeline-container {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+    }
+
+    /* Círculos en la línea */
+    .timeline-container::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -13px;
+        background-color: #fff;
+        border: 4px solid var(--bs-yellow-corporate); /* Amarillo corporativo */
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    /* Lado izquierdo */
+    .left {
+        left: 0;
+    }
+
+    /* Lado derecho */
+    .right {
+        left: 50%;
+    }
+
+    /* Ajuste de círculo para lado izquierdo */
+    .left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent white;
+    }
+
+    /* Ajuste de círculo para lado derecho */
+    .right::after {
+        left: -13px;
+    }
+
+    /* Contenido de la tarjeta */
+    .timeline-content {
+        padding: 20px 30px;
+        background-color: white;
+        position: relative;
+        border-radius: 6px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .timeline-content:hover {
+        transform: translateY(-5px);
+    }
+
+    .timeline-year {
+        color: var(--primary-color);
+        font-weight: 800;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    .timeline-content p {
+        margin-bottom: 1.25rem; /* Margen adicional solicitado */
+    }
+
+    .timeline-content p:last-child {
+        margin-bottom: 0; /* Evita espacio extra al final de la tarjeta */
+    }
+
+    .timeline-img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 4px;
+        margin-bottom: 15px;
+    }
+
+    /* Responsividad para móviles */
+    @media screen and (max-width: 600px) {
+        .timeline::after {
+            left: 31px;
+        }
+        .timeline-container {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+        .timeline-container::after {
+            left: 18px;
+        }
+        .left::after, .right::after {
+            left: 18px;
+        }
+        .right {
+            left: 0%;
+        }
+    }
+
+
+/* Estilos Globales y Variables */
+    
+
+    
+    
+    .rounded-20 { border-radius: 20px; }
+
+    /* Estilos del Banner */
+    .highlighted_banner {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .highlighted_banner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .highlighted_banner .content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0));
+        z-index: 1;
+    }
+
+    .highlighted_banner .info {
+        bottom: 40px;
+        left: 5%;
+        z-index: 2;
+        max-width: 800px;
+    }
+
+    /* --- LÓGICA DE TABS CON SCROLL HORIZONTAL --- */
+    .tabs-container {
+        position: relative;
+        margin-bottom: 3rem;
+        width: 100%;
+        overflow: visible;
+    }
+
+    .nav-tabs-scroll {
+        display: flex;
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        border-bottom: 2px solid #dee2e6;
+        padding-left: 0;
+        margin-left: 0;
+        justify-content: flex-start !important; 
+    }
+
+    .nav-tabs-scroll::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Espacio extra al final para que la flecha no tape el texto */
+    .nav-tabs-scroll::after {
+        content: '';
+        flex: 0 0 60px;
+    }
+
+    .nav-tabs-scroll .nav-item {
+        flex: 0 0 auto;
+        list-style: none;
+    }
+
+    .nav-tabs-scroll .nav-link {
+        color: #6c757d;
+        font-weight: 600;
+        border: none;
+        border-bottom: 3px solid transparent;
+        padding: 12px 20px;
+        font-size: 1rem;
+        white-space: nowrap;
+        transition: all 0.3s ease;
+        background: transparent;
+        display: block;
+    }
+
+    .nav-tabs-scroll .nav-link:hover {
+        color: var(--primary-color);
+    }
+
+    .nav-tabs-scroll .nav-link.active {
+        color: var(--primary-color);
+        border-bottom: 3px solid var(--primary-color);
+    }
+
+    /* Indicador de scroll para Tabs (Activo en Desktop y Mobile) */
+    .scroll-indicator-tabs {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #6c757d;
+        font-size: 1.5rem;
+        pointer-events: none;
+        animation: fadeArrowTabs 2s infinite;
+        z-index: 5;
+        display: block; 
+        background: linear-gradient(to left, white 60%, transparent);
+        padding-left: 50px;
+        padding-right: 15px;
+        transition: opacity 0.3s ease;
+    }
+
+    @keyframes fadeArrowTabs {
+        0%, 100% { opacity: 0.4; transform: translate(0, -50%); }
+        50% { opacity: 1; transform: translate(8px, -50%); }
+    }
+
+    @media (max-width: 991.98px) {
+        .nav-tabs-scroll .nav-link {
+            font-size: 0.95rem;
+            padding: 10px 15px;
+        }
+    }
+
+
+/* Estilos para las tarjetas de acceso corporativo */
+    .access-card {
+        background: #fff;
+        border-radius: 15px;
+        padding: 40px 30px;
+        height: 100%;
+        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        border: 1px solid rgba(0,0,0,0.05);
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .access-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: var(--primary-color); /* Azul corporativo default */
+        transition: height 0.3s ease;
+        z-index: 0;
+    }
+
+    .access-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    .access-card:hover::before {
+        height: 100%;
+        opacity: 0.03;
+    }
+
+    .card-icon-wrapper {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background: #f8f9fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        transition: all 0.3s ease;
+        position: relative;
+        z-index: 1;
+        /* Asegurar que el icono herede el color correctamente */
+        color: inherit; 
+    }
+
+    .access-card:hover .card-icon-wrapper {
+        background: var(--primary-color);
+        color: white !important; /* Forzar blanco al hacer hover */
+        transform: scale(1.1);
+    }
+
+    /* Asegurar que el icono dentro del wrapper cambie a blanco en hover del wrapper */
+    .access-card:hover .card-icon-wrapper i {
+        color: white !important;
+    }
+
+    .card-title {
+        color: var(--primary-color);
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .card-action {
+        margin-top: auto;
+        color: #6c757d;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+    }
+
+    .access-card:hover .card-action {
+        color: var(--primary-color);
+    }
+    
+    /* Colores específicos para diferenciar sutilmente los iconos antes del hover */
+    .card-governance .card-icon-wrapper { color: #183863; }
+    .card-transparency .card-icon-wrapper { color: #26B3D5; } /* Amarillo */
+    .card-docs .card-icon-wrapper { color: #F0A223; } /* Verde sutil */
+
+
+/* Estilos Globales Simulados (Variables que usa el layout) */
+    
+
+    /* Clases utilitarias del original */
+    
+    
+    .ls-2 { letter-spacing: 2px; }
+    .rounded-20 { border-radius: 20px; }
+
+    /* Línea decorativa del original */
+    .colored_lines::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background-color: var(--bs-yellow-corporate);
+        margin-top: 10px;
+    }
+
+    /* Estilos específicos para esta sección */
+    .mission-box {
+        background: #f8f9fa;
+        border-left: 8px solid var(--primary-color); /* Azul corporativo */
+        padding: 40px;
+        border-radius: 0 15px 15px 0;
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .model-placeholder {
+        background-color: #fff;
+        border: 2px dashed var(--bs-yellow-corporate); /* Amarillo corporativo */
+        color: #6c757d;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 400px;
+        width: 100%;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .model-placeholder:hover {
+        background-color: #fffbf0;
+        border-color: var(--bs-yellow-dark);
+    }
+
+    /* Ajustes visuales para las Tabs */
+    .nav-tabs .nav-link {
+        color: #6c757d;
+        font-weight: 600;
+        border: none;
+        border-bottom: 3px solid transparent;
+        padding: 10px 25px;
+        font-size: 1.1rem;
+    }
+    
+    .nav-tabs .nav-link:hover {
+        color: var(--primary-color);
+        border-color: transparent;
+    }
+
+    .nav-tabs .nav-link.active {
+        color: var(--primary-color);
+        border-bottom: 3px solid var(--primary-color);
+        background: transparent;
+    }
+
+
+/* Estilos específicos para esta sección */
+    .feature-text-box {
+        background: #f8f9fa;
+        border-radius: 20px;
+        padding: 40px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        border-left: 5px solid var(--primary-color);
+    }
+
+    .purpose-highlight {
+        background: #fff;
+        border-radius: 15px;
+        padding: 40px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        border-right: 5px solid var(--bs-yellow-corporate); /* Amarillo corporativo */
+    }
+
+    .cta-section {
+        background-image: url('/assets/img/2026/2026_01_conocenos_trabaje_banner.jpg');
+        background-size: cover;
+        background-position: top right;
+        border-radius: 20px;
+        padding: 60px 40px;
+        color: white;
+        text-align: left;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hashtag-badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 10px 25px;
+        border-radius: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        margin-top: 30px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    @media (max-width: 768px) {
+        .w-responsive {
+            width: 100% !important;
+        }
+    }
+
+
+/* Estilos específicos para esta sección */
+    .instrument-card {
+        transition: all 0.3s ease;
+        border-radius: 15px;
+        overflow: hidden;
+        height: 100%;
+        position: relative;
+    }
+    
+    .instrument-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    .instrument-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+    }
+
+    /* Estilo para el banner de Impacto Social */
+    .impact-banner {
+        background-image: url('/assets/img/2026/2026_01_conocenos_que_impacto.jpg');
+        background-size: cover;
+        border-radius: 12px;
+        padding: 3rem;
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .testimonial-intro-box {
+        border-left: 5px solid var(--bs-yellow-corporate);
+        padding-left: 2rem;
+    }
+
+
+/* Contenedor slider para móviles */
+    .slider-container {
+        position: relative;
+    }
+
+    .slider-menu {
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    
+    .slider-menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Indicador de scroll (solo móvil) - Color más oscuro e icono nuevo */
+    .scroll-indicator {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #6c757d; 
+        font-size: 1rem;
+        pointer-events: none;
+        animation: fadeArrow 2s infinite;
+        z-index: 10;
+        display: none;
+    }
+
+    @keyframes fadeArrow {
+        0%, 100% { opacity: 0.4; transform: translate(0, -50%); }
+        50% { opacity: 1; transform: translate(8px, -50%); }
+    }
+
+    /* Estructura de items estandarizada */
+    .menu-item {
+        position: relative;
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    @media (max-width: 991.98px) {
+        .menu-item {
+            /* Ajuste para que los elementos respiren igual */
+            padding: 0 10px;
+        }
+    }
+
+    /* Enlaces: Fuente ajustada y espaciado equilibrado */
+    .menu-item a {
+        text-decoration: none;
+        color: #333;
+        font-weight: normal; 
+        font-size: 0.85rem; 
+        white-space: nowrap;
+        transition: all 0.3s ease;
+        /* Padding equilibrado para evitar huecos grandes en palabras cortas */
+        padding: 8px 16px;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .menu-item a:hover {
+        color: var(--primary-color);
+    }
+
+    .menu-item a.active {
+        color: white !important;
+        background-color: var(--primary-color) !important;
+        font-weight: normal; 
+        border-radius: 10px;
+    }

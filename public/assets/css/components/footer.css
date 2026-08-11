@@ -1,0 +1,36 @@
+/* FGS footer responsive */
+
+@media (max-width: 991.98px) {
+
+            .fgs_footer .footer-column {
+                margin-bottom: .5rem;
+            }
+
+            .fgs_footer .footer-title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                padding: .75rem 0;
+                margin-bottom: 0;
+            }
+
+            .fgs_footer .footer-title .footer-arrow {
+                transition: transform .25s ease;
+                font-size: 1rem;
+                font-weight: 300;
+            }
+
+            .fgs_footer .footer-title[aria-expanded="true"] .footer-arrow {
+                transform: rotate(45deg);
+            }
+
+            .fgs_footer .collapse ul,
+            .fgs_footer ul {
+                margin-top: .5rem;
+            }
+
+            .fgs_footer ul li {
+                margin-bottom: .35rem;
+            }
+        }

@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Support\Cms;
+use Carbon\Carbon;
+
+class HomeController extends Controller
+{
+    public function index()
+    {
+        Carbon::setLocale('es');
+
+        $banners = Cms::entries('home_banners', fn ($q) => $q->orderBy('order'));
+        $posts = Cms::postsByCategorySlug('featured-news-and-news', 8);
+        $mapLogo = Cms::entries('home_maplogos', fn ($q) => $q->orderBy('display_rank'));
+
+        return view('home', compact('banners', 'posts', 'mapLogo'));
+    }
+}

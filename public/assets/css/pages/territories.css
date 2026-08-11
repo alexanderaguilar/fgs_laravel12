@@ -1,0 +1,681 @@
+/* Territories listing + detail */
+
+/* --- Estilos Globales del Tema (Reutilizados) --- */
+    
+
+    /* Clases utilitarias de texto */
+    
+    
+    
+    
+    /* --- Estilos del Banner --- */
+    .highlighted_banner {
+        height: auto;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .highlighted_banner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .highlighted_banner .infoExt {
+        bottom: 40px;
+        left: 5%;
+        z-index: 2;
+        max-width: 800px;
+    }
+
+    /* --- Estilos de Tabs Principales --- */
+    .nav-tabs-main {
+        border-bottom: 2px solid #dee2e6;
+        margin-bottom: 2rem;
+    }
+
+    .nav-tabs-main .nav-link {
+        color: #6c757d;
+        font-weight: 700;
+        border: none;
+        border-bottom: 4px solid transparent;
+        padding: 15px 20px;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-tabs-main .nav-link:hover {
+        color: var(--primary-color);
+    }
+
+    .nav-tabs-main .nav-link.active {
+        color: var(--primary-color);
+        border-bottom: 4px solid var(--primary-color);
+        background: transparent;
+    }
+
+    /* --- Estilos de Tabs Internos (Pills verticales o botones) --- */
+    .nav-pills-custom .nav-link {
+        color: #495057;
+        background-color: #f8f9fa;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-align: left;
+        padding: 15px;
+        border: 1px solid #dee2e6;
+        transition: all 0.2s;
+        width: 100%;
+    }
+
+    .nav-pills-custom .nav-link:hover {
+        background-color: #e9ecef;
+        transform: translateX(5px);
+    }
+
+    .nav-pills-custom .nav-link.active {
+        background-color: var(--primary-color);
+        color: #fff;
+        border-color: var(--primary-color);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* --- Botón Toggle Offcanvas (Solo Móvil) --- */
+    .btn-offcanvas-toggle {
+        background-color: #f8f9fa;
+        color: var(--primary-color);
+        font-weight: 700;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 15px;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .btn-offcanvas-toggle:hover {
+        background-color: #e9ecef;
+    }
+
+    /* --- Scroll Horizontal para Evolución (Mantenido solo para tab 1) --- */
+    .timeline-scroll-container {
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 20px;
+        padding-top: 10px;
+        padding-left: 5px;
+        gap: 20px;
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+        scrollbar-color: var(--primary-color) #f1f1f1;
+    }
+
+    .timeline-card {
+        flex: 0 0 280px;
+        background: #fff;
+        border: 1px solid rgba(0,0,0,0.1);
+        border-top: 4px solid var(--bs-yellow-corporate);
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* --- Contenedores de contenido --- */
+    .content-box {
+        background: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .list-check li {
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 25px;
+    }
+    
+    .list-check li::before {
+        content: '\F26B'; /* Bootstrap Icons check */
+        font-family: 'bootstrap-icons';
+        position: absolute;
+        left: 0;
+        color: var(--bs-yellow-dark);
+        font-weight: bold;
+    }
+
+    /* --- Estilos Nuevos para Tarjetas de Territorios (Efecto Hover) --- */
+    .program_box {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hover-title {
+        position: absolute;
+        bottom: 50px;
+        left: 20px;
+        color: #ffffff !important;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.2;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        z-index: 10;
+        margin-bottom: 0;
+    }
+
+    .hover-title small {
+        font-size: 14px;
+        font-weight: 400;
+        display: block;
+        margin-top: 5px;
+        color: rgba(255,255,255,0.9);
+    }
+
+    .program_box:hover .hover-title {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .program_box::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 50%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .program_box:hover::after {
+        opacity: 1;
+    }
+
+    /* EFECTO GRIS A COLOR PARA TERRITORIOS FINALIZADOS */
+    .territorios-old .program_box img {
+        filter: grayscale(100%);
+        transition: filter 0.5s ease-in-out;
+    }
+
+    .territorios-old .program_box:hover img {
+        filter: grayscale(0%);
+    }
+
+    /* --- Estilos Generales para Carousels (Flechas) --- */
+    .custom-carousel-control .carousel-control-prev,
+    .custom-carousel-control .carousel-control-next {
+        width: 5%;
+        opacity: 1;
+    }
+
+    .custom-carousel-control .carousel-control-prev-icon,
+    .custom-carousel-control .carousel-control-next-icon {
+        background-image: none;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .custom-carousel-control .carousel-control-prev-icon::before {
+        content: '\F284'; /* Bootstrap Icons chevron-left */
+        font-family: 'bootstrap-icons';
+        font-size: 3rem;
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+
+    .custom-carousel-control .carousel-control-next-icon::before {
+        content: '\F285'; /* Bootstrap Icons chevron-right */
+        font-family: 'bootstrap-icons';
+        font-size: 3rem;
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+
+    /* --- Estilos Específicos para el Slider de Resultados (10 Items) --- */
+    .results-carousel {
+        padding: 20px 0;
+    }
+    
+    .result-pill-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .result-pill {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 800px;
+        min-height: 160px;
+        position: relative;
+    }
+
+    .result-icon-box {
+        width: 180px;
+        height: 160px;
+        border-radius: 20px 80px 80px 20px; /* Curva pronunciada derecha */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        flex-shrink: 0;
+        box-shadow: 4px 4px 15px rgba(0,0,0,0.15);
+    }
+
+    .result-icon-box i {
+        font-size: 4.5rem;
+        color: white;
+    }
+
+    .result-text-box {
+        flex-grow: 1;
+        min-height: 120px;
+        margin-left: -30px;
+        padding: 20px 30px 20px 50px;
+        border-radius: 0 20px 20px 0;
+        display: flex;
+        align-items: center;
+        font-size: 1.05rem;
+        color: #495057;
+        line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+        .result-pill {
+            flex-direction: column;
+            text-align: center;
+            background: transparent !important;
+        }
+        .result-text-box {
+            margin-left: 0;
+            margin-top: -20px;
+            padding: 40px 20px 20px 20px;
+            border-radius: 20px;
+            width: 100%;
+        }
+        .result-icon-box {
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+    }
+
+    /* Colores Resultados */
+    .res-01 .result-icon-box { background-color: #648C76; } .res-01 .result-text-box { background-color: #E0ECE6; }
+    .res-02 .result-icon-box { background-color: #51928D; } .res-02 .result-text-box { background-color: #D6EBEA; }
+    .res-03 .result-icon-box { background-color: #507D94; } .res-03 .result-text-box { background-color: #D8E5EB; }
+    .res-04 .result-icon-box { background-color: #3B6FA0; } .res-04 .result-text-box { background-color: #D3E0EE; }
+    .res-05 .result-icon-box { background-color: #645D92; } .res-05 .result-text-box { background-color: #DCDAE9; }
+    .res-06 .result-icon-box { background-color: #965177; } .res-06 .result-text-box { background-color: #ECDCE5; }
+    .res-07 .result-icon-box { background-color: #AF525A; } .res-07 .result-text-box { background-color: #EFDCDF; }
+    .res-08 .result-icon-box { background-color: #C66D48; } .res-08 .result-text-box { background-color: #F4E2DA; }
+    .res-09 .result-icon-box { background-color: #BF8B41; } .res-09 .result-text-box { background-color: #F3E8D9; }
+    .res-10 .result-icon-box { background-color: #C09F23; } .res-10 .result-text-box { background-color: #F1ECD6; }
+
+    /* --- Estilos Nuevos para el Slider de Etapas (Fiel al diseño) --- */
+    
+    .etapa-header-blue { color: #1F3A52; font-weight: 700; font-size: 1.4rem; }
+    .etapa-header-cyan { color: #00B5E2; font-weight: 700; font-size: 1.4rem; }
+
+    .etapa-static-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .etapa-static-dark {
+        background-color: #1F3A52;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px 0 0 10px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        font-size: 1.1rem;
+    }
+
+    .etapa-static-light {
+        background-color: #DDE6F0;
+        color: #1F3A52;
+        padding: 10px 20px;
+        border-radius: 0 10px 10px 0;
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+    }
+
+    .etapa-connector {
+        position: relative;
+        height: 50px; /* Espacio para la línea */
+        margin-bottom: -20px; /* Superposición ligera */
+    }
+
+    .etapa-line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #1F3A52;
+        top: 50%; /* Centrada verticalmente respecto al connector div si quisiéramos horizontal, pero el diseño es vertical/horizontal */
+        /* Ajuste para el diseño específico: línea horizontal que conecta */
+        display: none; /* Simplificado: Usaremos border-top en el carousel o un pseudo elemento */
+    }
+    
+    /* El punto conector */
+    .etapa-dot {
+        width: 20px;
+        height: 20px;
+        background-color: #5D5990; /* Color base, se sobrescribe */
+        border-radius: 50%;
+        position: absolute;
+        left: 30%; /* Alineado con el inicio de la caja de etapa */
+        top: -10px;
+        z-index: 3;
+        border: 3px solid #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .etapa-connector-bar {
+        height: 2px;
+        background-color: #1F3A52;
+        width: 80%;
+        margin: 0 auto 30px auto;
+        position: relative;
+        top: 47px;
+    }
+
+    .etapa-dot-marker {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        top: -9px;
+        /* La posición horizontal depende del slide, se podría animar pero lo dejaremos fijo estéticamente alineado a la izquierda del contenido */
+        left: 50%; 
+        z-index: 5;
+    }
+
+    /* Cards del Slider Etapas */
+    .etapa-slide-content {
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Centrado vertical para alinear caja alta y baja */
+        padding: 20px 10px;
+    }
+
+    .etapa-box-dark {
+        width: 300px;
+        min-height: 180px;
+        border-radius: 20px 90px 90px 20px; /* Curva pronunciada derecha */
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+        position: relative;
+        flex-shrink: 0;
+        z-index: 2; /* Encima de la caja clara */
+    }
+
+    .etapa-box-light {
+        width: 100%;
+        max-width: 550px;
+        min-height: 130px; /* Altura reducida */
+        border-radius: 0 20px 20px 0;
+        padding: 25px 40px 25px 90px; /* Padding izquierdo extra por el overlap */
+        margin-left: -70px; /* Overlap para conectar */
+        display: flex;
+        align-items: center;
+        color: #333;
+        font-size: 1.05rem;
+        line-height: 1.5;
+        z-index: 1; /* Debajo de la caja oscura */
+    }
+
+    .etapa-number {
+        font-size: 4.5rem;
+        font-weight: 700;
+        line-height: 1;
+        margin-right: 15px;
+        opacity: 0.9;
+    }
+
+    .etapa-title-text {
+        font-weight: 700;
+        font-size: 1.3rem;
+        line-height: 1.2;
+    }
+
+    .etapa-inner-flex {
+        display: flex;
+        align-items: center;
+    }
+
+    .etapa-sep-line {
+        width: 2px;
+        height: 60px;
+        background-color: rgba(255,255,255,0.4);
+        margin: 0 15px;
+    }
+
+    /* Colores Específicos Etapas */
+    /* Etapa 1: Verde */
+    .bg-etapa-1-dark { background-color: #658D77; }
+    .bg-etapa-1-light { background-color: #E0ECE6; }
+    .dot-etapa-1 { background-color: #658D77; }
+
+    /* Etapa 2: Morado */
+    .bg-etapa-2-dark { background-color: #5D5990; }
+    .bg-etapa-2-light { background-color: #DCDAE9; }
+    .dot-etapa-2 { background-color: #5D5990; }
+
+    /* Etapa 3: Magenta/Vino */
+    .bg-etapa-3-dark { background-color: #8E4B65; }
+    .bg-etapa-3-light { background-color: #FBE3EA; }
+    .dot-etapa-3 { background-color: #8E4B65; }
+
+    /* Etapa 4: Naranja */
+    .bg-etapa-4-dark { background-color: #C86E37; }
+    .bg-etapa-4-light { background-color: #F4E2DA; }
+    .dot-etapa-4 { background-color: #C86E37; }
+
+    @media (max-width: 768px) {
+        .etapa-slide-content { flex-direction: column; }
+        .etapa-box-dark { width: 100%; border-radius: 20px 20px 0 0; min-height: auto; padding: 20px; }
+        .etapa-box-light { border-radius: 0 0 20px 20px; width: 100%; padding: 20px; margin-left: 0; min-height: auto; }
+        .etapa-static-container { flex-direction: column; align-items: stretch; text-align: center; }
+        .etapa-static-dark { border-radius: 10px 10px 0 0; justify-content: center; }
+        .etapa-static-light { border-radius: 0 0 10px 10px; justify-content: center; }
+        .etapa-connector-bar { display: none; } /* Ocultar linea en móvil */
+        .carousel-item {padding: 0 40px;}
+        .carousel-control-next, .carousel-control-prev{z-index:10;}
+
+        .program_box .hover-title {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+    }
+
+    .carousel-inner {
+        overflow-y: visible !important;
+    }
+
+#subheader .op {
+        border-radius: 0px 0px 40px 40px;
+        background: #183863;
+    }
+
+
+.bg-light-blue { background-color: var(--bs-blue-light); }
+
+    /* --- BENTO GRID LAYOUT --- */
+    .bento-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    
+    @media (min-width: 768px) {
+        .bento-grid {
+            grid-template-columns: repeat(3, 1fr); /* 3 columnas en desktop para los 3 items */
+            grid-auto-rows: minmax(280px, auto);
+        }
+    }
+
+    /* Clases Asimétricas Bento (Aplicadas a las tarjetas de cifras) */
+    .bento-tl { border-radius: 4rem 1.25rem 1.25rem 1.25rem !important; }
+    .bento-top-flat { border-radius: 1.25rem 1.25rem 1.25rem 1.25rem !important; } /* Modificado para 3 items rectos arriba */
+    .bento-tr { border-radius: 1.25rem 4rem 1.25rem 1.25rem !important; }
+
+    /* --- ESTILOS CIFRAS (Diseño Estático con Curva y Variaciones de Color) --- */
+    .kpi-card {
+        background-color: var(--bs-white);
+        border-radius: 1.25rem;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .kpi-header {
+        height: 160px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        z-index: 2;
+    }
+
+    .kpi-icon {
+        font-size: 3.5rem;
+        color: #fff;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+    }
+
+    .kpi-title {
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: 800;
+        margin: 0;
+        z-index: 2;
+    }
+
+    .kpi-body {
+        padding: 3.5rem 2rem 2.5rem 2rem;
+        text-align: center;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .kpi-desc {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin: 0;
+        line-height: 1.4;
+    }
+
+    /* Variaciones de Color */
+    .theme-blue .kpi-header { background-color: var(--primary-color); }
+    .theme-blue .kpi-body { background-color: var(--bs-white); }
+    
+    .theme-yellow .kpi-header { background-color: var(--bs-yellow-corporate); }
+    .theme-yellow .kpi-icon, .theme-yellow .kpi-title { color: var(--primary-color); }
+    .theme-yellow .kpi-body { background-color: var(--bs-white); }
+
+    .theme-light-blue .kpi-header { background-color: var(--bs-blue-light); }
+    .theme-light-blue .kpi-icon, .theme-light-blue .kpi-title { color: var(--primary-color); }
+    .theme-light-blue .kpi-body { background-color: var(--bs-white); }
+
+    /* --- SISTEMA DE TABS SCROLLABLE (MOBILE) --- */
+    .tabs-container {
+        position: relative;
+        overflow: hidden; /* Evita que el indicador genere scroll horizontal en la página */
+    }
+    .nav-tabs-scroll {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE 10+ */
+    }
+    .nav-tabs-scroll::-webkit-scrollbar {
+        display: none; /* Chrome/Safari */
+    }
+    .nav-tabs-scroll .nav-item {
+        white-space: nowrap;
+    }
+    /* Estilos estandar del tab */
+    .nav-tabs .nav-link { 
+        color: #6c757d; font-weight: 600; border: none; border-bottom: 3px solid transparent; 
+        padding: 12px 20px; transition: 0.3s; background: transparent;
+    }
+    .nav-tabs .nav-link.active { 
+        color: var(--primary-color); border-bottom-color: var(--primary-color); 
+    }
+    
+    /* Indicador Visual Derecho */
+    .scroll-indicator-tabs {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 60px;
+        background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 60%);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 10px;
+        pointer-events: none; /* Permite hacer clic a través del gradiente */
+        color: var(--primary-color);
+        font-size: 1.2rem;
+        transition: opacity 0.3s ease;
+        z-index: 5;
+    }
+    .scroll-indicator-tabs.is-hidden {
+        opacity: 0;
+    }
+
+    .nav-pills .nav-link { border: 1px solid var(--primary-color); color: var(--primary-color); border-radius: 30px; margin-inline: 5px; }
+    .nav-pills .nav-link.active { background-color: var(--primary-color); color: #fff; }
+
+    .news_card_link { text-decoration: none; transition: 0.3s ease; }
+    .news_card_link:hover { transform: translateY(-5px); }
+    .btn-control { width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; }
+
+    /* Ajustes específicos para desktop */
+    @media (min-width: 768px) {
+        .nav-tabs-scroll {
+            justify-content: center;
+        }
+        .scroll-indicator-tabs {
+            display: none !important;
+        }
+    }

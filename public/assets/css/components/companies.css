@@ -1,0 +1,57 @@
+/* FGS companies UI */
+
+.ls-2 { letter-spacing: 2px; }
+.rounded-20 { border-radius: 20px; }
+
+.company-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 8px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.company-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.company-logo-grid {
+    max-height: 120px;
+    max-width: 100%;
+    object-fit: contain;
+}
+.modal-logo {
+    max-height: 150px;
+    display: block;
+    margin: 0 auto;
+}
+.info-tab-content {
+    background-color: #fff;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.nav-tabs .nav-link {
+    color: #6c757d;
+    font-weight: 600;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+}
+.nav-tabs .nav-link:hover {
+    color: var(--primary-color);
+    border-color: transparent;
+}
+.nav-tabs .nav-link.active {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    background: transparent;
+}
+
+#subheader .op {
+    border-radius: 0px 0px 40px 40px;
+    background: var(--primary-color);
+}

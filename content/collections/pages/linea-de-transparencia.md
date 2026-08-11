@@ -1,0 +1,18 @@
+---
+id: page-23
+blueprint: page
+title: 'Línea de transparencia'
+excerpt: 'En Fundación Grupo Social estamos comprometidos con un manejo íntegro y transparente en todas nuestras actuaciones.'
+body: "<section class=\"page_title_section trabajo_en position-relative quienes_somos\">\r\n<div class=\"d-flex\">\r\n<div class=\"width50 bg_white d-none-767 d-none-991\">&nbsp;</div>\r\n<div class=\"width50 width100_767 width100_991 background_image\">\r\n<div class=\"height_widht_over\"><img class=\"object_fit_cover\" src=\"/storage/pages/May2019/fundacion-grupo-social-encabezado-faq-2.jpg\" width=\"880\" height=\"300\"></div>\r\n</div>\r\n</div>\r\n<div class=\"position-absolute position-center\">\r\n<div class=\"container-fluid\">\r\n<div class=\"left_right_padding_80\">\r\n<div class=\"title_box position-relative oswaldfonts\">\r\n<div class=\"height_widht_over d-none-991\"><img class=\"object_fit_cover\" src=\"/storage/pages/May2019/fundacion-grupo-social-encabezado-faq-1.png\" width=\"858\" height=\"179\"></div>\r\n<div class=\"position-absolute position-center z-index-9\">\r\n<h1>L&iacute;nea de Transparencia</h1>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n<div class=\"title_under_line position-absolute position-center d-none-767 d-none-991\">&nbsp;</div>\r\n</div>\r\n<div class=\"container-fluid\">\r\n<div class=\"left_right_padding_80\">&nbsp;</div>\r\n</div>\r\n</section>\r\n<section class=\"bg_white faq_section\">\r\n<div class=\"width1200\">\r\n<div class=\"faq_pra_section wow bounceInLeft center\">\r\n<div class=\"d-flex flex-wrap-767 align-items-center\">\r\n<div class=\"width100_767 width50 page_title_faq oswaldfonts\">\r\n<p>En Fundaci&oacute;n Grupo Social estamos comprometidos con un manejo &iacute;ntegro y transparente en todas nuestras actuaciones, por lo cual hemos dispuesto para nuestros beneficiarios de nuestros programas sociales, usuarios, proveedores y p&uacute;blico en general, los siguientes canales de comunicaci&oacute;n, por medio de los cuales se podr&aacute; denunciar cualquier irregularidad, incumplimiento normativo y/o fraudes.</p>\r\n<div class=\"blank_space_50 d-none-767\">&nbsp;</div>\r\n</div>\r\n<div class=\"width100_767 width50\">\r\n<p><strong>L&iacute;nea telef&oacute;nica:</strong> 01-8000-123424 a nivel nacional gratuita.</p>\r\n<p><strong>Mail</strong>: <a href=\"mailto:fundaciongruposocial@lineadetransparencia.com\" target=\"_blank\" rel=\"noopener\">fundaciongruposocial@<wbr>lineadetransparencia.com</a></p>\r\n<p><a class=\"btn btn-primary my-3\" title=\"Escribir a la l&iacute;nea de transparencia\" href=\"https://reporte.lineatransparencia.co/fundaciongruposocial\" target=\"_blank\" rel=\"noopener\">https://reporte.lineatransparencia.co/fundaciongruposocial</a></p>\r\n<h4>&nbsp;</h4>\r\n<p>Estos mecanismos de denuncia se rigen por principios de absoluta reserva y confidencialidad.&nbsp;</p>\r\n<p>Todo aquello que est&eacute; relacionado con notificaciones judiciales para la Entidad por favor remitirlos al correo:&nbsp;<br><a href=\"mailto:notificaciones@fundacionsocial.org\" target=\"_blank\" rel=\"noopener\">notificaciones@<wbr>fundacionsocial.org</a></p>\r\n<div class=\"blank_space_25\">&nbsp;</div>\r\n<div class=\"blold_italic\">&nbsp;</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</section>"
+has_about_videos: false
+has_companies: false
+has_direct_programs: false
+has_testimonials_companies: false
+has_testimonials_programs: false
+has_float_message: true
+has_how_about: false
+has_faqs: false
+status_legacy: ACTIVE
+meta_description: 'En Fundación Grupo Social estamos comprometidos con un manejo íntegro y transparente en todas nuestras actuaciones'
+meta_keywords: 'linea, transparencia, fundación grupo social'
+---

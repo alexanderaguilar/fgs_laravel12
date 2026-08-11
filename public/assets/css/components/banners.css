@@ -1,0 +1,80 @@
+/* FGS shared banners */
+
+/* --- Estilos del Banner --- */
+
+    .highlighted_banner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.highlighted_banner .infoExt {
+        bottom: 40px;
+        left: 5%;
+        z-index: 2;
+        max-width: 800px;
+    }
+
+.highlighted_banner .content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /*background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0));*/
+        z-index: 1;
+    }
+
+/* --- Estilos Globales del Tema (Reutilizados) --- */
+    
+
+    /* Clases utilitarias de texto */
+    
+    
+    
+    
+    /* --- Estilos del Banner --- */
+    .highlighted_banner {
+        height: auto;
+        overflow: hidden;
+        position: relative;
+    }
+
+.highlighted_banner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.highlighted_banner .infoExt {
+        bottom: 40px;
+        left: 5%;
+        z-index: 2;
+        max-width: 800px;
+    }
+/* --- Estilos del Banner --- */
+
+    .highlighted_banner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.highlighted_banner .infoExt {
+        bottom: 40px;
+        left: 5%;
+        z-index: 2;
+        max-width: 800px;
+    }
+
+.highlighted_banner .content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /*background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0));*/
+        z-index: 1;
+    }

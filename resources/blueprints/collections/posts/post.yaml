@@ -1,0 +1,107 @@
+title: Post
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: sub_title
+            field:
+              type: text
+          -
+            handle: excerpt
+            field:
+              type: textarea
+          -
+            handle: body
+            field:
+              type: textarea
+          -
+            handle: image
+            field:
+              type: assets
+              max_files: 1
+              container: assets
+          -
+            handle: featured
+            field:
+              type: toggle
+          -
+            handle: categories
+            field:
+              type: terms
+              taxonomies:
+                - categories
+              display: Categories
+          -
+            handle: territory
+            field:
+              type: entries
+              collections:
+                - territories
+              max_items: 1
+              display: Territory
+          -
+            handle: legacy_id
+            field:
+              type: integer
+              display: Legacy ID
+              visibility: hidden
+          -
+            handle: legacy_category_id
+            field:
+              type: integer
+              visibility: hidden
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+          -
+            handle: status_legacy
+            field:
+              type: select
+              options:
+                PUBLISHED: PUBLISHED
+                DRAFT: DRAFT
+                PENDING: PENDING
+              default: PUBLISHED
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: seo_title
+            field:
+              type: text
+          -
+            handle: meta_description
+            field:
+              type: textarea
+          -
+            handle: meta_keywords
+            field:
+              type: text

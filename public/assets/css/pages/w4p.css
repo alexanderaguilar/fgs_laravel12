@@ -1,0 +1,7 @@
+/* Work4Progress forms — misma tipografía del sitio */
+
+body { font-family: "Roboto", sans-serif; }
+.form-section { border-top: 1px solid #e5e7eb; padding-top: 1.5rem; margin-top: 2rem; }
+label { font-weight: 500; color: #374151; }
+input, textarea { transition: all 0.3s; font-family: inherit; }
+input:focus, textarea:focus { border-color: #3b82f6; box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4); }

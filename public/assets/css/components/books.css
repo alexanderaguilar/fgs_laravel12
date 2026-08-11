@@ -1,0 +1,360 @@
+/* FGS books modules */
+
+body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f8f9fa;
+    }
+
+    .display-3 {
+        font-weight: 500 !important;
+        line-height: .9 !important;
+    }
+
+    /* --- Tipografía y Títulos --- */
+    .main-title {
+        color: #FF8552;
+    }
+
+    .main-title span {
+        color: #003B71;
+    }
+
+    .section-title {
+        color: #003B71;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+    }
+
+    .section-subtitle {
+        color: #003B71;
+        font-size: 0.9rem;
+    }
+
+    /* --- Mapa Interactivo (Desktop) --- */
+    .map-section-desktop {
+        position: relative;
+        margin: auto;
+        min-height: 600px;
+        margin-top: -100px;
+    }
+
+    .map-section-desktop h3 {
+        line-height: normal;
+    }
+
+    .map-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("{{ asset('assets/img/calidad_vida/bg_terrain.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+    }
+
+    .map-point {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .map-point img {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+        transition: transform 0.5s ease;
+    }
+
+    .map-point:hover img {
+        transform: scale(1.15);
+    }
+
+    .point-text-content {
+        margin-left: 1rem;
+    }
+
+    .point-number {
+        color: white;
+        font-weight: 700;
+        width: 30px;
+        height: 30px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        margin-bottom: 0.5rem;
+    }
+
+    .point-title {
+        font-weight: 700;
+        color: #2c3e50;
+        font-size: 1.1rem;
+        margin: 0;
+    }
+
+    .coming-soon {
+        opacity: 0.6;
+        cursor: default;
+    }
+    
+    .coming-soon img {
+        filter: grayscale(1);
+    }
+
+    /* Posicionamiento de las 5 etapas (Inicio + 4 Etapas) */
+    #point-inicio { top: 30%; left: 5%; flex-direction: column; text-align: center; }
+    #point-inicio .point-text-content { margin-left: 0; margin-top: 1rem; }
+    
+    #point-entendimiento { top: 15%; left: 25%; flex-direction: column; text-align: center; }
+    #point-entendimiento .point-text-content { margin-left: 0; margin-top: 1rem; }
+
+    #point-construccion { top: 50%; left: 45%; flex-direction: column; text-align: center; }
+    #point-construccion .point-text-content { margin-left: 0; margin-top: 1rem; }
+
+    #point-desarrollo { top: 20%; left: 68%; flex-direction: column; text-align: center; }
+    #point-desarrollo .point-text-content { margin-left: 0; margin-top: 1rem; }
+
+    #point-logro { top: 50%; left: 82%; flex-direction: column; text-align: center; }
+    #point-logro .point-text-content { margin-left: 0; margin-top: 1rem; }
+
+    /* Estilos Popover Custom */
+    .popover {
+        border: none;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        border-radius: 12px;
+        max-width: 300px;
+    }
+    .popover-header {
+        background-color: #003B71;
+        color: white;
+        font-weight: 700;
+        border-radius: 12px 12px 0 0 !important;
+    }
+    .popover-body {
+        padding: 0;
+    }
+    .popover-link-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .popover-link-list li a {
+        display: block;
+        padding: 10px 15px;
+        color: #003B71;
+        text-decoration: none;
+        border-bottom: 1px solid #eee;
+        transition: background 0.2s;
+        font-size: 0.9rem;
+    }
+    .popover-link-list li a:hover {
+        background-color: #f0f7ff;
+    }
+    .popover-link-list li:last-child a {
+        border-bottom: none;
+    }
+
+    /* --- Estructura Móvil --- */
+    .item-card-mobile {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        border-radius: 15px;
+        background-color: #fff;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .item-card-mobile img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-right: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .btn-download {
+        border: 1px solid #3498db;
+        color: #3498db;
+        font-weight: bold;
+        border-radius: 25px;
+        padding: 0.3rem 1rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 0.8rem;
+    }
+
+    .btn-download:hover {
+        background-color: #3498db;
+        color: white;
+    }
+    
+    .badge-soon {
+        background-color: #ccc;
+        color: #666;
+        padding: 3px 10px;
+        border-radius: 10px;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+    }
+
+body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .display-3 {
+            font-weight: 500 !important;
+            line-height: .9 !important;
+        }
+
+        /* --- Tipografía y Títulos --- */
+        .main-title {
+            color: #FF8552; /* Tono naranja/café del título */
+        }
+
+        .main-title span {
+            color: #003B71; /* Tono azul oscuro */
+        }
+
+        .section-title {
+            color: #003B71;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .section-subtitle {
+            color: #003B71;
+            font-size: 0.9rem;
+        }
+
+        /* --- Mapa Interactivo (Desktop) --- */
+        .map-section-desktop {
+            position: relative;
+            /*max-width: 1100px; Ancho ajustado para el mapa detallado */
+            margin: auto;
+            min-height: 600px; /* Altura para dar espacio a los puntos */
+            margin-top: -100px;
+        }
+        .map-section-desktop h3{
+            line-height: normal;
+        }
+
+        .map-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("{{ asset('assets/img/calidad_vida/bg_terrain.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+
+        .map-point {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        .map-point img {
+            width: 110px; /* Tamaño de imagen ajustado */
+            height: 110px;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+            transition: transform 0.5s ease;
+        }
+        
+        .map-point:hover img {
+            transform: scale(1.3);
+        }
+
+        .point-text-content {
+            margin-left: 1rem;
+        }
+        
+        .point-number {
+            color: white;
+            font-weight: 700;
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            margin-bottom: 0.5rem;
+        }
+        
+        .point-title {
+            font-weight: 700;
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+        
+        .point-subtitle {
+            font-size: 0.9rem;
+            color: #003B71;
+        }
+
+        /* Posicionamiento preciso de los puntos en el mapa */
+        #point-inicio { top: 55%; left: 5%; flex-direction: column; text-align: left; }
+        #point-inicio .point-text-content { margin-left: 0; margin-top: 1rem; }
+        /*#point-inicio::before { content: 'MODELO DE'; display: block; font-weight: bold; color: #3498db; }*/
+        #point-inicio .point-title { color: #003B71; }
+
+        #point-metodologia { top: 25%; left: 18%; }
+        #point-comunicacion { top: 45%; left: 30%; flex-direction: column; text-align: left; }
+        #point-comunicacion .point-text-content { margin-left: 0; margin-top: 1rem; }
+        
+        #point-aprendizajes { top: 25%; left: 45%; flex-direction: column; text-align: left; }
+        #point-aprendizajes .point-text-content { margin-left: 0; margin-top: 1rem; }
+
+        #point-recursos { top: 50%; left: 65%; }
+        #point-bilbao { top: 50%; left: 75%; }
+
+        /* --- Estructura de Contenido (Móvil) --- */
+        .item-card-mobile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .item-card-mobile img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .btn-download {
+            border: 1px solid #3498db;
+            color: #3498db;
+            font-weight: bold;
+            border-radius: 25px;
+            padding: 0.3rem 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+
+        .btn-download:hover {
+            background-color: #3498db;
+            color: white;
+        }

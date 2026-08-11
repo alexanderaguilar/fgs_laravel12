@@ -1,0 +1,108 @@
+title: Territory
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: description
+            field:
+              type: textarea
+          -
+            handle: territory
+            field:
+              type: textarea
+              display: Territory text
+          -
+            handle: looking_for
+            field:
+              type: textarea
+          -
+            handle: habitantes
+            field:
+              type: text
+          -
+            handle: city_other_data
+            field:
+              type: textarea
+          -
+            handle: map_image
+            field:
+              type: assets
+              max_files: 1
+              container: assets
+          -
+            handle: listing_image
+            field:
+              type: assets
+              max_files: 1
+              container: assets
+          -
+            handle: image
+            field:
+              type: assets
+              max_files: 1
+              container: assets
+              display: Hero image
+          -
+            handle: title_image
+            field:
+              type: assets
+              max_files: 1
+              container: assets
+          -
+            handle: title_bg_image
+            field:
+              type: assets
+              max_files: 1
+              container: assets
+              display: Title background image
+          -
+            handle: state
+            field:
+              type: text
+          -
+            handle: active
+            field:
+              type: toggle
+              default: true
+          -
+            handle: legacy_id
+            field:
+              type: integer
+              visibility: hidden
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              validate: 'max:200'
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: seo_title
+            field:
+              type: text
+          -
+            handle: meta_description
+            field:
+              type: textarea
+          -
+            handle: meta_keywords
+            field:
+              type: text

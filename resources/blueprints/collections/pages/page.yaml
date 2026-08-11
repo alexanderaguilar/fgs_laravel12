@@ -1,0 +1,98 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: excerpt
+            field:
+              type: textarea
+          -
+            handle: body
+            field:
+              type: textarea
+              character_limit: 0
+          -
+            handle: image
+            field:
+              type: assets
+              max_files: 1
+              container: assets
+          -
+            handle: has_about_videos
+            field:
+              type: toggle
+              display: Has About Videos
+          -
+            handle: has_companies
+            field:
+              type: toggle
+          -
+            handle: has_direct_programs
+            field:
+              type: toggle
+          -
+            handle: has_testimonials_companies
+            field:
+              type: toggle
+          -
+            handle: has_testimonials_programs
+            field:
+              type: toggle
+          -
+            handle: has_float_message
+            field:
+              type: toggle
+          -
+            handle: has_how_about
+            field:
+              type: toggle
+          -
+            handle: has_faqs
+            field:
+              type: toggle
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: status_legacy
+            field:
+              type: select
+              options:
+                ACTIVE: ACTIVE
+                INACTIVE: INACTIVE
+              default: ACTIVE
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: seo_title
+            field:
+              type: text
+          -
+            handle: meta_description
+            field:
+              type: textarea
+          -
+            handle: meta_keywords
+            field:
+              type: text

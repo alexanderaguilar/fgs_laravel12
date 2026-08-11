@@ -1,0 +1,25 @@
+tree:
+  -
+    id: footer-quienes
+    title: '¿Quiénes somos?'
+    url: /conocenos/quienes-somos
+  -
+    id: footer-como
+    title: '¿Cómo somos?'
+    url: /conocenos/como-somos
+  -
+    id: footer-que
+    title: '¿Qué hacemos?'
+    url: /conocenos/que-hacemos
+  -
+    id: footer-historia
+    title: Historia
+    url: /conocenos/historia
+  -
+    id: footer-asuntos
+    title: 'Asuntos corporativos'
+    url: /conocenos/asuntos-corporativos
+  -
+    id: footer-trabaja
+    title: 'Trabaja con nosotros'
+    url: /conocenos/trabaja-con-nosotros

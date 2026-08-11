@@ -1,0 +1,75 @@
+title: Home Banner
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+          -
+            handle: description
+            field:
+              type: textarea
+          -
+            handle: youtube_url
+            field:
+              type: text
+          -
+            handle: youtube_id
+            field:
+              type: text
+              display: YouTube ID
+          -
+            handle: thumbnail
+            field:
+              type: assets
+              max_files: 1
+              container: assets
+          -
+            handle: thumbnail_mobile
+            field:
+              type: assets
+              max_files: 1
+              container: assets
+          -
+            handle: cta_text
+            field:
+              type: text
+          -
+            handle: cta_url
+            field:
+              type: text
+          -
+            handle: target
+            field:
+              type: text
+          -
+            handle: text_display
+            field:
+              type: select
+              options:
+                on: On
+                off: Off
+              default: on
+          -
+            handle: inverted_text
+            field:
+              type: toggle
+          -
+            handle: order
+            field:
+              type: integer
+              default: 0
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug

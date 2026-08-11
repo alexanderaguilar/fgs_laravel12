@@ -1,0 +1,35 @@
+title: Direct Social Program
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+          -
+            handle: image
+            field:
+              type: assets
+              max_files: 1
+              container: assets
+          -
+            handle: description
+            field:
+              type: textarea
+          -
+            handle: website
+            field:
+              type: text
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug

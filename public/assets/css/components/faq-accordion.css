@@ -1,0 +1,62 @@
+/* FGS FAQ accordion */
+
+/* --- Estilos Personalizados para el Acordeón (FAQ) --- */
+    .accordion-custom .accordion-item {
+        border: 1px solid rgba(0,0,0,0.05);
+        border-radius: 12px !important;
+        margin-bottom: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        background-color: #fff;
+    }
+
+.accordion-custom .accordion-button {
+        font-weight: 700;
+        color: var(--primary-color);
+        background-color: #fff;
+        padding: 1.25rem 1.5rem;
+        font-size: 1.05rem;
+        transition: all 0.3s ease;
+    }
+
+.accordion-custom .accordion-button:not(.collapsed) {
+        color: var(--primary-color);
+        background-color: #f8fcfd; /* Azul muy tenue */
+        box-shadow: inset 0 -1px 0 rgba(0,0,0,.05);
+    }
+
+.accordion-custom .accordion-button:focus {
+        box-shadow: none;
+        border-color: rgba(0,0,0,.125);
+    }
+
+/* Icono del acordeón en color corporativo */
+    .accordion-custom .accordion-button::after {
+        filter: invert(15%) sepia(87%) saturate(3065%) hue-rotate(195deg) brightness(91%) contrast(100%);
+    }
+
+.accordion-custom .accordion-body {
+        color: #555;
+        line-height: 1.6;
+        padding: 1.5rem;
+        font-size: 1rem;
+    }
+
+.accordion-custom .accordion-body p:last-child {
+        margin-bottom: 0;
+    }
+
+.accordion-custom a {
+        color: var(--primary-color);
+        font-weight: 600;
+        text-decoration: underline;
+        text-decoration-color: var(--bs-yellow-corporate);
+        text-decoration-thickness: 2px;
+        text-underline-offset: 3px;
+        transition: all 0.2s ease;
+    }
+
+.accordion-custom a:hover {
+        color: var(--bs-blue-light);
+        text-decoration-color: var(--bs-blue-light);
+    }

@@ -1,0 +1,28 @@
+tree:
+  - id: 6b100007-1f7c-44d9-a635-c64fc6c87dc2
+    title: 'Políticas de Protección de Datos Personales'
+    url: '/storage/documents/FGS-Politica-Proteccion-Datos-Personales.pdf'
+  - id: a7477771-05c4-4a50-be6c-c86d56a07e96
+    title: 'Aviso de Privacidad'
+    url: '/storage/documents/FGS-Aviso-de-Privacidad.pdf'
+  - id: 88bee5b7-186f-4767-a0d9-77163932102a
+    title: 'Código de Gobierno'
+    url: /storage/documents/FGS-Codigo-Gobierno.pdf
+  - id: e41795fe-acb1-4363-9748-54e7851733b8
+    title: 'Preguntas Frecuentes'
+    url: preguntas-frecuentes
+  - id: 5f01ff25-6827-4f38-8cfe-5ea950b660e2
+    title: 'Línea de transparencia'
+    url: linea-de-transparencia
+  - id: b4ef0500-8dfb-4134-85e3-c8a41e2a93a5
+    title: Contáctenos
+    url: contactenos
+  - id: 583ede7c-477c-411c-803f-bbbd0d61fd2b
+    title: 'Información General'
+    url: informacion-general
+  - id: 08a156c1-5f26-4607-bb3a-42cabd9cd738
+    title: 'Trabaje con Nosotros'
+    url: 'https://trabajaconnosotros.fundaciongruposocial.co/'
+  - id: b8e886a1-58a0-49d7-9f5c-182bb9dbf5c0
+    title: 'Entidades que hacen parte de la Organización Fundación Grupo Social'
+    url: '/storage/documents/FGS_entidades_organizacion.pdf'

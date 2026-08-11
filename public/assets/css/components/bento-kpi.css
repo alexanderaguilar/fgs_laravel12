@@ -1,0 +1,293 @@
+/* FGS bento / KPI cards */
+
+/* --- BENTO GRID LAYOUT --- */
+    .bento-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+/* Clases Asimétricas Bento (Aplicadas a las tarjetas de cifras) */
+    .bento-tl { border-radius: 4rem 1.25rem 1.25rem 1.25rem !important; }
+
+.bento-top-flat { border-radius: 1.25rem 1.25rem 1.25rem 1.25rem !important; }
+
+/* Modificado para 3 items rectos arriba */
+    .bento-tr { border-radius: 1.25rem 4rem 1.25rem 1.25rem !important; }
+
+/* --- ESTILOS CIFRAS (Diseño Estático con Curva y Variaciones de Color) --- */
+    .kpi-card {
+        background-color: var(--bs-white);
+        border-radius: 1.25rem;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgba(0,0,0,0.05);
+    }
+
+.kpi-header {
+        height: 160px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        z-index: 2;
+    }
+
+.kpi-icon {
+        font-size: 3.5rem;
+        color: #fff;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+    }
+
+.kpi-title {
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: 800;
+        margin: 0;
+        z-index: 2;
+    }
+
+.kpi-body {
+        padding: 3.5rem 2rem 2.5rem 2rem;
+        text-align: center;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+.kpi-desc {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin: 0;
+        line-height: 1.4;
+    }
+
+/* Variaciones de Color */
+    .theme-blue .kpi-header { background-color: var(--primary-color); }
+
+.theme-blue .kpi-body { background-color: var(--bs-white); }
+
+.theme-yellow .kpi-header { background-color: var(--bs-yellow-corporate); }
+
+.theme-yellow .kpi-icon, .theme-yellow .kpi-title { color: var(--primary-color); }
+
+.theme-yellow .kpi-body { background-color: var(--bs-white); }
+
+.theme-light-blue .kpi-header { background-color: var(--bs-blue-light); }
+
+.theme-light-blue .kpi-icon, .theme-light-blue .kpi-title { color: var(--primary-color); }
+
+.theme-light-blue .kpi-body { background-color: var(--bs-white); }
+
+/* Temas Slide Territorios */
+    .theme-1 .territorios-header { background-color: #7da186; }
+
+.theme-1 .territorios-body, .theme-1 .territorios-header::after { background-color: #edf3f0; color: #506655; }
+
+.theme-2 .territorios-header { background-color: #6fa099; }
+
+.theme-2 .territorios-body, .theme-2 .territorios-header::after { background-color: #edf5f4; color: #40605b; }
+
+.theme-3 .territorios-header { background-color: #5d7d93; }
+
+.theme-3 .territorios-body, .theme-3 .territorios-header::after { background-color: #eaeff2; color: #3d5260; }
+
+.theme-4 .territorios-header { background-color: #4a6fa5; }
+
+.theme-4 .territorios-body, .theme-4 .territorios-header::after { background-color: #e8ecf3; color: #2e4566; }
+
+.theme-5 .territorios-header { background-color: #945d7a; }
+
+.theme-5 .territorios-body, .theme-5 .territorios-header::after { background-color: #f3eaef; color: #603d50; }
+
+.theme-6 .territorios-header { background-color: #746d9a; }
+
+.theme-6 .territorios-body, .theme-6 .territorios-header::after { background-color: #eeedf4; color: #4a4563; }
+
+.theme-7 .territorios-header { background-color: #a65455; }
+
+.theme-7 .territorios-body, .theme-7 .territorios-header::after { background-color: #f4eaeb; color: #6e3838; }
+
+.theme-8 .territorios-header { background-color: #c29352; }
+
+.theme-8 .territorios-body, .theme-8 .territorios-header::after { background-color: #f5f1ea; color: #7a5c33; }
+
+.theme-9 .territorios-header { background-color: #bf6f53; }
+
+.theme-9 .territorios-body, .theme-9 .territorios-header::after { background-color: #f4ebe8; color: #7a4634; }
+
+.theme-10 .territorios-header { background-color: #cbb04a; }
+
+.theme-10 .territorios-body, .theme-10 .territorios-header::after { background-color: #f5f3e9; color: #806e2e; }
+
+/* =========================================================================
+       DISEÑO BENTO GRID Y TARJETAS KPI (COLORES ARMONIOSOS)
+       ========================================================================= */
+    .bento-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+.bento-tall { grid-row: span 2; }
+
+.bento-wide { grid-column: span 2; }
+
+/* Clases Asimétricas Bento */
+    .bento-tl { border-radius: 3rem 1.25rem 1.25rem 1.25rem !important; }
+
+.bento-tr { border-radius: 1.25rem 3rem 1.25rem 1.25rem !important; }
+
+.bento-bl { border-radius: 1.25rem 1.25rem 1.25rem 3rem !important; }
+
+.bento-br { border-radius: 1.25rem 1.25rem 3rem 1.25rem !important; }
+
+.bento-both { border-radius: 3rem 1.25rem 3rem 1.25rem !important; }
+
+/* Estructura Tarjeta Limpia */
+    .kpi-card {
+        padding: 2.5rem 2rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+        border: none;
+        border-radius: 1.25rem;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    }
+
+/* Efecto Hover Referente */
+    .kpi-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 1.5rem 2.5rem rgba(0,0,0,.15) !important;
+        z-index: 2;
+    }
+
+/* Temas de Color (Armonía) */
+    .theme-blue-corp { background-color: var(--primary-color); color: #fff; }
+
+.theme-blue-corp .kpi-subtext, .theme-blue-corp .kpi-desc { color: rgba(255,255,255,0.85); }
+
+.theme-blue-med { background-color: var(--bs-blue-light); color: #fff; }
+
+.theme-blue-med .kpi-subtext, .theme-blue-med .kpi-desc { color: rgba(255,255,255,0.85); }
+
+.theme-blue-light { background-color: #eef4f9; color: var(--primary-color); }
+
+.theme-blue-light .kpi-subtext, .theme-blue-light .kpi-desc { color: #555; }
+
+.theme-yellow-corp { background-color: var(--bs-yellow-corporate); color: var(--primary-color); }
+
+.theme-yellow-corp .kpi-subtext, .theme-yellow-corp .kpi-desc { color: #444; }
+
+.theme-yellow-dark { background-color: var(--bs-yellow-dark); color: var(--primary-color); }
+
+.theme-yellow-dark .kpi-subtext, .theme-yellow-dark .kpi-desc { color: #333; }
+
+.theme-yellow-light { background-color: #fff9e6; color: var(--primary-color); }
+
+.theme-yellow-light .kpi-subtext, .theme-yellow-light .kpi-desc { color: #555; }
+
+.theme-white { background-color: #fff; color: var(--primary-color); border: 1px solid rgba(0,74,135,0.1); }
+
+.theme-white .kpi-subtext, .theme-white .kpi-desc { color: #555; }
+
+/* Tipografía interna */
+    .kpi-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+.kpi-desc {
+        font-size: 0.95rem;
+        font-weight: 500;
+        line-height: 1.4;
+        margin-top: 0.5rem;
+    }
+
+.kpi-bottom {
+        margin-top: 2rem;
+    }
+
+.kpi-number {
+        font-size: clamp(3.5rem, 5vw, 4.5rem);
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.04em;
+        margin-bottom: 0.2rem;
+        display: flex;
+        align-items: baseline;
+    }
+
+.kpi-number span {
+        font-size: 0.5em;
+        margin-left: 2px;
+    }
+
+.kpi-subtext {
+        font-size: 1.05rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+/* --- TEMAS DE COLOR PARA SLIDES (Basado en imágenes) --- */
+    /* Slide 1: Verde */
+    .theme-1 .territorios-header { background-color: #7da186; }
+
+.theme-1 .territorios-body, .theme-1 .territorios-header::after { background-color: #edf3f0; color: #506655; }
+
+/* Slide 2: Verde Agua/Teal */
+    .theme-2 .territorios-header { background-color: #6fa099; }
+
+.theme-2 .territorios-body, .theme-2 .territorios-header::after { background-color: #edf5f4; color: #40605b; }
+
+/* Slide 3: Azul Grisáceo */
+    .theme-3 .territorios-header { background-color: #5d7d93; }
+
+.theme-3 .territorios-body, .theme-3 .territorios-header::after { background-color: #eaeff2; color: #3d5260; }
+
+/* Slide 4: Azul */
+    .theme-4 .territorios-header { background-color: #4a6fa5; }
+
+.theme-4 .territorios-body, .theme-4 .territorios-header::after { background-color: #e8ecf3; color: #2e4566; }
+
+/* Slide 5: Morado Rojizo/Vino */
+    .theme-5 .territorios-header { background-color: #945d7a; }
+
+.theme-5 .territorios-body, .theme-5 .territorios-header::after { background-color: #f3eaef; color: #603d50; }
+
+/* Slide 6: Morado */
+    .theme-6 .territorios-header { background-color: #746d9a; }
+
+.theme-6 .territorios-body, .theme-6 .territorios-header::after { background-color: #eeedf4; color: #4a4563; }
+
+/* Slide 7: Rojo Ladrillo */
+    .theme-7 .territorios-header { background-color: #a65455; }
+
+.theme-7 .territorios-body, .theme-7 .territorios-header::after { background-color: #f4eaeb; color: #6e3838; }
+
+/* Slide 8: Dorado/Marrón Claro */
+    .theme-8 .territorios-header { background-color: #c29352; }
+
+.theme-8 .territorios-body, .theme-8 .territorios-header::after { background-color: #f5f1ea; color: #7a5c33; }
+
+/* Slide 9: Naranja Quemado */
+    .theme-9 .territorios-header { background-color: #bf6f53; }
+
+.theme-9 .territorios-body, .theme-9 .territorios-header::after { background-color: #f4ebe8; color: #7a4634; }
+
+/* Slide 10: Amarillo */
+    .theme-10 .territorios-header { background-color: #cbb04a; }
+
+.theme-10 .territorios-body, .theme-10 .territorios-header::after { background-color: #f5f3e9; color: #806e2e; }

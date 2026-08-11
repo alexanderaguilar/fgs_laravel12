@@ -1,0 +1,252 @@
+/* FGS shared tabs / pills */
+
+/* --- Estilos de Tabs Internos (Pills verticales) alineados a Territorios --- */
+    .nav-pills-custom .nav-link {
+        color: #495057;
+        background-color: #f8f9fa;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-align: left;
+        padding: 15px 20px;
+        border: 1px solid #dee2e6;
+        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        display: block;
+        width: 100%;
+    }
+
+.nav-pills-custom .nav-link:hover {
+        background-color: #e9ecef;
+        transform: translateX(5px);
+    }
+
+.nav-pills-custom .nav-link.active {
+        background-color: var(--primary-color);
+        color: #fff;
+        border-color: var(--primary-color);
+        box-shadow: 0 5px 15px rgba(0,74,135,0.2);
+    }
+
+/* Scroll Horizontal para Tabs en Móviles */
+    .faq-vertical-tabs {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        padding-bottom: 15px;
+        margin-bottom: 1.5rem;
+        scrollbar-width: thin;
+        scrollbar-color: var(--primary-color) #f1f1f1;
+    }
+
+.faq-vertical-tabs::-webkit-scrollbar {
+        height: 6px;
+    }
+
+.faq-vertical-tabs::-webkit-scrollbar-thumb {
+        background-color: #dee2e6;
+        border-radius: 4px;
+    }
+
+.faq-vertical-tabs .nav-link {
+        display: inline-block;
+        width: auto;
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+
+.faq-vertical-tabs .nav-link {
+            display: block;
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+
+/* --- Estilos de Tabs Principales --- */
+    .nav-tabs-main {
+        border-bottom: 2px solid #dee2e6;
+        margin-bottom: 2rem;
+    }
+
+.nav-tabs-main .nav-link {
+        color: #6c757d;
+        font-weight: 700;
+        border: none;
+        border-bottom: 4px solid transparent;
+        padding: 15px 20px;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+    }
+
+.nav-tabs-main .nav-link:hover {
+        color: var(--primary-color);
+    }
+
+.nav-tabs-main .nav-link.active {
+        color: var(--primary-color);
+        border-bottom: 4px solid var(--primary-color);
+        background: transparent;
+    }
+
+/* --- Estilos de Tabs Internos (Pills verticales o botones) --- */
+    .nav-pills-custom .nav-link {
+        color: #495057;
+        background-color: #f8f9fa;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-align: left;
+        padding: 15px;
+        border: 1px solid #dee2e6;
+        transition: all 0.2s;
+        width: 100%;
+    }
+
+.nav-pills-custom .nav-link:hover {
+        background-color: #e9ecef;
+        transform: translateX(5px);
+    }
+
+.nav-pills-custom .nav-link.active {
+        background-color: var(--primary-color);
+        color: #fff;
+        border-color: var(--primary-color);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+/* Ajustes visuales para las Tabs */
+    .nav-tabs .nav-link {
+        color: #6c757d;
+        font-weight: 600;
+        border: none;
+        border-bottom: 3px solid transparent;
+        padding: 10px 25px;
+        font-size: 1.1rem;
+    }
+
+.nav-tabs .nav-link:hover {
+        color: var(--primary-color);
+        border-color: transparent;
+    }
+
+.nav-tabs .nav-link.active {
+        color: var(--primary-color);
+        border-bottom: 3px solid var(--primary-color);
+        background: transparent;
+    }
+
+/* --- SISTEMA DE TABS SCROLLABLE (MOBILE) --- */
+    .tabs-container {
+        position: relative;
+        overflow: hidden; /* Evita que el indicador genere scroll horizontal en la página */
+    }
+
+.nav-tabs-scroll {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE 10+ */
+    }
+
+.nav-tabs-scroll::-webkit-scrollbar {
+        display: none; /* Chrome/Safari */
+    }
+
+.nav-tabs-scroll .nav-item {
+        white-space: nowrap;
+    }
+
+/* Estilos estandar del tab */
+    .nav-tabs .nav-link { 
+        color: #6c757d; font-weight: 600; border: none; border-bottom: 3px solid transparent; 
+        padding: 12px 20px; transition: 0.3s; background: transparent;
+    }
+
+.nav-tabs .nav-link.active { 
+        color: var(--primary-color); border-bottom-color: var(--primary-color); 
+    }
+
+/* Indicador Visual Derecho */
+    .scroll-indicator-tabs {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 60px;
+        background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 60%);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 10px;
+        pointer-events: none; /* Permite hacer clic a través del gradiente */
+        color: var(--primary-color);
+        font-size: 1.2rem;
+        transition: opacity 0.3s ease;
+        z-index: 5;
+    }
+
+.scroll-indicator-tabs.is-hidden {
+        opacity: 0;
+    }
+
+.nav-pills .nav-link { border: 1px solid var(--primary-color); color: var(--primary-color); border-radius: 30px; margin-inline: 5px; }
+
+.nav-pills .nav-link.active { background-color: var(--primary-color); color: #fff; }
+
+.scroll-indicator-tabs {
+            display: none !important;
+        }
+
+.faq-vertical-tabs {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        padding-bottom: 5px;
+        margin-bottom: 1.5rem;
+    }
+
+.faq-vertical-tabs::-webkit-scrollbar {
+        height: 4px;
+    }
+
+.faq-vertical-tabs::-webkit-scrollbar-thumb {
+        background-color: #dee2e6;
+        border-radius: 4px;
+    }
+
+/* module_faq responsive tabs */
+.faq-vertical-tabs {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        padding-bottom: 5px;
+        margin-bottom: 1.5rem;
+    }
+    .faq-vertical-tabs::-webkit-scrollbar {
+        height: 4px;
+    }
+    .faq-vertical-tabs::-webkit-scrollbar-thumb {
+        background-color: #dee2e6;
+        border-radius: 4px;
+    }
+    /* En pantallas MD en adelante (escritorio), se vuelven verticales reales */
+    @media (min-width: 768px) {
+        .faq-vertical-tabs {
+            flex-direction: column !important;
+            overflow-x: visible;
+            white-space: normal;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }

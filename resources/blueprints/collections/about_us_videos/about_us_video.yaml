@@ -1,0 +1,36 @@
+title: About Us Video
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+          -
+            handle: youtube_url
+            field:
+              type: text
+          -
+            handle: thumbnail
+            field:
+              type: assets
+              max_files: 1
+              container: assets
+          -
+            handle: order
+            field:
+              type: integer
+              default: 0
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug

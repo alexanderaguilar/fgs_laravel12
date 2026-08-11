@@ -1,0 +1,57 @@
+title: Site
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+          -
+            handle: description
+            field:
+              type: textarea
+          -
+            handle: logo
+            field:
+              type: assets
+              max_files: 1
+              container: assets
+          -
+            handle: footer_direction
+            field:
+              type: text
+          -
+            handle: footer_telephone
+            field:
+              type: text
+          -
+            handle: receive_email
+            field:
+              type: text
+          -
+            handle: mail_from
+            field:
+              type: text
+          -
+            handle: google_analytics_tracking_id
+            field:
+              type: text
+          -
+            handle: google_tag_manager
+            field:
+              type: textarea
+          -
+            handle: google_tag_manager_noscript
+            field:
+              type: textarea
+          -
+            handle: recaptcha_site_key
+            field:
+              type: text
+          -
+            handle: recaptcha_secret_key
+            field:
+              type: text
