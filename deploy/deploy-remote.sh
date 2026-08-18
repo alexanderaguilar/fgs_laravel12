@@ -35,6 +35,6 @@ rsync -az --delete \
 
 ssh -i "$SSH_KEY" -o StrictHostKeyChecking=accept-new \
   "${DEPLOY_USER}@${DEPLOY_HOST}" \
-  "RELEASE_ID='${RELEASE_ID}' bash '${RELEASE_DIR}/deploy/activate-release.sh'"
+  "RELEASE_ID='${RELEASE_ID}' PHP_BIN=php8.4 bash '${RELEASE_DIR}/deploy/activate-release.sh'"
 
 echo "==> Deploy activo: http://${DEPLOY_HOST}/"

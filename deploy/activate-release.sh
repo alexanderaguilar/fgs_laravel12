@@ -38,8 +38,13 @@ if [[ ! -L public/storage ]]; then
 fi
 
 echo "==> Permisos storage"
-chown -R "${APP_USER}:${APP_USER}" "${APP_ROOT}/shared/storage"
-chmod -R 775 "${APP_ROOT}/shared/storage" bootstrap/cache
+if command -v sudo >/dev/null 2>&1; then
+  sudo chown -R "${APP_USER}:${APP_USER}" "${APP_ROOT}/shared/storage" bootstrap/cache
+  sudo chmod -R 775 "${APP_ROOT}/shared/storage" bootstrap/cache
+else
+  chown -R "${APP_USER}:${APP_USER}" "${APP_ROOT}/shared/storage" bootstrap/cache
+  chmod -R 775 "${APP_ROOT}/shared/storage" bootstrap/cache
+fi
 
 echo "==> Laravel / Statamic"
 "${PHP_BIN}" artisan storage:link --force 2>/dev/null || true
