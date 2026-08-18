@@ -1,12 +1,4 @@
-<section id="bread-crumb" class="bg-light">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col py-2 px-4">
-                <p><a href="/">Inicio</a> - <a href="/contatenos" class="text-decoration-none text-dark fw-bold">Contacto</a></p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.breadcrumb', ['items' => [['label' => 'Contáctenos']]])
 
 <!-- BANNER PRINCIPAL -->
 <div class="highlighted_banner position-relative d-none d-md-block" data-aos="fade-up" data-aos-duration="1000">
@@ -28,12 +20,12 @@
          <div class="d-flex flex-wrap-767 align-items-center justify-content-between">
             <div class="width100_767 width50 page_title_faq oswaldfonts">
                <h2>Escriba sus comentarios, preguntas o sugerencias en el siguiente formulario y en cuanto lo recibamos daremos respuesta a sus inquietudes.</h2>
-               <div class="blank_space_50 d-none-767">&nbsp;</div>
+               <div class="blank_space_50 d-none-767"> </div>
                <hr class="black_line d-none-767" />
             </div>
             <div class="width100_767 width50 samll_text sourcesansprofonts d-none-767">
                <div class="btn_work_us sourcesansprofonts pull-right">
-                  <h5 class="page_title_faq oswaldfonts pb-5">Si desea incluir su hoja de vida en nuestras bases de datos, consulte la secci&oacute;n Trabaje con Nosotros</h5>
+                  <h5 class="page_title_faq oswaldfonts pb-5">Si desea incluir su hoja de vida en nuestras bases de datos, consulte la sección Trabaje con Nosotros</h5>
                   <a href="https://trabajaconnosotros.fundaciongruposocial.co/" target="_blank" rel="noopener">Ir a trabaje con nosotros</a>
                </div>
             </div>
@@ -77,8 +69,8 @@
                         </div>
                         <div class="col-md-6 col-sm-12">
                               <div class="form-group">
-                                 <label for="email">Correo Electr&oacute;nico:</label>
-                                 <input id="email" name="email" value="" type="email" class="form email" required="required" placeholder="Ingrese su correo electr&oacute;nico" />
+                                 <label for="email">Correo Electrónico:</label>
+                                 <input id="email" name="email" value="" type="email" class="form email" required="required" placeholder="Ingrese su correo electrónico" />
                                  <div id="email-error" style="color:red; font-size:11px;"></div>
                               </div>
                         </div>
@@ -88,7 +80,7 @@
                      <div class="row">
                         <div class="col-sm-12 col-12">
                               <div class="form-group">
-                                 <label for="subject">Tema / T&iacute;tulo:</label>
+                                 <label for="subject">Tema / Título:</label>
                                  <input id="subject" name="subject" value="" type="text" class="form" required="required" placeholder="Escriba el motivo por el cual nos contacta" />
                                  <div id="subject-error" style="color:red; font-size:11px;"></div>
                               </div>
@@ -111,7 +103,7 @@
                         <div class="col-sm-12 col-12">
                               <div class="form-group" style="display: flex; align-items: center;">
                                  <input id="check" name="check" value="" type="checkbox" class="form" style="width: fit-content; margin-right: 30px;" required="required" />
-                                 <label for="check">Autorizo a la Fundaci&oacute;n Grupo Social el uso de mis datos personales conforme a las <a href="/storage/documents/FGS-Politica-Proteccion-Datos-Personales.pdf" target="_blank" rel="noopener">Pol&iacute;ticas de Protecci&oacute;n de Datos Personales</a></label>
+                                 <label for="check">Autorizo a la Fundación Grupo Social el uso de mis datos personales conforme a las <a href="/storage/documents/FGS-Politica-Proteccion-Datos-Personales.pdf" target="_blank" rel="noopener">Políticas de Protección de Datos Personales</a></label>
                                     <div id="check-error" style="color:red; font-size:11px;"></div>
                               </div>
                         </div>
@@ -127,7 +119,7 @@
                </div>
                <div class="only_dis_mobile text-center">
                   <div class="btn_work_us sourcesansprofonts">
-                    <h5 class="page_title_faq oswaldfonts pb-5">Si desea incluir su hoja de vida en nuestras bases de datos, consulte la secci&oacute;n Trabaje con Nosotros</h5>
+                    <h5 class="page_title_faq oswaldfonts pb-5">Si desea incluir su hoja de vida en nuestras bases de datos, consulte la sección Trabaje con Nosotros</h5>
                     <a href="https://trabajaconnosotros.fundaciongruposocial.co/" target="_blank" rel="noopener">Ir a trabaje con nosotros</a>
                   </div>
                </div>

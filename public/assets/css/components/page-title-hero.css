@@ -1,0 +1,66 @@
+/* Legacy page_title_section heroes — proportional height aligned with .highlighted_banner */
+
+.page_title_section {
+    min-height: var(--fgs-hero-height);
+}
+
+.page_title_section > .d-flex {
+    min-height: var(--fgs-hero-height);
+}
+
+.page_title_section .background_image,
+.page_title_section .background_image .height_widht_over {
+    height: var(--fgs-hero-height);
+    min-height: var(--fgs-hero-height);
+}
+
+.page_title_section .background_image img,
+.page_title_section.trabajo_en .background_image img {
+    width: 100%;
+    height: 100% !important;
+    min-height: var(--fgs-hero-height) !important;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.page_title_section .title_box {
+    width: min(1040px, calc(100% - 2rem));
+    height: auto;
+    min-height: var(--fgs-hero-title-height);
+}
+
+.page_title_section .title_box .height_widht_over {
+    height: var(--fgs-hero-title-height);
+    min-height: var(--fgs-hero-title-height);
+}
+
+.page_title_section .title_box .height_widht_over img,
+.page_title_section.trabajo_en .title_box img,
+.page_title_section.trabajo_en .title_box .object_fit_cover {
+    width: 100%;
+    height: 100% !important;
+    min-height: var(--fgs-hero-title-height) !important;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.page_title_section > .position-absolute.position-center {
+    width: 100%;
+    pointer-events: none;
+}
+
+.page_title_section .title_box .position-center {
+    pointer-events: auto;
+}
+
+@media (max-width: 991.98px) {
+    .page_title_section.quienes_somos {
+        top: 0;
+    }
+
+    .page_title_section.trabajo_en .background_image {
+        margin-top: 0;
+    }
+}

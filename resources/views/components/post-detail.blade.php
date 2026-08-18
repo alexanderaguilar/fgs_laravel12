@@ -1,12 +1,7 @@
-<section id="bread-crumb">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col py-2 px-4">
-                <p><a href="/">Inicio</a> - <a href="/noticias">Noticias</a> - <a href="{{ post_url($post->slug) }}" alt="{{$post->title}}">{{ \Illuminate\Support\Str::limit($post->title, 50, ' ...') }}</a></p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.breadcrumb', ['items' => [
+    ['label' => 'Noticias', 'url' => '/noticias'],
+    ['label' => \Illuminate\Support\Str::limit($post->title, 50)],
+]])
 
 <section class="blog_detail">
 

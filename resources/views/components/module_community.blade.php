@@ -12,9 +12,9 @@
                 <img src="/storage/pages/May2019/fundacion-grupo-social-trabajo-com-comunidades.jpg" class="object_fit_cover" alt="">
                 <div class="HowWeDoBox"></div>
                 <div class="position-absolute HowWeDoBoxText p-5">
-                    <h3 class="text-white mb-3">Nuestro acompa&ntilde;amiento a comunidades</h3>
+                    <h3 class="text-white mb-3">Nuestro acompañamiento a comunidades</h3>
                     <p class="text-white mb-3">Trabajamos involucrándonos directamente con las poblaciones marginadas a través de procesos de largo plazo, de carácter promocional y no asistencial, fortaleciendo las capacidades necesarias para que puedan <strong>ser agentes de su propio desarrollo y alcancen un mejoramiento integral en su calidad de vida.</strong></p>
-                    <a href="/nuestro-acompanamiento-a-comunidades" class="btn btn-primary">Conoce nuestro acompa&ntilde;amiento a comunidades</a>
+                    <a href="/nuestro-acompanamiento-a-comunidades" class="btn btn-primary">Conoce nuestro acompañamiento a comunidades</a>
                 </div>
             </div>
         </div>

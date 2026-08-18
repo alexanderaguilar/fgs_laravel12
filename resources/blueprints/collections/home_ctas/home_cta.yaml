@@ -1,0 +1,133 @@
+title: 'CTA Home'
+tabs:
+  main:
+    display: Principal
+    sections:
+      -
+        display: Tipo de bloque
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Título
+              instructions: 'Historias: título grande a la izquierda. Informe: título junto al icono.'
+              validate:
+                - required
+          -
+            handle: block_type
+            field:
+              type: select
+              required: true
+              display: Tipo de bloque
+              instructions: 'Define el layout del CTA en el home.'
+              options:
+                historias: 'Historias de progreso (foto + CTA)'
+                informe: 'Informe de labores (dos columnas)'
+              default: historias
+              validate:
+                - required
+          -
+            handle: subtitle
+            field:
+              type: text
+              display: Subtítulo
+              instructions: 'Texto de apoyo bajo el título.'
+          -
+            handle: order
+            field:
+              type: integer
+              default: 0
+              display: Orden
+              instructions: 'Menor número = aparece primero (tras el carousel de logos).'
+      -
+        display: 'Historias de progreso'
+        fields:
+          -
+            handle: background_image
+            field:
+              type: assets
+              display: Imagen de fondo
+              instructions: 'Foto horizontal (personas / contexto). Carpeta sugerida: home-ctas/'
+              container: assets
+              folder: home-ctas
+              max_files: 1
+              mode: list
+              allow_uploads: true
+              show_filename: true
+              if:
+                block_type: 'equals historias'
+          -
+            handle: cta_text
+            field:
+              type: text
+              display: Texto del enlace
+              default: 'Ver testimonios'
+              if:
+                block_type: 'equals historias'
+      -
+        display: 'Informe de labores'
+        fields:
+          -
+            handle: highlight_label
+            field:
+              type: text
+              display: Texto destacado (derecha)
+              instructions: 'Ej. TESTIMONIO # 115 AÑOS'
+              if:
+                block_type: 'equals informe'
+          -
+            handle: highlight_year
+            field:
+              type: text
+              display: Año / cifra (derecha)
+              instructions: 'Ej. 2025'
+              if:
+                block_type: 'equals informe'
+          -
+            handle: badge_text
+            field:
+              type: text
+              display: Badge inferior
+              instructions: 'Pastilla naranja al pie del bloque.'
+              if:
+                block_type: 'equals informe'
+      -
+        display: Enlace
+        fields:
+          -
+            handle: cta_url
+            field:
+              type: text
+              display: URL del enlace
+              instructions: 'Ruta relativa (/testimonios) o URL absoluta (https://…). Todo el bloque es clicable.'
+          -
+            handle: target
+            field:
+              type: select
+              display: Abrir en
+              options:
+                _self: Misma ventana
+                _blank: Nueva ventana
+              default: _self
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              from: title
+              required: true
+              validate:
+                - required
+          -
+            handle: published
+            field:
+              type: toggle
+              default: true
+              display: Publicado
+              instructions: 'Desactiva para ocultar el bloque en el home sin borrarlo.'

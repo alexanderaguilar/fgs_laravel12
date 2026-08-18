@@ -7,15 +7,6 @@
     
     
     
-    
-    .colored_lines::after {
-        content: '';
-        display: block;
-        width: 60px;
-        height: 4px;
-        background-color: var(--bs-yellow-corporate);
-        margin-top: 10px;
-    }
 
     /* --- Estilos del Banner --- */
 

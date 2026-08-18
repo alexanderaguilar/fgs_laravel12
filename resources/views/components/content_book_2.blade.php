@@ -1,13 +1,5 @@
 <!-- Estilos Personalizados -->
-<section id="bread-crumb">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col py-2 px-4">
-                <p><a href="/">Inicio</a> - <a href="/viaje-por-el-modelo-de-calidad-de-vida">Viaje por el Modelo de Calidad de Vida: Etapa de Construcción de Estrategia</a></p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.breadcrumb', ['items' => [['label' => 'Viaje por el modelo de calidad de vida', 'url' => '/viaje-por-el-modelo-de-calidad-de-vida'], ['label' => 'Etapa de construcción']]])
 
 <div class="container-fluid position-relative m-0 p-0 pb-5 overflow-hidden" style="background-image: url({{ asset('assets/img/calidad_vida/bg_irregular_line.jpg') }}); background-size: cover; background-position: center;">
 

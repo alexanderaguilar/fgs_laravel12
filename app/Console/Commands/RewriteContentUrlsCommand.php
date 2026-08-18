@@ -9,7 +9,7 @@ class RewriteContentUrlsCommand extends Command
 {
     protected $signature = 'fgs:rewrite-content-urls {--dry-run : Show files that would change}';
 
-    protected $description = 'Rewrite absolute fundaciongruposocial.co /storage URLs to root-relative /storage paths in Statamic content';
+    protected $description = 'Rewrite absolute fundaciongruposocial.co / staging IP URLs to root-relative paths and upgrade http:// to https:// in Statamic content';
 
     public function handle(): int
     {
@@ -20,9 +20,13 @@ class RewriteContentUrlsCommand extends Command
         ];
 
         $patterns = [
+            '#https?://3\.91\.33\.230/+storage/#' => '/storage/',
+            '#https?://3\.91\.33\.230/+assets/#' => '/assets/',
+            '#https?://3\.91\.33\.230/#' => '/',
             '#https?://(?:www\.)?fundaciongruposocial\.co/+storage/#' => '/storage/',
             '#https?://(?:www\.)?fundaciongruposocial\.co/+public/#' => '/',
             '#https?://(?:www\.)?fundaciongruposocial\.co/#' => '/',
+            '#http://#' => 'https://',
         ];
 
         $changed = 0;

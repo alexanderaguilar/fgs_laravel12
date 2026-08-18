@@ -1,0 +1,375 @@
+/* Home CTAs: Historias de progreso + Informe de labores */
+.home-ctas {
+    padding: 0.25rem 0 clamp(3rem, 6vw, 4rem);
+    background: #f7f8fa;
+}
+
+.home-ctas__stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.35rem;
+}
+
+.home-cta {
+    position: relative;
+    display: block;
+    border-radius: 1.5rem;
+    overflow: visible;
+    text-decoration: none;
+    color: #fff;
+    isolation: isolate;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.home-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(22, 56, 99, 0.18);
+    color: #fff;
+}
+
+/* --- Historias de progreso --- */
+.home-cta--stories {
+    min-height: clamp(220px, 28vw, 300px);
+    background: var(--primary-color, #163863);
+    overflow: hidden;
+    border-radius: 1.5rem;
+}
+
+.home-cta__media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.home-cta__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.home-cta__shade {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(14, 40, 72, 0.97) 0%,
+            rgba(14, 40, 72, 0.88) 28%,
+            rgba(14, 40, 72, 0.55) 52%,
+            rgba(14, 40, 72, 0.15) 72%,
+            rgba(14, 40, 72, 0) 88%
+        );
+}
+
+.home-cta__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.65rem;
+    min-height: inherit;
+    padding: clamp(1.5rem, 4vw, 2.75rem);
+    max-width: min(34rem, 92%);
+}
+
+.home-cta__title {
+    margin: 0;
+    font-size: clamp(1.65rem, 3.2vw, 2.35rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: #fff;
+}
+
+.home-cta__subtitle {
+    margin: 0;
+    font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.92);
+    max-width: 28rem;
+}
+
+.home-cta__action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-top: 0.55rem;
+    color: var(--bs-yellow-corporate, #f2a325);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.home-cta__action-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.85rem;
+    height: 1.85rem;
+    border-radius: 50%;
+    background: var(--bs-yellow-corporate, #f2a325);
+    color: #163863;
+    font-size: 0.95rem;
+    transition: transform 0.3s ease;
+}
+
+.home-cta--stories:hover .home-cta__action-icon {
+    transform: translateX(3px);
+}
+
+/* --- Informe de labores (mockup navy + rail naranja + badge) --- */
+.home-cta--report {
+    --report-navy: #0a2748;
+    --report-navy-mid: #123a66;
+    --report-navy-deep: #071c36;
+    --report-orange: #f28b25;
+    background:
+        radial-gradient(ellipse 55% 90% at 92% 18%, rgba(39, 178, 213, 0.22) 0%, transparent 58%),
+        radial-gradient(ellipse 40% 70% at 8% 70%, rgba(242, 139, 37, 0.1) 0%, transparent 55%),
+        linear-gradient(105deg, var(--report-navy-deep) 0%, var(--report-navy) 42%, var(--report-navy-mid) 78%, #0d3358 100%);
+    padding: clamp(1.35rem, 2.8vw, 1.85rem) clamp(1.35rem, 3.2vw, 2.5rem) clamp(2.75rem, 4.5vw, 3.15rem);
+    min-height: 0;
+    margin-bottom: 0;
+    border-radius: 1.35rem;
+    overflow: visible;
+    box-shadow: 0 14px 36px rgba(7, 28, 54, 0.28);
+}
+
+.home-cta-report {
+    display: grid;
+    gap: 1.1rem 1.25rem;
+    align-items: center;
+    grid-template-columns: 1fr;
+}
+
+.home-cta-report__left {
+    display: flex;
+    align-items: center;
+    gap: 1.05rem;
+    min-width: 0;
+}
+
+.home-cta-report__icon {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.65rem;
+    height: 3.65rem;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--report-orange);
+    font-size: 1.55rem;
+    box-shadow:
+        0 0 0 6px rgba(255, 255, 255, 0.1),
+        0 0 26px rgba(255, 255, 255, 0.22),
+        0 0 32px rgba(242, 139, 37, 0.28);
+}
+
+.home-cta-report__icon i {
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+}
+
+.home-cta-report__copy {
+    min-width: 0;
+}
+
+.home-cta-report__title {
+    margin: 0 0 0.28rem;
+    font-size: clamp(1.15rem, 2vw, 1.55rem);
+    font-weight: 800;
+    line-height: 1.18;
+    color: #fff;
+    letter-spacing: -0.01em;
+}
+
+.home-cta-report__subtitle {
+    margin: 0;
+    font-size: clamp(0.88rem, 1.2vw, 1rem);
+    font-weight: 400;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.home-cta-report__right {
+    position: relative;
+    text-align: left;
+    min-width: 0;
+    padding-top: 0.15rem;
+}
+
+.home-cta-report__label {
+    position: relative;
+    margin: 0 0 0.7rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 2px solid var(--report-orange);
+    box-shadow: 0 1px 10px rgba(242, 139, 37, 0.28);
+    font-size: clamp(0.92rem, 1.45vw, 1.15rem);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.home-cta-report__anos {
+    display: inline-block;
+    margin-left: 0.2em;
+    font-size: 0.48em;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    vertical-align: super;
+    line-height: 1;
+}
+
+.home-cta-report__year {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.55em;
+    margin: 0;
+    font-size: clamp(1.55rem, 2.8vw, 2.15rem);
+    font-weight: 400;
+    letter-spacing: 0;
+    color: #fff;
+    line-height: 1;
+}
+
+.home-cta-report__year span {
+    display: inline-block;
+    min-width: 0.55em;
+    text-align: center;
+}
+
+.home-cta-report__badge {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: inline-block;
+    max-width: calc(100% - 2rem);
+    padding: 0.55rem 1.5rem;
+    border-radius: 0.85rem 0.85rem 0 0;
+    background: var(--report-orange);
+    color: #fff;
+    font-size: clamp(0.58rem, 1vw, 0.7rem);
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.25;
+    white-space: nowrap;
+    box-shadow: none;
+}
+
+@media (min-width: 768px) {
+    .home-cta-report {
+        grid-template-columns: minmax(0, 1.4fr) minmax(14rem, auto);
+        gap: 2.5rem 3.5rem;
+        align-items: center;
+    }
+
+    .home-cta-report__right {
+        justify-self: end;
+    }
+
+    .home-cta-report__label::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: clamp(3.5rem, 9vw, 7rem);
+        height: 2px;
+        border-radius: 2px;
+        background: linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(242, 139, 37, 0.55) 40%,
+            var(--report-orange) 100%
+        );
+        box-shadow: 0 0 10px rgba(242, 139, 37, 0.45);
+        transform: translateX(-100%);
+    }
+
+    .home-cta-report__year {
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 992px) {
+    .home-cta--report {
+        padding-top: 1.75rem;
+        padding-bottom: 3rem;
+    }
+
+    .home-cta-report__icon {
+        width: 4rem;
+        height: 4rem;
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .home-cta--stories {
+        min-height: clamp(260px, 68vw, 340px);
+    }
+
+    .home-cta__shade {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(14, 40, 72, 0.92) 0%,
+                rgba(14, 40, 72, 0.72) 42%,
+                rgba(14, 40, 72, 0.35) 70%,
+                rgba(14, 40, 72, 0.15) 100%
+            );
+    }
+
+    .home-cta__content {
+        max-width: 100%;
+        justify-content: flex-end;
+        padding-bottom: 1.75rem;
+    }
+
+    .home-cta--report {
+        padding-bottom: clamp(2.75rem, 5vw, 3.25rem);
+    }
+
+    .home-cta-report__left {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+
+    .home-cta-report__label {
+        white-space: normal;
+        letter-spacing: 0.1em;
+    }
+
+    .home-cta-report__badge {
+        white-space: normal;
+        font-size: 0.58rem;
+        padding: 0.48rem 1rem;
+        border-radius: 0.75rem 0.75rem 0 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-cta,
+    .home-cta__action-icon {
+        transition: none;
+    }
+
+    .home-cta:hover {
+        transform: none;
+    }
+
+    .home-cta--stories:hover .home-cta__action-icon {
+        transform: none;
+    }
+}

@@ -1,4 +1,4 @@
-@include('partials.breadcrumb')
+@include('partials.breadcrumb', ['items' => [['label' => 'Noticias']]])
 <section id="blog" class="bg-light pt-3 pb-3">
     <div class="container" data-aos="fade-up">
         <div class="row">

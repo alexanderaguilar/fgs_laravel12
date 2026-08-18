@@ -6,7 +6,6 @@
 ])
 @section('content')
 
-    @include('components.extra-header')
     @include('components.communities_page')
 
 @endsection

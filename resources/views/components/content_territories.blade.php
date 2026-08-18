@@ -1,15 +1,4 @@
-<section id="bread-crumb" class="bg-light py-2">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col px-4">
-                <p class="mb-0 small">
-                    <a href="/" class="text-decoration-none text-secondary">Inicio</a> - 
-                    <a href="#" class="text-decoration-none text-dark fw-bold">Nuestros Territorios Progreso</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.breadcrumb', ['items' => [['label' => 'Nuestros Territorios Progreso']]])
 
 <!-- BANNER PRINCIPAL -->
 <div class="highlighted_banner position-relative d-none d-md-block" data-aos="fade-up">
@@ -26,16 +15,14 @@
 </div>
 
 <h1 class="m-3 mt-4 mb-2 fw-bold fst-italic d-block d-md-none"><span class="text-deepblue">Nuestros Territorios Progreso</span></h1>
-<section id="subheader" class="fgs_lines position-relative">
-    
+<section id="opening" class="position-relative">
     <div class="container position-relative">
-        <div class="row justify-content-center">
-            <div class="op col-12 col-lg-10 p-2 p-5 text-center">
-                <h4 class="text-white position-relative py-5 text-center fw-bold fst-italic">Impulsamos a las comunidades a trabajar por un sueño compartido, uno en donde haya lugar para todos. Creemos en el cambio y en el poder que tienen las personas para generarlo</h4>
+        <div class="row mt-2 justify-content-center">
+            <div class="col-12 col-lg-12 py-2 text-center">
+                <h4 class="text-deepblue position-relative py-5 text-center" style="line-height: 36px;">Impulsamos a las comunidades a trabajar por un sueño compartido, uno en donde haya lugar para todos. Creemos en el cambio y en el poder que tienen las personas para generarlo.</h4>
             </div>
-        </div>    
+        </div>
     </div>
-
 </section>
 
 <div class="container py-5">

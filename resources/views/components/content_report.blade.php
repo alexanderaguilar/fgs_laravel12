@@ -1,13 +1,4 @@
-
-<section id="bread-crumb" class="bg-light">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col py-2 px-4">
-                <p><a href="/">Inicio</a> - <a href="/linea-de-transparencia" class="text-decoration-none text-dark fw-bold">Informes de labores</a></p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.breadcrumb', ['items' => [['label' => 'Informe de labores']]])
 
 <!-- BANNER PRINCIPAL -->
 <div class="highlighted_banner position-relative d-none d-md-block" data-aos="fade-up" data-aos-duration="1000">

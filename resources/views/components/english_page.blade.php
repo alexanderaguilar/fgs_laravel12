@@ -3,7 +3,7 @@
         
         <div class="col-md-3 col-sm-6 col-6 box_col">
             <div class="position-relative zoomeffice">
-                <div class="overlay_layer_gray position-absolute">&nbsp;</div>
+                <div class="overlay_layer_gray position-absolute"> </div>
                 <div class="height_widht_over">
                     <img class="object_fit_cover" src="./storage/home-banner-videos/quienes_home.jpg" width="420" height="300" />
                 </div>
@@ -15,14 +15,14 @@
                 <p>We are a social development foundation which is the parent, in every sense of the word,<strong> of a solid group of businesses engaged genuinely and solely in the quest for the common good.</strong> </p>
 </p>
                 <!--<div class="btn_trans robotfonts btn_conocer">
-                    <a href="testimonios">Conoce m&aacute;s</a>
+                    <a href="testimonios">Conoce más</a>
                 </div>-->
             </div>
         </div>
 
         <div class="col-md-3 col-sm-6 col-6 box_col">
             <div class="position-relative zoomeffice">
-                <div class="overlay_layer_gray position-absolute">&nbsp;</div>
+                <div class="overlay_layer_gray position-absolute"> </div>
                 <div class="height_widht_over">
                     <img class="object_fit_cover" src="./storage/home-maplogos/March2021/foto_hone_como_somos.jpg" width="420" height="300" />
                 </div>
@@ -34,16 +34,16 @@
                 <p>We are an Organization <strong> engaged genuinely and solely </strong>in the quest for the common good.
 </p>
                 <!--<div class="btn_trans robotfonts btn_conocer">
-                    <a href="como-somos">Conoce m&aacute;s</a>
+                    <a href="como-somos">Conoce más</a>
                 </div>-->
             </div>
         </div>
 
         <div class="col-md-3 col-sm-6 col-6 box_col">
             <div class="position-relative zoomeffice">
-                <div class="overlay_layer_gray position-absolute">&nbsp;</div>
+                <div class="overlay_layer_gray position-absolute"> </div>
                 <div class="height_widht_over">
-                    <img class="object_fit_cover" title="Fundaci&oacute;n Social - Historia" src="./storage/pages/May2019/fundacion-social-historia-padre-campoamor-mosaic.jpg" alt="Imagen para entrar a la secci&oacute;n de historia" width="420" height="300" />
+                    <img class="object_fit_cover" title="Fundación Social - Historia" src="./storage/pages/May2019/fundacion-social-historia-padre-campoamor-mosaic.jpg" alt="Imagen para entrar a la sección de historia" width="420" height="300" />
                 </div>
                 <div class="text_information position-absolute white_text_color diferent_position">
                     <a href="nuestra-historia"><h2 class="oswaldfonts">Our history</h2></a>
@@ -52,14 +52,14 @@
             <div class="position-relative paragraph-box">
                 <p>Over a century of faithful adherence to  the Legacy handed down from generation to generation.</p>
                 <!--<div class="btn_trans robotfonts btn_conocer">
-                    <a href="nuestra-historia">Conoce m&aacute;s</a>
+                    <a href="nuestra-historia">Conoce más</a>
                 </div>-->
             </div>
         </div>
 
         <div class="col-md-3 col-sm-6 col-6 box_col">
             <div class="position-relative zoomeffice">
-                <div class="overlay_layer_gray position-absolute">&nbsp;</div>
+                <div class="overlay_layer_gray position-absolute"> </div>
                 <div class="height_widht_over">
                     <img class="object_fit_cover" src="./storage/pages/May2019/fundacion-grupo-social-mosaico-testimonios.jpg" width="420" height="300" />
                 </div>
@@ -70,7 +70,7 @@
             <div class="position-relative paragraph-box">
                 <p>Of people,<strong> who are the reason for our existence.</strong> </p>
                 <!--<div class="btn_trans robotfonts btn_conocer">
-                    <a href="testimonios">Conoce m&aacute;s</a>
+                    <a href="testimonios">Conoce más</a>
                 </div>-->
             </div>
         </div>
@@ -109,7 +109,7 @@
                     <div class="left_image position-relative">
                         
                         <div class="height_widht_over">
-                            <img class="object_fit_cover" title="Fundaci&oacute;n Social Empresas" src="./storage/pages/May2019/fundacion-grupo-social-como-actuamos-empresas2.jpg" width="720" height="600" />
+                            <img class="object_fit_cover" title="Fundación Social Empresas" src="./storage/pages/May2019/fundacion-grupo-social-como-actuamos-empresas2.jpg" width="720" height="600" />
                         </div>
                         <div class="text-left text-box">
                             <h3 class="oswaldfonts">Our businesses</h3>
@@ -174,7 +174,7 @@
     <div class="container-fluid banner-end">
         <div class="row">
             <div class="col wow fadeInDown box_col position-relative">
-                <div class="overlay_layer_gray position-absolute">&nbsp;</div>
+                <div class="overlay_layer_gray position-absolute"> </div>
                 <div class="height_widht_over">
                     <img class="object_fit_cover" src="/storage/home-banner-videos/bottom-message-foundation.jpg" width="100%"/>
                 </div>

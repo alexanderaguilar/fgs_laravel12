@@ -8,8 +8,8 @@ looking_for: 'En el año 2022, Fundación Grupo Social llegó a Bilbao, un nuevo
 habitantes: '<h3>28.565</h3>'
 city_other_data: "<p><strong>&iquest;Por qu&eacute; estamos en Bilbao?</strong></p>\r\n<p>Tenemos un sue&ntilde;o compartido con la comunidad de <strong>Bilbao</strong>: fortalecer e impulsar un territorio que se distingue por su diversidad, su cercan&iacute;a al r&iacute;o Bogot&aacute; y, sobre todo, por la perseverancia de su gente. <strong>Este sector, habitado por personas trabajadoras, tiene unas metas claras para un mejor futuro y un profundo deseo de superaci&oacute;n.</strong></p>\r\n<p>&nbsp;</p>\r\n<p>Esa misma determinaci&oacute;n, sin embargo, a veces dispersa los esfuerzos colectivos y dificulta la empat&iacute;a entre sus miembros. Por eso, vemos en Bilbao una gran oportunidad para unir prop&oacute;sitos, construir confianza y orientar las acciones hacia un objetivo com&uacute;n que inspire a todos.</p>\r\n<p>&nbsp;</p>\r\n<p>Nuestro compromiso es acompa&ntilde;ar este proceso, impulsando espacios de encuentro y participaci&oacute;n donde cada persona pueda aportar y sentirse parte del cambio. Queremos que Bilbao sea un lugar donde cada historia cuente, donde cada paso contribuya al bienestar colectivo y donde todos puedan escribir, con orgullo, su propia historia.</p>"
 map_image: city-details/January2023/Va8NrlMKs271pbNKeXoh.jpg
-listing_image: city-details/May2026/1G0djjZcAFjDemZTE3AC.jpg
-image: city-details/May2026/qI2pIFtyDherECECKSA3.jpg
+listing_image: city-details/June2026/uTMWgDQoGa5oAci2NYTJ.jpg
+image: city-details/June2026/RGdyICPDjo9dBadWYOxu.jpg
 title_image: city-details/May2026/FRKhE3GQpKVF57JAwvUz.jpg
 title_bg_image: city-details/May2026/FRKhE3GQpKVF57JAwvUz.jpg
 state: 'Aquí escribes tu historia'

@@ -1,12 +1,4 @@
-<section id="bread-crumb">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col py-2 px-4">
-                <p><a href="/">Inicio</a> - <a href="/que-hacemos">Qué hacemos</a></p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.breadcrumb', ['items' => [['label' => 'Qué hacemos']]])
 
 <div class="container-fluid position-relative m-0 p-0 pb-5 overflow-hidden">
 
@@ -34,7 +26,7 @@
         <div class="col-md-6 col-sm-6 col-12 box_col aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
             <a href="que-hacemos/territorios-progreso">
                 <div class="position-relative zoomeffice">
-                    <div class="overlay_layer_gray position-absolute">&nbsp;</div>
+                    <div class="overlay_layer_gray position-absolute"> </div>
                     <div class="height_widht_over">
                         <img class="object_fit_cover" src="/assets/img/2024/que_hacemos_territorios.jpg" width="420" height="300">
                     </div>
@@ -48,7 +40,7 @@
         <div class="col-md-6 col-sm-6 col-12 box_col aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
             <a href="que-hacemos/nuestras-empresas">
                 <div class="position-relative zoomeffice">
-                    <div class="overlay_layer_gray position-absolute">&nbsp;</div>
+                    <div class="overlay_layer_gray position-absolute"> </div>
                     <div class="height_widht_over">
                         <img class="object_fit_cover" src="/assets/img/2024/que_hacemos_empresas.jpg" width="420" height="300">
                     </div>

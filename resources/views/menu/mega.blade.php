@@ -12,7 +12,7 @@
             </div>
             <!-- Column 3 -->
             <div class="col-12 col-lg-3 text-center">
-                <a href="/nuestro-impacto-en-la-sociedad/testimonios"><h4>Testimonios</h4></a>
+                <a href="/testimonios"><h4>Testimonios</h4></a>
             </div>
             <!-- Column 4 -->
             <div class="col-12 col-lg-3 text-center">

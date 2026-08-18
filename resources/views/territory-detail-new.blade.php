@@ -6,7 +6,8 @@
 ])
 
 @push('styles')
-    <link href="{{ asset('assets/css/pages/territories.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/pages/impact.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/pages/territories.css') }}?v={{ filemtime(public_path('assets/css/pages/territories.css')) }}" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 @endpush
 
@@ -17,7 +18,6 @@
 
 @section('content')
 
-    @include('components.extra-header')
     @include('components.territory_page_new')
    
 @endsection

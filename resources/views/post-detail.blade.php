@@ -25,7 +25,6 @@
 
 @section('content')
 
-    @include('components.extra-header')
     @include('components.post-detail')
     @include('components.sticky-share')
    

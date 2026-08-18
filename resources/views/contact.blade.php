@@ -14,6 +14,5 @@
 @endpush
 
 @section('content')
-    @include('components.extra-header')
     @include('components.contact_page')
 @endsection

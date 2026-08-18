@@ -1,12 +1,7 @@
-<section id="bread-crumb">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col py-2 px-4">
-                <p><a href="/" class="text-decoration-none text-secondary">Inicio</a> <span class="text-muted mx-1">-</span> <a href="/nuestros-territorios-progreso/" class="text-decoration-none text-dark fw-bold">Nuestros Territorios Progreso</a></p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.breadcrumb', ['items' => [
+    ['label' => 'Nuestros Territorios Progreso', 'url' => '/nuestros-territorios-progreso'],
+    ['label' => $citydata->title],
+]])
 
 <!-- BANNER PRINCIPAL -->
 <div class="highlighted_banner position-relative d-none d-md-block" data-aos="fade-up" data-aos-duration="1000">
@@ -34,45 +29,7 @@
 </h1>
 <img class="d-block d-md-none img-fluid rounded-bottom-4 shadow-sm mb-4" src="/storage/{{$citydata->image}}" onerror="this.src='https://placehold.co/1920x600?text=Territorios+Progreso'" alt="Territorios Progreso">
 
-<!-- SECCIÓN DE CIFRAS (CON BENTO GRID Y DISEÑO ESTÁTICO) -->
-<section class="container my-5 cifra_section">
-    <div class="bento-grid" data-aos="fade-up">
-        
-        <!-- Item 1: Territorio (Azul) -->
-        <div class="kpi-card theme-blue hover-lift bento-tl">
-            <div class="kpi-header">
-                <i class="bi bi-map-fill kpi-icon"></i>
-                <h3 class="kpi-title">Territorio</h3>
-            </div>
-            <div class="kpi-body">
-                <p class="kpi-desc">{{$citydata->territory}}</p>
-            </div>
-        </div>
-
-        <!-- Item 2: Datos Clave (Amarillo) -->
-        <div class="kpi-card theme-yellow hover-lift bento-top-flat">
-            <div class="kpi-header">
-                <i class="bi bi-clipboard-data-fill kpi-icon"></i>
-                <h3 class="kpi-title">Datos clave</h3>
-            </div>
-            <div class="kpi-body">
-                <p class="kpi-desc">{{$citydata->looking_for}}</p>
-            </div>
-        </div>
-
-        <!-- Item 3: Habitantes (Azul Claro) -->
-        <div class="kpi-card theme-light-blue hover-lift bento-tr">
-            <div class="kpi-header">
-                <i class="bi bi-people-fill kpi-icon"></i>
-                <h3 class="kpi-title">Habitantes</h3>
-            </div>
-            <div class="kpi-body">
-                <div class="kpi-desc">{!!$citydata->habitantes!!}</div>
-            </div>
-        </div>
-
-    </div>
-</section>
+@include('components.territory_figures')
 
 <!-- SECCIÓN DE INFO Y CIFRAS INTERACTIVAS -->
 <section class="bg-white community_unit_section py-5">   

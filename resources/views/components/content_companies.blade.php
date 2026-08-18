@@ -1,12 +1,4 @@
-<section id="bread-crumb">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col py-2 px-4">
-                <p><a href="/">Inicio</a> - <a href="/que-hacemos/nuestras-empresas">Nuestras Empresas</a></p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.breadcrumb', ['items' => [['label' => 'Nuestras empresas']]])
 
 <div class="highlighted_banner position-relative d-none d-md-block" data-aos="fade-up">
     <div class="position-relative content">
@@ -22,16 +14,14 @@
 </div>
 
 <h1 class="m-3 mt-4 mb-2 fw-bold fst-italic d-block d-md-none"><span class="text-deepblue">Nuestras empresas</span></h1>
-<section id="subheader" class="fgs_lines position-relative">
-    
+<section id="opening" class="position-relative">
     <div class="container position-relative">
-        <div class="row justify-content-center">
-            <div class="op col-12 col-lg-10 p-2 p-5 text-center">
-                <h4 class="text-white position-relative py-5 text-center fw-bold fst-italic">Abrimos puertas de oportunidades donde otros no llegan y a quienes otros no atienden. Su progreso e inclusión es el único propósito de nuestras empresas para el bien común.</h4>
+        <div class="row mt-2 justify-content-center">
+            <div class="col-12 col-lg-12 py-2 text-center">
+                <h4 class="text-deepblue position-relative py-5 text-center" style="line-height: 36px;">Abrimos puertas de oportunidades donde otros no llegan y a quienes otros no atienden. Su progreso e inclusión es el único propósito de nuestras empresas para el bien común.</h4>
             </div>
-        </div>    
+        </div>
     </div>
-
 </section>
 
 <div class="container py-5">
@@ -39,7 +29,7 @@
     <section class="d-flex align-items-center" data-aos="fade-up">
         <div class="row justify-content-center">
             <div class="col-lg-12">
-                <h2 class="mb-3 text-deepblue display-4 we_700 colored_lines position-relative pb-3">¿Por qué tenemos empresas?</h2>
+                <h2 class="mb-3 text-deepblue we_700 colored_lines position-relative pb-3">¿Por qué tenemos empresas?</h2>
             </div>
         </div>
     </section>
@@ -106,7 +96,7 @@ misma.</p>
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-lg-12">
-                <h2 class="mb-3 text-deepblue display-4 we_700 colored_lines position-relative pb-3">Así son nuestras empresas</h2>
+                <h2 class="mb-3 text-deepblue we_700 colored_lines position-relative pb-3">Así son nuestras empresas</h2>
             </div>
         </div>
     </div>
@@ -136,7 +126,7 @@ misma.</p>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
-                        <h3 class="text-deepblue display-5 we_700 mb-4 colored_lines position-relative pb-3">Características y propósito</h3>
+                        <h3 class="text-deepblue we_700 mb-4 colored_lines position-relative pb-3">Características y propósito</h3>
                         
                         <p class="lead text-dark mb-4">
                             Decidimos enfocar nuestra gestión empresarial en sectores que cuentan con un altísimo
@@ -168,7 +158,7 @@ igualdad de oportunidades, la inclusión y el bienestar.
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
-                        <h3 class="text-deepblue display-5 we_700 mb-4 colored_lines position-relative pb-3">Servicio con ‘S’ mayúscula</h3>
+                        <h3 class="text-deepblue we_700 mb-4 colored_lines position-relative pb-3">Servicio con ‘S’ mayúscula</h3>
                         
                         <p class="lead mb-4">
                             Tenemos un sólido grupo empresarial concebido como parte fundamental de nuestro

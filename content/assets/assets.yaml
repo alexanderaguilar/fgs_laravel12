@@ -1,2 +1,6 @@
 title: Assets
 disk: public
+allow_uploads: true
+create_folders: true
+source_preset: null
+warm_presets: true

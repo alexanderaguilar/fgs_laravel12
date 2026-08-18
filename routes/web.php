@@ -14,6 +14,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\TerritoriesController;
+use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Route;
 
 Route::redirect('/admin/{any?}', '/cp')->where('any', '.*');
@@ -26,6 +27,8 @@ Route::get('en', [EnglishController::class, 'index']);
 
 Route::get('noticias', [PostController::class, 'posts'])->name('posts.index');
 Route::get('noticias/{slug}', [PostController::class, 'show'])->name('posts.show');
+Route::get('testimonios', [TestimonialController::class, 'index'])->name('testimonials.index');
+Route::redirect('nuestro-impacto-en-la-sociedad/testimonios', '/testimonios');
 Route::get('viaje-por-el-modelo-de-calidad-de-vida', [PageController::class, 'book']);
 Route::get('viaje-por-el-modelo-de-calidad-de-vida/etapa-construccion', [PageController::class, 'book2']);
 Route::get('porque-aqui-si', [PageController::class, 'because']);
@@ -59,5 +62,10 @@ Route::post('contactenos/store', [ContactController::class, 'store']);
 Route::get('nuestro-acompanamiento-a-comunidades', [CommunityController::class, 'index']);
 Route::get('nuestro-acompanamiento-a-comunidades/{slug}', [CommunityController::class, 'community']);
 
-Route::get('/search', [SearchController::class, 'search'])->name('search');
+Route::get('/search', [SearchController::class, 'search'])
+    ->middleware('throttle:search')
+    ->name('search');
+Route::get('/search/suggest', [SearchController::class, 'suggest'])
+    ->middleware('throttle:search-suggest')
+    ->name('search.suggest');
 Route::any('/{friendlyUrl}', [ContentController::class, 'anySlug'])->where('friendlyUrl', '^(?!cp|api|storage|assets|vendor).*$');

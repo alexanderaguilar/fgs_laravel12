@@ -13,7 +13,7 @@ use Symfony\Component\Yaml\Yaml;
 class ImportVoyagerCommand extends Command
 {
     protected $signature = 'fgs:import-voyager
-        {--sql=database/fgsupdate_20260617_prod.sql : Path to the SQL dump}
+        {--sql=database/fgsupdate_20260814_prod.sql : Path to the SQL dump}
         {--fresh : Delete existing imported collections before import}
         {--only= : Comma-separated collections to import}';
 

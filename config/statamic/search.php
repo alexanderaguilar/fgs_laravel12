@@ -12,7 +12,7 @@ return [
     |
     */
 
-    'default' => env('STATAMIC_DEFAULT_SEARCH_INDEX', 'default'),
+    'default' => env('STATAMIC_DEFAULT_SEARCH_INDEX', 'site'),
 
     /*
     |--------------------------------------------------------------------------
@@ -24,6 +24,25 @@ return [
     */
 
     'indexes' => [
+
+        'site' => [
+            'driver' => 'local',
+            'searchables' => [
+                'collection:posts',
+                'collection:territories',
+            ],
+            'fields' => ['title', 'excerpt', 'body', 'description', 'territory', 'looking_for', 'state'],
+            'min_characters' => 3,
+            'property_weights' => [
+                'title' => 10,
+                'excerpt' => 4,
+                'description' => 4,
+                'territory' => 3,
+                'looking_for' => 2,
+                'state' => 2,
+                'body' => 1,
+            ],
+        ],
 
         'default' => [
             'driver' => 'local',

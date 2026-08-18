@@ -5,6 +5,5 @@
 @endpush
 
 @section('content')
-    @include('components.extra-header')
     @include('components.content_impact')
 @endsection

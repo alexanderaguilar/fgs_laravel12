@@ -1,80 +1,166 @@
-/* FGS shared banners */
+/* Home hero slider (#all_banners) */
 
-/* --- Estilos del Banner --- */
+#all_banners .home-banners-slider:not(.tns-slider) .home-banner-slide:not(:first-child) {
+    display: none;
+}
 
-    .highlighted_banner img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+#all_banners .tns-outer {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#all_banners .tns-inner {
+    height: 100%;
+    overflow: hidden;
+}
+
+#all_banners .home-banners-slider {
+    height: var(--fgs-hero-height);
+}
+
+#all_banners .home-banner-slide {
+    height: var(--fgs-hero-height);
+    overflow: hidden;
+    position: relative;
+}
+
+#all_banners .home-banner-media {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#all_banners .home-banner-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+#all_banners .home-banner-slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(22, 56, 99, 0.62) 0%,
+        rgba(22, 56, 99, 0.22) 42%,
+        rgba(22, 56, 99, 0) 72%
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+#all_banners .fgs_lines::before {
+    height: 10px;
+    z-index: 3;
+}
+
+#all_banners .home-banner-info {
+    position: absolute;
+    left: 50%;
+    bottom: 12%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: min(920px, 88%);
+    max-width: 88%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#all_banners .home-banner-title {
+    font-weight: 700;
+    font-size: clamp(1.75rem, 1.1rem + 2.8vw, 3.25rem);
+    line-height: var(--lh-heading-snug, 1.2);
+    letter-spacing: var(--tracking-heading, -0.02em);
+    color: #fff;
+    margin: 0 0 0.5rem;
+}
+
+#all_banners .home-banner-desc,
+#all_banners .home-banner-desc p {
+    color: #fff;
+    font-size: clamp(1.05rem, 1.6vw, 1.5rem);
+    line-height: 1.35;
+    margin: 0;
+}
+
+#all_banners .home-banner-desc strong,
+#all_banners .home-banner-desc b,
+#all_banners .home-banner-desc em {
+    color: var(--secondary-color);
+    font-style: normal;
+    font-weight: 700;
+}
+
+#all_banners .home-banner-info.is-inverted .home-banner-title,
+#all_banners .home-banner-info.is-inverted .home-banner-desc,
+#all_banners .home-banner-info.is-inverted .home-banner-desc p {
+    color: var(--primary-color);
+}
+
+#all_banners .home-banner-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    margin-top: 1rem;
+}
+
+#all_banners .home-banner-cta {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#all_banners .home-banner-cta:hover {
+    color: var(--secondary-color);
+}
+
+#all_banners .home-banner-info.is-inverted .home-banner-cta {
+    color: var(--primary-color);
+}
+
+#all_banners .tns-nav {
+    position: absolute;
+    bottom: 22px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    z-index: 4;
+}
+
+#all_banners .tns-nav > [aria-controls] {
+    background: rgba(255, 255, 255, 0.55);
+}
+
+#all_banners .tns-nav > .tns-nav-active {
+    background: var(--secondary-color) !important;
+}
+
+@media (max-width: 767.98px) {
+    #all_banners .home-banner-info {
+        bottom: 16%;
+        width: 90%;
+        max-width: 90%;
     }
 
-.highlighted_banner .infoExt {
-        bottom: 40px;
-        left: 5%;
-        z-index: 2;
-        max-width: 800px;
+    #all_banners .home-banner-title {
+        font-size: clamp(1.55rem, 1rem + 3.5vw, 1.85rem);
     }
 
-.highlighted_banner .content::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        /*background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0));*/
-        z-index: 1;
+    #all_banners .tns-nav {
+        bottom: 16px;
     }
-
-/* --- Estilos Globales del Tema (Reutilizados) --- */
-    
-
-    /* Clases utilitarias de texto */
-    
-    
-    
-    
-    /* --- Estilos del Banner --- */
-    .highlighted_banner {
-        height: auto;
-        overflow: hidden;
-        position: relative;
-    }
-
-.highlighted_banner img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-.highlighted_banner .infoExt {
-        bottom: 40px;
-        left: 5%;
-        z-index: 2;
-        max-width: 800px;
-    }
-/* --- Estilos del Banner --- */
-
-    .highlighted_banner img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-.highlighted_banner .infoExt {
-        bottom: 40px;
-        left: 5%;
-        z-index: 2;
-        max-width: 800px;
-    }
-
-.highlighted_banner .content::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        /*background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0));*/
-        z-index: 1;
-    }
+}

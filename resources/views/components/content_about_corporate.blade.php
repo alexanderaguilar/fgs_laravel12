@@ -1,12 +1,4 @@
-<section id="bread-crumb" class="bg-light">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col py-2 px-4">
-                <p><a href="/">Inicio</a> - <a href="/asuntos-corporativos" class="text-decoration-none text-dark fw-bold">Conócenos / Asuntos Corporativos</a></p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.breadcrumb', ['items' => [['label' => 'Conócenos', 'url' => '/conocenos/quienes-somos'], ['label' => 'Asuntos corporativos']]])
 
 @include('menu.mega_about')
 

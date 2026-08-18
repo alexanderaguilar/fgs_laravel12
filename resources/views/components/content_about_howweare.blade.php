@@ -1,12 +1,4 @@
-<section id="bread-crumb" class="bg-light">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col py-2 px-4">
-                <p class="mb-0"><a href="/" class="text-decoration-none text-secondary">Inicio</a> - <a href="/quienes-somos" class="text-decoration-none text-dark fw-bold">Conócenos / Quiénes somos</a></p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.breadcrumb', ['items' => [['label' => 'Conócenos', 'url' => '/conocenos/quienes-somos'], ['label' => 'Cómo somos']]])
 
 @include('menu.mega_about')
 
@@ -110,7 +102,7 @@ más puertas de progreso, bienestar e inclusión en el país.</p>
                     <div class="col-md-5 col-sm-5 col-12 box_col aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
                         <a href="/conocenos/historia">
                             <div class="position-relative zoomeffice">
-                                <div class="overlay_layer_gray position-absolute">&nbsp;</div>
+                                <div class="overlay_layer_gray position-absolute"> </div>
                                 <div class="height_widht_over">
                                     <img class="object_fit_cover" src="/assets/img/2026/2026_01_conocenos_como_tab_2_1.jpg" width="420" height="300">
                                 </div>
@@ -124,7 +116,7 @@ más puertas de progreso, bienestar e inclusión en el país.</p>
                     <div class="col-md-5 col-sm-5 col-12 box_col aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
                         <a href="/storage/general/LEGADO_FUNDACION_GRUPO_SOCIAL.pdf" target="_blank">
                             <div class="position-relative zoomeffice">
-                                <div class="overlay_layer_gray position-absolute">&nbsp;</div>
+                                <div class="overlay_layer_gray position-absolute"> </div>
                                 <div class="height_widht_over">
                                     <img class="object_fit_cover" src="/assets/img/2026/2026_01_conocenos_como_tab_2_2.jpg" width="420" height="300">
                                 </div>

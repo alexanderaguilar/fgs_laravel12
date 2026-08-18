@@ -1,4 +1,4 @@
-@include('partials.breadcrumb')
+@include('partials.breadcrumb', ['items' => [['label' => $page->title]]])
 <section id="content">
     {!! $page->body !!}
 </section>

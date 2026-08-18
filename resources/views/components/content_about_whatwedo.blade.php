@@ -1,12 +1,4 @@
-<section id="bread-crumb" class="bg-light">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col py-2 px-4">
-                <p><a href="/">Inicio</a> - <a href="/que-hacemos" class="text-decoration-none text-dark fw-bold">Conócenos / Qué hacemos</a></p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.breadcrumb', ['items' => [['label' => 'Conócenos', 'url' => '/conocenos/quienes-somos'], ['label' => 'Qué hacemos']]])
 
 @include('menu.mega_about')
 
@@ -50,7 +42,7 @@ alrededor del país a través de nuestros Territorios Progreso.
             <div class="col-md-6 col-sm-6 col-12 box_col aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
                 <a href="/nuestros-territorios-progreso">
                     <div class="position-relative zoomeffice">
-                        <div class="overlay_layer_gray position-absolute">&nbsp;</div>
+                        <div class="overlay_layer_gray position-absolute"> </div>
                         <div class="height_widht_over">
                             <img class="object_fit_cover" src="/assets/img/2026/2026_01_conocenos_que_territorios.jpg" width="420" height="300">
                         </div>
@@ -64,7 +56,7 @@ alrededor del país a través de nuestros Territorios Progreso.
             <div class="col-md-6 col-sm-6 col-12 box_col aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
                 <a href="/nuestras-empresas">
                     <div class="position-relative zoomeffice">
-                        <div class="overlay_layer_gray position-absolute">&nbsp;</div>
+                        <div class="overlay_layer_gray position-absolute"> </div>
                         <div class="height_widht_over">
                             <img class="object_fit_cover" src="/assets/img/2026/2026_01_conocenos_que_empresas.jpg" width="420" height="300">
                         </div>

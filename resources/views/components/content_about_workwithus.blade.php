@@ -1,12 +1,4 @@
-<section id="bread-crumb" class="bg-light">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col py-2 px-4">
-                <p><a href="/">Inicio</a> - <a href="/trabaja-con-nosotros" class="text-decoration-none text-dark fw-bold">Conócenos / Trabaja con Nosotros</a></p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.breadcrumb', ['items' => [['label' => 'Conócenos', 'url' => '/conocenos/quienes-somos'], ['label' => 'Trabaja con nosotros']]])
 
 @include('menu.mega_about')
 

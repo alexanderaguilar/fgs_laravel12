@@ -28,7 +28,7 @@ class CommunityController extends Controller
 
         $cities = Cms::entries('territories', fn ($q) => $q->where('active', true))->sortByDesc('id')->values();
         $cities_old = Cms::entries('territories', fn ($q) => $q->where('active', false))->sortByDesc('id')->values();
-        $recent_testimonials = Cms::postsForTerritory($citydata->entry_id, 'work-in-communities-testimonials-news', 5);
+        $recent_testimonials = Cms::postsForTerritory($citydata->entry_id, 'work-in-communities-testimonials', 5);
 
         return view('community-detail', compact('citydata', 'recent_testimonials', 'cities', 'cities_old'));
     }

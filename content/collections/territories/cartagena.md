@@ -8,8 +8,8 @@ looking_for: 'Inicio: 2013 / Territorio: Localidad de la virgen en el suroriente
 habitantes: '<h3>95.507</h3>'
 city_other_data: "<p>Estamos presentes en la Comuna Seis porque creemos en la valent&iacute;a, determinaci&oacute;n y profunda resiliencia de su comunidad para construir un futuro mejor. Este territorio es, en esencia, un Territorio del Buen Vivir por el que apostamos en conjunto por un sue&ntilde;o compartido. &nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>El manglar circundante, guardi&aacute;n natural y refugio de vida, simboliza los valores que definen a sus habitantes: fortaleza y adaptaci&oacute;n. Como la flor del mangle colorado que se transforma en ra&iacute;ces robustas y nuevos &aacute;rboles, la comunidad crece, se adapta y se fortalece en un constante resurgimiento. Por ello, apostamos por su tejido social y su sue&ntilde;o compartido de prosperar, expandi&eacute;ndose con vitalidad frente a las adversidades.</p>"
 map_image: city-details/November2019/wwdQUdFgW21qAOQDYsSA.jpg
-listing_image: city-details/May2026/kim6Yp2FbaYUkyh6gBee.jpg
-image: city-details/May2026/AOtKbQYSRcaUzmIhUpVR.jpg
+listing_image: city-details/June2026/qXUIdj5kT1vRLyvpGGx1.jpg
+image: city-details/June2026/EmUJIu35Y01jUptVNifp.jpg
 title_image: city-details/May2026/jIYmE8FHCuSjNC2Uuunp.jpg
 title_bg_image: city-details/May2026/jIYmE8FHCuSjNC2Uuunp.jpg
 state: 'Territorio del buen vivir'

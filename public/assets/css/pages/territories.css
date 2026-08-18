@@ -10,7 +10,6 @@
     
     /* --- Estilos del Banner --- */
     .highlighted_banner {
-        height: auto;
         overflow: hidden;
         position: relative;
     }
@@ -679,3 +678,108 @@
             display: none !important;
         }
     }
+
+/* --- Cifras territorio (lenguaje visual impact-figures + iconos lg) --- */
+.territory-figures .impact-container {
+    margin-bottom: 0;
+}
+
+.territory-figures .internal-grid-3 {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 768px) {
+    .territory-figures .internal-grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.territory-stat {
+    align-items: flex-start;
+    gap: 0.35rem;
+    padding: clamp(1.25rem, 2.5vw, 1.75rem);
+    min-height: 100%;
+}
+
+.territory-stat__icon-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.75rem;
+    height: 3.75rem;
+    margin-bottom: 0.85rem;
+    border-radius: 50%;
+    background-color: #eef4f9;
+    color: var(--primary-color, #163863);
+    transition: background-color 0.35s ease, color 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.territory-stat__icon {
+    font-size: 1.85rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    display: block;
+}
+
+.territory-stat__icon::before {
+    font-weight: 400 !important;
+}
+
+.territory-stat__label {
+    font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+    margin-bottom: 0.4rem;
+}
+
+.territory-stat__desc {
+    font-size: clamp(0.88rem, 1.2vw, 0.98rem);
+    line-height: 1.45;
+    color: #5c6b7a;
+    margin-top: 0;
+}
+
+.territory-stat__desc--value {
+    color: var(--primary-color, #163863);
+    font-weight: 700;
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    line-height: 1.25;
+}
+
+.territory-stat--accent .territory-stat__icon-wrap {
+    background-color: rgba(214, 137, 16, 0.12);
+    color: #d68910;
+}
+
+.territory-stat--accent .territory-stat__label {
+    color: #d68910;
+}
+
+.territory-figures .stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(22, 56, 99, 0.12);
+}
+
+.territory-figures .stat-card:hover .territory-stat__icon-wrap {
+    background-color: var(--primary-color, #163863);
+    color: #fff;
+    transform: scale(1.08);
+    box-shadow: 0 8px 18px rgba(22, 56, 99, 0.18);
+}
+
+.territory-figures .territory-stat--accent:hover .territory-stat__icon-wrap {
+    background-color: #d68910;
+    color: #fff;
+    box-shadow: 0 8px 18px rgba(214, 137, 16, 0.28);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .territory-figures .stat-card,
+    .territory-stat__icon-wrap {
+        transition: none;
+    }
+
+    .territory-figures .stat-card:hover,
+    .territory-figures .stat-card:hover .territory-stat__icon-wrap {
+        transform: none;
+    }
+}

@@ -1,12 +1,4 @@
-<section id="bread-crumb" class="bg-light">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col py-2 px-4">
-                <p class="mb-0"><a href="/" class="text-decoration-none text-secondary">Inicio</a> - <a href="/quienes-somos" class="text-decoration-none text-dark fw-bold">Conócenos / Quiénes somos</a></p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.breadcrumb', ['items' => [['label' => 'Conócenos', 'url' => '/conocenos/quienes-somos'], ['label' => 'Quiénes somos']]])
 
 @include('menu.mega_about')
 

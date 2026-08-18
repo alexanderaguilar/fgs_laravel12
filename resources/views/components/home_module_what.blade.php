@@ -17,7 +17,7 @@
             <div class="col-md-6 col-sm-6 col-12 box_col aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
                 <a href="/nuestros-territorios-progreso">
                     <div class="position-relative zoomeffice">
-                        <div class="overlay_layer_gray position-absolute">&nbsp;</div>
+                        <div class="overlay_layer_gray position-absolute"> </div>
                         <div class="height_widht_over">
                             <img class="object_fit_cover" src="/assets/img/2026/2026_01_conocenos_que_territorios.jpg" width="420" height="300">
                         </div>
@@ -31,7 +31,7 @@
             <div class="col-md-6 col-sm-6 col-12 box_col aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
                 <a href="/nuestras-empresas">
                     <div class="position-relative zoomeffice">
-                        <div class="overlay_layer_gray position-absolute">&nbsp;</div>
+                        <div class="overlay_layer_gray position-absolute"> </div>
                         <div class="height_widht_over">
                             <img class="object_fit_cover" src="/assets/img/2026/2026_01_conocenos_que_empresas.jpg" width="420" height="300">
                         </div>

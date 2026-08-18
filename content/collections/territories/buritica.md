@@ -8,10 +8,10 @@ looking_for: 'Acompañar a las comunidades para que alcancen una calidad de vida
 habitantes: '<h3>9.925</h3>'
 city_other_data: "<p><strong>&iquest;Por qu&eacute; estamos en Buritic&aacute;?</strong><br>Estamos en <strong>Buritic&aacute;</strong> porque reconocemos que este municipio es, verdaderamente, el Tesoro de Antioquia.</p>\r\n<p>&nbsp;</p>\r\n<p>Apostamos por su territorio por la riqueza humana, cultural, agr&iacute;cola e hist&oacute;rica que lo define. Su gente es el motor: una comunidad noble, humilde y alegre que busca la paz y el bienestar, con la sabidur&iacute;a de aprovechar su potencial para el bien com&uacute;n. En Buritic&aacute;, lo ancestral ya vislumbra un futuro moderno y vanguardista.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Tenemos el sue&ntilde;o compartido de hacer realidad, colectivamente, una vida mejor para todos.</strong></p>"
 map_image: city-details/November2019/ZWiyEdECh1EYpL8RRHjv.jpg
-listing_image: city-details/May2026/ptguxgcYDfXNuURMy2MT.jpg
-image: city-details/May2026/NmnxjkijoMX8NCBbpNPe.jpg
-title_image: city-details/May2026/NcA85gWDr0z4lgrJN4hF.jpg
-title_bg_image: city-details/May2026/NcA85gWDr0z4lgrJN4hF.jpg
+listing_image: city-details/July2026/vCrR77CblV9oWyvC6A1z.jpg
+image: city-details/July2026/13jzGhF3ExPiMtEiWlSu.jpg
+title_image: city-details/July2026/R7oM2AXTDUEOwo4ga4xn.jpg
+title_bg_image: city-details/July2026/R7oM2AXTDUEOwo4ga4xn.jpg
 state: 'El tesoro de Antioquia'
 active: true
 seo_title: Buriticá

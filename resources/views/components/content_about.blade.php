@@ -1,16 +1,6 @@
+@include('partials.breadcrumb', ['items' => [['label' => 'Conócenos']]])
 
-
-    <section id="bread-crumb" class="d-none d-md-block">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col py-2 px-4">
-                    <p><a href="/">Inicio</a> - <a href="/conocenos">Conócenos</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Header Desktop-->
+<!-- Header Desktop-->
     <div class="container-fluid position-relative m-0 p-0 overflow-hidden d-none d-md-block">
         <img class="fgs_img_blured" src="/storage/home-maplogos/March2021/foto_hone_como_somos.jpg" alt="">
         <div class="gradient_alpha"></div>
@@ -35,7 +25,7 @@
         <div class="row justify-content-center my-4">
             <div class="col-md-5 fgs_content_bg-warning text-center p-1 p-md-3 d-flex align-items-center rounded-20 me-2">
                 <div class="text-start text-md-start m-4 m-md-5">
-                    <h2 class="text-deepblue display-4 we_700 colored_lines position-relative pb-3">Nuestra misión</h2>
+                    <h2 class="text-deepblue we_700 colored_lines position-relative pb-3">Nuestra misión</h2>
                     <p class="fs-4 text-deepblue mt-3">Contribuir a superar las causas estructurales de la pobreza para construir una sociedad justa, solidaria, productiva y en paz.</p>
                 </div>
             </div>

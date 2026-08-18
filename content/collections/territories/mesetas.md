@@ -7,8 +7,8 @@ territory: 'Subregión de La Macarena, Meta'
 looking_for: 'Subregión de La Macarena, Meta'
 habitantes: '<p>15.993</p>'
 city_other_data: "<p>Tenemos el prop&oacute;sito de aportar a la calidad de vida de los habitantes de Mesetas, construyendo colectivamente un camino de transformaci&oacute;n que permita proyectar un futuro distinto para el territorio. Este es un lugar que late con fuerza y convicci&oacute;n, donde el progreso es posible cuando se trabaja conjuntamente.</p>\r\n<p>&nbsp;</p>\r\n<p>Este municipio fue priorizado por su equilibrio &uacute;nico entre retos estructurales y amplias posibilidades de desarrollo. Si bien existen brechas significativas, sus fortalezas en ubicaci&oacute;n estrat&eacute;gica, base productiva y riqueza natural ofrecen oportunidades reales de &eacute;xito y sostenibilidad para el acompa&ntilde;amiento.</p>\r\n<p>&nbsp;</p>\r\n<p>Mesetas alberga una comunidad resiliente y trabajadora, con una poblaci&oacute;n joven que desempe&ntilde;a un papel esencial en el liderazgo local y en iniciativas productivas y tur&iacute;sticas. Estas condiciones permiten fortalecer las capacidades locales y consolidar alternativas de futuro econ&oacute;micas e incluyentes para las nuevas generaciones.</p>"
-listing_image: city-details/May2026/Y30L0PhIKZtMJUPo0dRe.jpg
-image: city-details/May2026/kFxTODJoT8yczgD3eqoM.jpg
+listing_image: city-details/June2026/B7llfSzUBQJpfqTxN6sV.jpg
+image: city-details/June2026/7QwK7u9kXYSTxT2Ctpbi.jpg
 title_image: city-details/May2026/vv0zSckLxbUwRygwtM90.jpg
 title_bg_image: city-details/May2026/vv0zSckLxbUwRygwtM90.jpg
 state: 'Semillas de esperanza en el umbral de la Orinoquia'

@@ -1,7 +1,7 @@
 <!-- <section>
 <div class="container-fluid">
 <div class="row">
-<div class="col p-0"><img class="d-none d-sm-block img-fluid" src="http://3.91.33.230/assets/img/w4p_head.jpg"> <img class="d-block d-sm-none img-fluid" src="http://3.91.33.230/assets/img/w4p_head_mobile.jpg"></div>
+<div class="col p-0"><img class="d-none d-sm-block img-fluid" src="/assets/img/w4p_head.jpg"> <img class="d-block d-sm-none img-fluid" src="/assets/img/w4p_head_mobile.jpg"></div>
 </div>
 </div>
 </section>
@@ -20,14 +20,14 @@
 <div class="container">
 <div class="row justify-content-center">
 <div class="col-lg-10 text-start my-3">
-<h4 class="mb-4 oswaldfonts" style="font-weight: lighter;">El pasado 4 de octubre se seleccionaron las redes para operar el programa Work4Progress de Fundaci&oacute;n la Caixa y Fundaci&oacute;n Grupo Social en Necocl&iacute;, Antioquia.</h4>
+<h4 class="mb-4 oswaldfonts" style="font-weight: lighter;">El pasado 4 de octubre se seleccionaron las redes para operar el programa Work4Progress de Fundación la Caixa y Fundación Grupo Social en Necoclí, Antioquia.</h4>
 <h2 class="mb-4 oswaldfonts" style="font-weight: lighter;">Estas redes han sido escogidas porque:</h2>
 <ol>
 <li class="mb-4 oswaldfonts p3">Cuentan con socios locales de trayectoria comprobada en la zona.</li>
-<li class="mb-4 oswaldfonts p3">Incluyen organizaciones sin &aacute;nimo de lucro, autoridades locales, empresas, as&iacute; como centros de investigaci&oacute;n o formaci&oacute;n, disponen de capacidad y estructura suficientes para garantizar los objetivos del programa.</li>
-<li class="mb-4 oswaldfonts p3">Demostraron experiencia de trabajo en proyectos cofinanciados por organismos p&uacute;blicos o privados.</li>
+<li class="mb-4 oswaldfonts p3">Incluyen organizaciones sin ánimo de lucro, autoridades locales, empresas, así como centros de investigación o formación, disponen de capacidad y estructura suficientes para garantizar los objetivos del programa.</li>
+<li class="mb-4 oswaldfonts p3">Demostraron experiencia de trabajo en proyectos cofinanciados por organismos públicos o privados.</li>
 </ol>
-<h4 class="mb-4 oswaldfonts" style="font-weight: lighter; color: #0dcaf0;">&lsquo;Work4Progress&rsquo;, de Fundaci&oacute;n la Caixa y Fundaci&oacute;n Grupo Social, es un programa de innovaci&oacute;n social que promueve el empleo y el emprendimiento especialmente entre mujeres y j&oacute;venes.</h4>
+<h4 class="mb-4 oswaldfonts" style="font-weight: lighter; color: #0dcaf0;">‘Work4Progress’, de Fundación la Caixa y Fundación Grupo Social, es un programa de innovación social que promueve el empleo y el emprendimiento especialmente entre mujeres y jóvenes.</h4>
 </div>
 </div>
 <div class="row justify-content-center">
@@ -39,15 +39,15 @@
 <div class="row justify-content-center">
 <div class="col-lg-5">
 <div class="alert alert-info" role="alert">
-<h4 class="mb-4 oswaldfonts" style="font-weight: lighter;">L&iacute;der: Interactuar</h4>
-<p class="oswaldfonts">Socios: Casa Luker y Fundaci&oacute;n Luker</p>
-<img class="img-fluid" src="http://3.91.33.230/assets/img/w4p_logos_1.png"></div>
+<h4 class="mb-4 oswaldfonts" style="font-weight: lighter;">Líder: Interactuar</h4>
+<p class="oswaldfonts">Socios: Casa Luker y Fundación Luker</p>
+<img class="img-fluid" src="/assets/img/w4p_logos_1.png"></div>
 </div>
 <div class="col-lg-5">
 <div class="alert alert-info" role="alert">
-<h4 class="mb-4 oswaldfonts" style="font-weight: lighter;">L&iacute;der: Fundaci&oacute;n Codespa</h4>
+<h4 class="mb-4 oswaldfonts" style="font-weight: lighter;">Líder: Fundación Codespa</h4>
 <p class="oswaldfonts">Socios: Uniminito, Octopus Force y Ecosostenible Cativo</p>
-<img class="img-fluid" src="http://3.91.33.230/assets/img/w4p_logos_2.png"></div>
+<img class="img-fluid" src="/assets/img/w4p_logos_2.png"></div>
 </div>
 </div>
 </div>
@@ -60,19 +60,19 @@
 <section>
 <div class="container-fluid">
 <div class="row">
-<div class="col p-0"><img class="d-none d-sm-block img-fluid" src="http://3.91.33.230/storage/w4p/w4p_2025_desktop.jpg" width="100%"> <img class="d-block d-sm-none img-fluid" src="http://3.91.33.230/storage/w4p/w4p_2025_mobile.jpg" width="100%"></div>
+<div class="col p-0"><img class="d-none d-sm-block img-fluid" src="/storage/w4p/w4p_2025_desktop.jpg" width="100%"> <img class="d-block d-sm-none img-fluid" src="/storage/w4p/w4p_2025_mobile.jpg" width="100%"></div>
 </div>
 </div>
 </section>
 <section class="py-5">
 <div class="container">
 <div class="row align-items-center">
-<div class="col-lg-5 text-center"><img class="img-fluid" src="http://3.91.33.230/storage/w4p/w4p_isolated_woman.png" alt="Mujer de la comunidad de Necocl&iacute;"></div>
+<div class="col-lg-5 text-center"><img class="img-fluid" src="/storage/w4p/w4p_isolated_woman.png" alt="Mujer de la comunidad de Necoclí"></div>
 <div class="col-lg-7">
-<h2 class="oswaldfonts mb-4" style="font-weight: lighter;">Descripci&oacute;n y bases de la convocatoria</h2>
+<h2 class="oswaldfonts mb-4" style="font-weight: lighter;">Descripción y bases de la convocatoria</h2>
 <ul id="myTab" class="nav nav-tabs" role="tablist">
-<li class="nav-item" role="presentation"><button id="busca-tab" class="nav-link active" role="tab" type="button" data-bs-toggle="tab" data-bs-target="#busca" aria-controls="busca" aria-selected="true">&iquest;Qu&eacute; se busca?</button></li>
-<li class="nav-item" role="presentation"><button id="dirigida-tab" class="nav-link" role="tab" type="button" data-bs-toggle="tab" data-bs-target="#dirigida" aria-controls="dirigida" aria-selected="false">&iquest;A qui&eacute;n va dirigida la convocatoria?</button></li>
+<li class="nav-item" role="presentation"><button id="busca-tab" class="nav-link active" role="tab" type="button" data-bs-toggle="tab" data-bs-target="#busca" aria-controls="busca" aria-selected="true">¿Qué se busca?</button></li>
+<li class="nav-item" role="presentation"><button id="dirigida-tab" class="nav-link" role="tab" type="button" data-bs-toggle="tab" data-bs-target="#dirigida" aria-controls="dirigida" aria-selected="false">¿A quién va dirigida la convocatoria?</button></li>
 </ul>
 <div id="myTabContent" class="tab-content">
 <div id="busca" class="tab-pane fade show active p-3" role="tabpanel" aria-labelledby="busca-tab">A través de la convocatoria Work4Progress Necoclí y Cartagena, se busca seleccionar redes de entidades que presenten propuestas de actualización de diagnóstico, co-creación y prototipado de iniciativas para la generación de empleo de calidad para mujeres y jóvenes en Necoclí, Antioquia y Cartagena, Bólivar en los sectores de agroindustria y turismo.</div>
@@ -102,7 +102,7 @@
 </div>
 <div class="col-lg-3 col-md-6 mb-3">
 <div class="alert alert-info" style="padding: 2rem 1rem;">
-<h5 class="oswaldfonts" style="font-weight: normal;">Sesi&oacute;n informativa</h5>
+<h5 class="oswaldfonts" style="font-weight: normal;">Sesión informativa</h5>
 <p class="mb-0">17 de Septiembre de 2025</p>
 </div>
 </div>
@@ -231,14 +231,14 @@
 <div class="container">
 <div class="row justify-content-center">
 <div class="col-lg-10 text-start my-3">
-<h4 class="mb-4 oswaldfonts" style="font-weight: lighter;">El pasado 4 de octubre se seleccionaron las redes para operar el programa Work4Progress de Fundaci&oacute;n la Caixa y Fundaci&oacute;n Grupo Social en Necocl&iacute;, Antioquia.</h4>
+<h4 class="mb-4 oswaldfonts" style="font-weight: lighter;">El pasado 4 de octubre se seleccionaron las redes para operar el programa Work4Progress de Fundación la Caixa y Fundación Grupo Social en Necoclí, Antioquia.</h4>
 <h2 class="mb-4 oswaldfonts" style="font-weight: lighter;">Estas redes han sido escogidas porque:</h2>
 <ol>
 <li class="mb-4 oswaldfonts p3">Cuentan con socios locales de trayectoria comprobada en la zona.</li>
-<li class="mb-4 oswaldfonts p3">Incluyen organizaciones sin &aacute;nimo de lucro, autoridades locales, empresas, as&iacute; como centros de investigaci&oacute;n o formaci&oacute;n, disponen de capacidad y estructura suficientes para garantizar los objetivos del programa.</li>
-<li class="mb-4 oswaldfonts p3">Demostraron experiencia de trabajo en proyectos cofinanciados por organismos p&uacute;blicos o privados.</li>
+<li class="mb-4 oswaldfonts p3">Incluyen organizaciones sin ánimo de lucro, autoridades locales, empresas, así como centros de investigación o formación, disponen de capacidad y estructura suficientes para garantizar los objetivos del programa.</li>
+<li class="mb-4 oswaldfonts p3">Demostraron experiencia de trabajo en proyectos cofinanciados por organismos públicos o privados.</li>
 </ol>
-<h4 class="mb-4 oswaldfonts" style="font-weight: lighter; color: #0dcaf0;">&lsquo;Work4Progress&rsquo;, de Fundaci&oacute;n la Caixa y Fundaci&oacute;n Grupo Social, es un programa de innovaci&oacute;n social que promueve el empleo y el emprendimiento especialmente entre mujeres y j&oacute;venes.</h4>
+<h4 class="mb-4 oswaldfonts" style="font-weight: lighter; color: #0dcaf0;">‘Work4Progress’, de Fundación la Caixa y Fundación Grupo Social, es un programa de innovación social que promueve el empleo y el emprendimiento especialmente entre mujeres y jóvenes.</h4>
 </div>
 </div>
 <div class="row justify-content-center">
@@ -250,15 +250,15 @@
 <div class="row justify-content-center">
 <div class="col-lg-5">
 <div class="alert alert-info" role="alert">
-<h4 class="mb-4 oswaldfonts" style="font-weight: lighter;">L&iacute;der: Interactuar</h4>
-<p class="oswaldfonts">Socios: Casa Luker y Fundaci&oacute;n Luker</p>
-<img class="img-fluid" src="http://3.91.33.230/assets/img/w4p_logos_1.png" alt="Logos de Interactuar, Casa Luker y Fundaci&oacute;n Luker"></div>
+<h4 class="mb-4 oswaldfonts" style="font-weight: lighter;">Líder: Interactuar</h4>
+<p class="oswaldfonts">Socios: Casa Luker y Fundación Luker</p>
+<img class="img-fluid" src="/assets/img/w4p_logos_1.png" alt="Logos de Interactuar, Casa Luker y Fundación Luker"></div>
 </div>
 <div class="col-lg-5">
 <div class="alert alert-info" role="alert">
-<h4 class="mb-4 oswaldfonts" style="font-weight: lighter;">L&iacute;der: Fundaci&oacute;n Codespa</h4>
+<h4 class="mb-4 oswaldfonts" style="font-weight: lighter;">Líder: Fundación Codespa</h4>
 <p class="oswaldfonts">Socios: Uniminito, Octopus Force y Ecosostenible Cativo</p>
-<img class="img-fluid" src="http://3.91.33.230/assets/img/w4p_logos_2.png" alt="Logos de Fundaci&oacute;n Codespa, Uniminuto, Octopus Force y Ecosostenible Cativo"></div>
+<img class="img-fluid" src="/assets/img/w4p_logos_2.png" alt="Logos de Fundación Codespa, Uniminuto, Octopus Force y Ecosostenible Cativo"></div>
 </div>
 </div>
 </div>

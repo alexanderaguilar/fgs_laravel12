@@ -47,6 +47,8 @@
     ];
 @endphp
 
+@include('partials.breadcrumb', ['items' => [['label' => 'Documentos']]])
+
 <div class="container py-5">
     <div class="row">
         <div class="col-lg-10 mx-auto">

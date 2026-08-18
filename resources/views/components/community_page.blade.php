@@ -1,4 +1,7 @@
-@include('partials.breadcrumb')
+@include('partials.breadcrumb', ['items' => [
+    ['label' => 'Acompañamiento a comunidades', 'url' => '/nuestro-acompanamiento-a-comunidades'],
+    ['label' => $citydata->title],
+]])
 <section class="page_title_section trabajo_en position-relative quienes_somos">
 	<div class="d-flex">
 		<div class="width50 bg_white d-none-767 d-none-991"></div>
@@ -105,13 +108,13 @@
     <div class="container-fluid">
         <div class="inner_text left_right_padding_80">
             <div class="max_width robotfonts">
-                <div class="blank_space_30">&nbsp;</div>
-                <p class="wow bounceInUp robotfonts">Fundaci&oacute;n Grupo Social acompa&ntilde;a a las comunidades para que ellas construyan condiciones para su propio desarrollo y logren un mejoramiento integral y sostenible en su calidad de vida.</p>
-                <p class="wow bounceInUp robotfonts">Su trabajo lo realiza en un &aacute;mbito territorial porque es all&iacute; donde las comunidades construyen identidad, inciden en su entorno, proponen soluciones a los problemas cotidianos y desde la lectura de su realidad crean participativamente proyectos de desarrollo com&uacute;n.</p>
+                <div class="blank_space_30"> </div>
+                <p class="wow bounceInUp robotfonts">Fundación Grupo Social acompaña a las comunidades para que ellas construyan condiciones para su propio desarrollo y logren un mejoramiento integral y sostenible en su calidad de vida.</p>
+                <p class="wow bounceInUp robotfonts">Su trabajo lo realiza en un ámbito territorial porque es allí donde las comunidades construyen identidad, inciden en su entorno, proponen soluciones a los problemas cotidianos y desde la lectura de su realidad crean participativamente proyectos de desarrollo común.</p>
             </div>
         </div>
     </div>
-    <div class="blank_space_50">&nbsp;</div>
+    <div class="blank_space_50"> </div>
     <div class="d-flex flex-wrap"> 
         @foreach ($cities as $ct)
             <div class="program_box zoomeffice">
@@ -138,12 +141,12 @@
     <div class="container-fluid">
         <div class="inner_text left_right_padding_80">
             <div class="max_width robotfonts">
-                <div class="blank_space_30">&nbsp;</div>
+                <div class="blank_space_30"> </div>
                 <p class="wow bounceInUp robotfonts">Después de concluir nuestro acompañamiento a las comunidades de estos territorios, ellos hoy continúan generando alianzas y trabajando en equipo por quienes no han tenido suficientes oportunidades para progresar.</p>
             </div>    
         </div>
     </div>
-    <div class="blank_space_50">&nbsp;</div>
+    <div class="blank_space_50"> </div>
     <div class="d-flex flex-wrap"> 
         @foreach ($cities_old as $ct)
             <div class="program_box zoomeffice">

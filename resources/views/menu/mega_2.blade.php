@@ -1,5 +1,4 @@
-<!-- Mega Menu Content -->
-<div class="dropdown-menu mega-menu" aria-labelledby="megaMenu">
+<div class="dropdown-menu mega-menu w-100" aria-labelledby="navbarDropdownConocenos">
     <div class="container-fluid p-1 p-lg-5 py-lg-2">
         <div class="row py-md-3 py-1">
             <div class="col d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">

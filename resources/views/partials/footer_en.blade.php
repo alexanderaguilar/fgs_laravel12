@@ -48,7 +48,7 @@
                             <li><a target="_self" href="/contactenos">Contact us</a></li>
                         </ul>
                         <ul class="copyright mt-4">
-                            <li>&copy; {{ now()->year }} - {{setting('site.title')}}</li>
+                            <li>© {{ now()->year }} - {{setting('site.title')}}</li>
                             <li class="b_septer">|</li>
                             <li>All rights reserved</li>
                             <li class="b_septer">|</li>

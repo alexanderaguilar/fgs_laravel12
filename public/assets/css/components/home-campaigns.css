@@ -1,0 +1,322 @@
+/* Home: Así abrimos puertas al progreso */
+.home-campaigns {
+    background: #f7f8fa;
+}
+
+.home-campaigns__lead {
+    color: #5a6472;
+    font-size: 1rem;
+    line-height: 1.65;
+    max-width: 40rem;
+    margin: 0;
+}
+
+.home-campaigns__grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+}
+
+.home-campaign-card {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(22, 56, 99, 0.1);
+    background: var(--primary-color, #163863);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.home-campaign-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(22, 56, 99, 0.16);
+}
+
+.home-campaign-card__link {
+    display: block;
+    position: relative;
+    min-height: clamp(320px, 42vw, 460px);
+    color: #fff;
+    text-decoration: none;
+}
+
+.home-campaign-card__media {
+    position: absolute;
+    inset: 0;
+}
+
+.home-campaign-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s ease;
+}
+
+.home-campaign-card:hover .home-campaign-card__img {
+    transform: scale(1.08);
+}
+
+.home-campaign-card__shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(10, 28, 52, 0.92) 0%,
+        rgba(10, 28, 52, 0.55) 42%,
+        rgba(10, 28, 52, 0.12) 72%,
+        rgba(10, 28, 52, 0.05) 100%
+    );
+    transition: opacity 0.35s ease;
+}
+
+.home-campaign-card:hover .home-campaign-card__shade {
+    opacity: 0.92;
+}
+
+.home-campaign-card__body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: 1.35rem 1.4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+}
+
+.home-campaign-card__tag {
+    display: inline-block;
+    background: #27b2d5;
+    color: #fff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.7rem;
+    border-radius: 0.35rem;
+    line-height: 1.2;
+}
+
+.home-campaign-card__title {
+    color: #fff;
+    font-weight: 700;
+    font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+    line-height: 1.25;
+    margin: 0;
+    max-width: 18ch;
+}
+
+.home-campaign-card__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #fff;
+    font-size: 0.92rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+    transition: gap 0.3s ease, opacity 0.3s ease;
+}
+
+.home-campaign-card:hover .home-campaign-card__cta {
+    gap: 0.65rem;
+    opacity: 0.95;
+}
+
+.home-campaign-card__cta i {
+    font-size: 0.95rem;
+    transition: transform 0.3s ease;
+}
+
+.home-campaign-card:hover .home-campaign-card__cta i {
+    transform: translateX(3px);
+}
+
+/* Dueña de */
+.home-owner__heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem 0.9rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+.home-owner__logo-wordmark {
+    display: block;
+    width: auto;
+    height: clamp(28px, 3.6vw, 38px);
+    max-width: min(100%, 240px);
+    object-fit: contain;
+}
+
+.home-owner__tagline {
+    color: var(--primary-color, #163863);
+    font-size: clamp(0.85rem, 1.4vw, 1.05rem);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    opacity: 0.9;
+    text-transform: uppercase;
+}
+
+.home-owner__bar {
+    background: var(--primary-color, #163863);
+    border-radius: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 10px 28px rgba(22, 56, 99, 0.12);
+}
+
+.home-owner__logos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem 1.75rem;
+}
+
+.home-owner__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-owner__logo-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.home-owner__logo-link:hover {
+    transform: translateY(-2px);
+    opacity: 0.88;
+}
+
+.home-owner__logo {
+    display: block;
+    height: clamp(28px, 4vw, 42px);
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+}
+
+/* Carrusel activo (clase puesta por home.js) */
+.home-owner__bar.is-carousel {
+    padding: 1.15rem 0.85rem;
+    overflow: hidden;
+}
+
+.home-owner__bar.is-carousel .tns-outer {
+    margin: 0 !important;
+}
+
+.home-owner__bar.is-carousel .tns-inner {
+    overflow: hidden;
+}
+
+.home-owner__logos.tns-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0;
+}
+
+.home-owner__bar.is-carousel .tns-item {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.2rem;
+}
+
+.home-owner__bar.is-carousel .home-owner__logo {
+    height: clamp(28px, 3.6vw, 40px);
+    max-width: min(100%, 118px);
+    margin-inline: auto;
+}
+
+.home-owner__bar.is-carousel .tns-nav,
+.home-owner__bar.is-carousel .tns-controls {
+    display: none !important;
+}
+
+.home-owner__logos:not(.tns-slider) {
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    gap: 0.65rem 1rem;
+}
+
+@media (max-width: 575.98px) {
+    .home-owner__bar.is-carousel {
+        padding: 1.05rem 0.7rem;
+    }
+
+    .home-owner__bar.is-carousel .home-owner__logo {
+        height: 28px;
+        max-width: min(100%, 92px);
+    }
+}
+
+@media (min-width: 768px) {
+    .home-campaigns__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Fila estática cuando caben todos los logos */
+.home-owner__bar:not(.is-carousel) {
+    padding: 1.25rem 1.5rem;
+    overflow: visible;
+}
+
+.home-owner__bar:not(.is-carousel) .home-owner__logos {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem 1rem;
+    transform: none !important;
+    width: auto !important;
+}
+
+.home-owner__bar:not(.is-carousel) .home-owner__logo {
+    height: clamp(32px, 2.4vw, 42px);
+    max-width: 120px;
+}
+
+@media (min-width: 1200px) {
+    .home-campaigns__grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.35rem;
+    }
+
+    .home-campaign-card__link {
+        min-height: 440px;
+    }
+
+    .home-owner__bar:not(.is-carousel) .home-owner__logo {
+        max-width: 110px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-campaign-card,
+    .home-campaign-card__img,
+    .home-campaign-card__cta,
+    .home-campaign-card__cta i,
+    .home-owner__logo-link {
+        transition: none;
+    }
+
+    .home-campaign-card:hover,
+    .home-owner__logo-link:hover {
+        transform: none;
+    }
+
+    .home-campaign-card:hover .home-campaign-card__img {
+        transform: none;
+    }
+}

@@ -5,12 +5,11 @@
 @endpush
 
 @push('scripts')
-    <script defer src="{{ asset('assets/js/fgs/posts-infinite.js') }}"></script>
+    <script defer src="{{ asset('assets/js/fgs/posts-infinite.js') }}?v={{ filemtime(public_path('assets/js/fgs/posts-infinite.js')) }}"></script>
 @endpush
 
 @section('content')
 
-    @include('components.extra-header')
     @include('components.posts')
 
 @endsection

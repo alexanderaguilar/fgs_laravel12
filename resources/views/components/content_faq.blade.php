@@ -1,15 +1,4 @@
-<section id="bread-crumb" class="bg-light py-2">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col px-4">
-                <p class="mb-0 small">
-                    <a href="/" class="text-decoration-none text-secondary">Inicio</a> - 
-                    <a href="/preguntas-frecuentes" class="text-decoration-none text-dark fw-bold">Preguntas frecuentes</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.breadcrumb', ['items' => [['label' => 'Preguntas frecuentes']]])
 
 <div class="highlighted_banner position-relative d-none d-md-block" data-aos="fade-up" data-aos-duration="1000">
     <div class="position-relative content h-100">

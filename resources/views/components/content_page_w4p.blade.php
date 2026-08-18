@@ -1,4 +1,4 @@
-@include('partials.breadcrumb')
+@include('partials.breadcrumb', ['items' => [['label' => 'Work 4 Progress']]])
 <section id="content">
     <!-- Hero Image Section -->
     <section class="mt-5">
@@ -17,8 +17,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <h1 class="oswaldfonts mb-2 display-4">Convocatoria Work4Progress Colombia 2025</h1>
-                    <p class="lead text-muted mb-4">Para las regiones de Necocl&iacute; (Antioquia) y Cartagena
-                        (Bol&iacute;var)</p>
+                    <p class="lead text-muted mb-4">Para las regiones de Necoclí (Antioquia) y Cartagena
+                        (Bolívar)</p>
                     <p class="lead mb-4">Estado: <span class="badge bg-danger fs-5">Cerrada</span></p>
                 </div>
             </div>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="alert alert-info h-100 p-4">
-                        <h5 class="oswaldfonts" style="font-weight: normal;">Sesi&oacute;n informativa</h5>
+                        <h5 class="oswaldfonts" style="font-weight: normal;">Sesión informativa</h5>
                         <?php //<a class="btn btn-primary my-3" href=" https://www.linkedin.com/events/convocatoriawork4progresscolomb7376353559216562176/" target="_blank" rel="noopener">Agéndate vía Linkedin</a> ?>
                         <p class="mb-0 fs-5">30 de Septiembre<br><sub>Hora: 8:00 a. m. Colombia <br> 3:00 p. m.
                                 Barcelona</sub></p>
@@ -92,19 +92,19 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 text-center mb-4 mb-lg-0"><img class="img-fluid rounded"
-                        src="/storage/w4p/w4p_isolated_woman.png" alt="Mujer de la comunidad de Necocl&iacute;"></div>
+                        src="/storage/w4p/w4p_isolated_woman.png" alt="Mujer de la comunidad de Necoclí"></div>
                 <div class="col-lg-7">
                     <h2 class="oswaldfonts mb-3">Contexto General</h2>
-                    <p>Uno de los desaf&iacute;os clave que presenta la agenda de 2030 es la creaci&oacute;n de empleo
-                        de calidad, especialmente para mujeres y j&oacute;venes. Seg&uacute;n datos de la
-                        Organizaci&oacute;n Internacional del Trabajo, actualmente en el mundo 2 de cada 5
-                        j&oacute;venes est&aacute;n desempleados, y este problema se intensifica en el caso de las
+                    <p>Uno de los desafíos clave que presenta la agenda de 2030 es la creación de empleo
+                        de calidad, especialmente para mujeres y jóvenes. Según datos de la
+                        Organización Internacional del Trabajo, actualmente en el mundo 2 de cada 5
+                        jóvenes están desempleados, y este problema se intensifica en el caso de las
                         mujeres.</p>
-                    <p>Con el &aacute;nimo de continuar consolidando el programa Work4Progress en Colombia,
-                        <strong>Fundaci&oacute;n &rdquo;la Caixa&rdquo;</strong>, <strong>Fundaci&oacute;n Grupo
-                            Social</strong> y <strong>Fundaci&oacute;n VISA</strong> unen esfuerzos para seguir
-                        impulsando el programa en Necocl&iacute; (Antioquia) y Cartagena (Bol&iacute;var), promoviendo
-                        la innovaci&oacute;n para el fomento del ecosistema de generaci&oacute;n de ingresos.
+                    <p>Con el ánimo de continuar consolidando el programa Work4Progress en Colombia,
+                        <strong>Fundación ”la Caixa”</strong>, <strong>Fundación Grupo
+                            Social</strong> y <strong>Fundación VISA</strong> unen esfuerzos para seguir
+                        impulsando el programa en Necoclí (Antioquia) y Cartagena (Bolívar), promoviendo
+                        la innovación para el fomento del ecosistema de generación de ingresos.
                     </p>
                 </div>
             </div>
@@ -115,52 +115,52 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="oswaldfonts mb-4 text-center">Descripci&oacute;n y Bases de la Convocatoria</h2>
+                    <h2 class="oswaldfonts mb-4 text-center">Descripción y Bases de la Convocatoria</h2>
                     <ul id="myTabW4P" class="nav nav-tabs justify-content-center" role="tablist">
                         <li class="nav-item" role="presentation"><button id="busca-tab" class="nav-link active"
                                 role="tab" type="button" data-bs-toggle="tab" data-bs-target="#busca"
-                                aria-controls="busca" aria-selected="true">&iquest;Qu&eacute; se busca?</button></li>
+                                aria-controls="busca" aria-selected="true">¿Qué se busca?</button></li>
                         <li class="nav-item" role="presentation"><button id="dirigida-tab" class="nav-link"
                                 role="tab" type="button" data-bs-toggle="tab" data-bs-target="#dirigida"
-                                aria-controls="dirigida" aria-selected="false">&iquest;A qui&eacute;n va
+                                aria-controls="dirigida" aria-selected="false">¿A quién va
                                 dirigida?</button></li>
                     </ul>
                     <div id="myTabContent" class="tab-content border border-top-0 rounded-bottom p-4">
                         <div id="busca" class="tab-pane fade show active" role="tabpanel"
                             aria-labelledby="busca-tab">
-                            <p class="lead">El programa busca dise&ntilde;ar, acelerar y escalar prototipos de
+                            <p class="lead">El programa busca diseñar, acelerar y escalar prototipos de
                                 negocios y servicios que aseguren su viabilidad comercial y financiera, generando
-                                empleos duraderos en Necocl&iacute;, Antioquia y Cartagena, Bolivar.</p>
-                            <h5 class="mt-4">Las principales l&iacute;neas de acci&oacute;n son:</h5>
+                                empleos duraderos en Necoclí, Antioquia y Cartagena, Bolivar.</p>
+                            <h5 class="mt-4">Las principales líneas de acción son:</h5>
                             <ul>
-                                <li class="py-3"><strong>Aceleraci&oacute;n de prototipos existentes:</strong>
+                                <li class="py-3"><strong>Aceleración de prototipos existentes:</strong>
                                     Consolidar y fortalecer la cartera puesta en marcha por Work4Progress en
-                                    Necocl&iacute;.</li>
-                                <li class="py-3"><strong>Dise&ntilde;o de nuevos prototipos de mayor escala:</strong>
-                                    Crear iniciativas con foco en Econom&iacute;a circular, Transici&oacute;n
-                                    energ&eacute;tica, y Adaptaci&oacute;n al cambio clim&aacute;tico.</li>
+                                    Necoclí.</li>
+                                <li class="py-3"><strong>Diseño de nuevos prototipos de mayor escala:</strong>
+                                    Crear iniciativas con foco en Economía circular, Transición
+                                    energética, y Adaptación al cambio climático.</li>
                                 <li class="py-3"><strong>Acceso a mercados:</strong> Promover la
-                                    comercializaci&oacute;n de los prototipos, dando prioridad a la participaci&oacute;n
+                                    comercialización de los prototipos, dando prioridad a la participación
                                     del sector empresarial.</li>
-                                <li class="py-3"><strong>Innovaci&oacute;n tecnol&oacute;gica y
-                                        digitalizaci&oacute;n:</strong> Desarrollar soluciones tecnol&oacute;gicas que
+                                <li class="py-3"><strong>Innovación tecnológica y
+                                        digitalización:</strong> Desarrollar soluciones tecnológicas que
                                     aumenten la competitividad de los negocios.</li>
                             </ul>
                         </div>
                         <div id="dirigida" class="tab-pane fade" role="tabpanel" aria-labelledby="dirigida-tab">
-                            <p class="lead">Se dirige a redes de entidades lideradas por una organizaci&oacute;n no
+                            <p class="lead">Se dirige a redes de entidades lideradas por una organización no
                                 lucrativa, y que cuenten preferentemente con incubadoras, aceleradoras y/o empresas
-                                sociales que re&uacute;nan los siguientes requisitos:</p>
+                                sociales que reúnan los siguientes requisitos:</p>
                             <ul class="list-unstyled mt-4">
                                 <li class="mb-3 d-flex"><span class="me-3 fs-4">✓</span>
-                                    <div><strong>Contar con socios locales:</strong> Se valorar&aacute; especialmente la
-                                        trayectoria de actuaci&oacute;n coordinada en la zona (Necocl&iacute; y
+                                    <div><strong>Contar con socios locales:</strong> Se valorará especialmente la
+                                        trayectoria de actuación coordinada en la zona (Necoclí y
                                         Cartagena).</div>
                                 </li>
                                 <li class="mb-3 d-flex"><span class="me-3 fs-4">✓</span>
-                                    <div><strong>Incluir diversidad de organizaciones:</strong> Sin &aacute;nimo de
-                                        lucro, autoridades locales, empresas, as&iacute; como centros de
-                                        investigaci&oacute;n o formaci&oacute;n.</div>
+                                    <div><strong>Incluir diversidad de organizaciones:</strong> Sin ánimo de
+                                        lucro, autoridades locales, empresas, así como centros de
+                                        investigación o formación.</div>
                                 </li>
                                 <li class="mb-3 d-flex"><span class="me-3 fs-4">✓</span>
                                     <div><strong>Disponer de capacidad y estructura:</strong> Suficientes para
@@ -168,7 +168,7 @@
                                 </li>
                                 <li class="d-flex"><span class="me-3 fs-4">✓</span>
                                     <div><strong>Demostrar experiencia:</strong> De trabajo en proyectos cofinanciados
-                                        por organismos p&uacute;blicos o privados.</div>
+                                        por organismos públicos o privados.</div>
                                 </li>
                             </ul>
                         </div>
@@ -191,7 +191,7 @@
                         <div class="card-body p-4">
                             <div class="display-1 fw-bold text-primary mb-3">1</div>
                             <h5 class="card-title">Verifica los Criterios</h5>
-                            <p class="card-text">Aseg&uacute;rate de que tu red de entidades cumple con los requisitos
+                            <p class="card-text">Asegúrate de que tu red de entidades cumple con los requisitos
                                 de la convocatoria.</p>
                         </div>
                     </div>
@@ -202,7 +202,7 @@
                             <div class="display-1 fw-bold text-primary mb-3">2</div>
                             <h5 class="card-title">Diligencia los Formularios</h5>
                             <p class="card-text mb-3">Los formularios se habilitarán el 30 de septiembre</p>
-                            <p class="card-text mb-3">Completa los 3 formularios de inscripci&oacute;n y desc&aacute;rgalos en formato PDF.</p>
+                            <p class="card-text mb-3">Completa los 3 formularios de inscripción y descárgalos en formato PDF.</p>
     <a class="btn btn-primary mb-2" href="/work-4-progress/w4p_2025_formulario_A1" target="_blank" rel="noopener">Formulario A1</a> <a class="btn btn-primary mb-2" href="/work-4-progress/w4p_2025_formulario_A2" target="_blank" rel="noopener">Formulario A2</a> <a class="btn btn-primary mb-2" href="/work-4-progress/w4p_2025_formulario_A3" target="_blank" rel="noopener">Formulario A3</a>
                         </div>
                     </div>
@@ -211,9 +211,9 @@
                     <div class="card h-100 text-center shadow-sm">
                         <div class="card-body p-4">
                             <div class="display-1 fw-bold text-primary mb-3">3</div>
-                            <h5 class="card-title">Env&iacute;a tu Postulaci&oacute;n</h5>
-                            <p class="card-text">Env&iacute;a los 3 formularios diligenciados en PDF al correo
-                                electr&oacute;nico: <a class="fw-bold"
+                            <h5 class="card-title">Envía tu Postulación</h5>
+                            <p class="card-text">Envía los 3 formularios diligenciados en PDF al correo
+                                electrónico: <a class="fw-bold"
                                     href="mailto:w4pcolombia@fgs.co">w4pcolombia@fgs.co</a></p>
                         </div>
                     </div>
@@ -227,7 +227,7 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
-                    <h2 class="oswaldfonts mb-4">Documentos de Inter&eacute;s</h2>
+                    <h2 class="oswaldfonts mb-4">Documentos de Interés</h2>
                     <p class="lead mb-5">Consulta los siguientes recursos para preparar tu propuesta.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3"><a class="btn btn-outline-primary p-3 w-100"
@@ -235,7 +235,7 @@
                         rel="noopener noreferrer">Bases de la convocatoria</a></div>
                 <div class="col-md-6 col-lg-3 mb-3"><a class="btn btn-outline-primary p-3 w-100"
                         href="/storage/w4p/DOC_02_contexto_necocli.pdf" target="_blank"
-                        rel="noopener noreferrer">Contexto Territorio Necocl&iacute;</a></div>
+                        rel="noopener noreferrer">Contexto Territorio Necoclí</a></div>
                 <div class="col-md-6 col-lg-3 mb-3"><a class="btn btn-outline-primary p-3 w-100"
                         href="/storage/w4p/DOC_03_contexto_cartagena.pdf" target="_blank"
                         rel="noopener noreferrer">Contexto Territorio Cartagena</a></div>
@@ -244,10 +244,10 @@
                         rel="noopener noreferrer">Preguntas Frecuentes</a></div>
                 <div class="col-md-6 col-lg-3 mb-3"><a class="btn btn-outline-primary p-3 w-100"
                         href="/storage/w4p/DOC_05_guia_metodologica.pdf" target="_blank"
-                        rel="noopener noreferrer">Metodolog&iacute;a W4P</a></div>
+                        rel="noopener noreferrer">Metodología W4P</a></div>
                 <div class="col-md-6 col-lg-3 mb-3"><a class="btn btn-outline-primary p-3 w-100"
                         href="/storage/w4p/DOC_06_guia_presentacion_propuesta.pdf" target="_blank"
-                        rel="noopener noreferrer">Gu&iacute;a presentaci&oacute;n propuesta W4P</a></div>
+                        rel="noopener noreferrer">Guía presentación propuesta W4P</a></div>
                 <div class="col-md-6 col-lg-3 mb-3"><a class="btn btn-outline-primary p-3 w-100"
                         href="/storage/w4p/DOC_07_cartera_prototipos.pdf" target="_blank"
                         rel="noopener noreferrer">Cartera de prototipos</a></div>

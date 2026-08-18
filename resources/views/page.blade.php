@@ -5,6 +5,5 @@
 'ogimage'=>$page->image ?? null
 ])
 @section('content')
-    @include('components.extra-header')
     @include('components.content_page')
 @endsection

@@ -101,6 +101,34 @@
         margin-bottom: 0; /* Evita espacio extra al final de la tarjeta */
     }
 
+    /* Puente narrativo tras 1911–1913 */
+    .timeline-bridge {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        clear: both;
+        display: flex;
+        justify-content: center;
+        padding: 1.75rem 1rem 2.25rem;
+        margin: 0.5rem 0 1rem;
+    }
+
+    .timeline-bridge__text {
+        max-width: 38rem;
+        margin: 0;
+        padding: 1.15rem 1.35rem 1.25rem;
+        text-align: center;
+        font-size: inherit;
+        font-style: normal;
+        font-weight: inherit;
+        line-height: 1.55;
+        color: inherit;
+        background: #fff;
+        border-radius: 1rem;
+        border-left: 4px solid var(--bs-yellow-corporate, #f2a325);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
     .timeline-img {
         width: 100%;
         height: auto;
@@ -362,16 +390,6 @@
     
     .ls-2 { letter-spacing: 2px; }
     .rounded-20 { border-radius: 20px; }
-
-    /* Línea decorativa del original */
-    .colored_lines::after {
-        content: '';
-        display: block;
-        width: 60px;
-        height: 4px;
-        background-color: var(--bs-yellow-corporate);
-        margin-top: 10px;
-    }
 
     /* Estilos específicos para esta sección */
     .mission-box {

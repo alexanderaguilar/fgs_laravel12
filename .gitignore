@@ -24,6 +24,7 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+deploy/env/production.env
 /storage/app/public/**
 !/storage/app/public/.gitignore
 /storage/app/imports/*

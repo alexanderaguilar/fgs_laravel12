@@ -101,6 +101,10 @@
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
     {{-- Modular shared UI (extracted from Blade <style> blocks) --}}
+    <link href="{{ asset('assets/css/components/header.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/components/breadcrumb.css') }}?v={{ filemtime(public_path('assets/css/components/breadcrumb.css')) }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/components/highlighted-banner.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/components/page-title-hero.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/components/banners.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/components/tabs.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/components/faq-accordion.css') }}" rel="stylesheet">
@@ -109,6 +113,9 @@
     <link href="{{ asset('assets/css/components/about.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/components/books.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/components/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/components/home-campaigns.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/components/home-ctas.css') }}?v={{ filemtime(public_path('assets/css/components/home-ctas.css')) }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/components/search-overlay.css') }}" rel="stylesheet">
 
     @stack('styles')
 

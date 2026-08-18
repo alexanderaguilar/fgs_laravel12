@@ -1,0 +1,67 @@
+title: 'Logo Dueña de'
+tabs:
+  main:
+    display: Principal
+    sections:
+      -
+        display: Logo
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Nombre de la empresa
+              instructions: 'Texto alternativo del logo (accesibilidad).'
+              validate:
+                - required
+          -
+            handle: logo
+            field:
+              type: assets
+              display: Logo (PNG o SVG)
+              instructions: 'Sube PNG o SVG con fondo transparente. Preferible blanco/monocromo claro para el riel azul del home. Carpeta: home-owner-logos/'
+              container: assets
+              folder: home-owner-logos
+              max_files: 1
+              mode: list
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              required: true
+              validate:
+                - required
+          -
+            handle: website
+            field:
+              type: text
+              display: URL (opcional)
+              instructions: 'Si se define, el logo será clicable. Usa https://…'
+              input_type: url
+          -
+            handle: display_rank
+            field:
+              type: integer
+              default: 0
+              display: Orden
+              instructions: 'Menor número = aparece primero de izquierda a derecha.'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              from: title
+              required: true
+              validate:
+                - required
+          -
+            handle: published
+            field:
+              type: toggle
+              default: true
+              display: Publicado
+              instructions: 'Desactiva para ocultar el logo en el home sin borrarlo.'

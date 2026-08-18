@@ -5,6 +5,5 @@
 'ogimage'=>'img/fgs.jpg'
 ])
 @section('content')
-    @include('components.extra-header')
     @include('components.content_book_2')
 @endsection

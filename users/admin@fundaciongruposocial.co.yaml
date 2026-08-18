@@ -1,3 +1,18 @@
 super: true
+email: admin@fundaciongruposocial.co
 id: b148176c-7526-4ec5-98ff-d0db4f5596f1
-password_hash: $2y$12$rUb92FKz7ziyU8e6vy5z9eVf6JHueyCvsN72WwTJpNRdpjz7h/QtK
+password_hash: $2y$12$BKHwC.3VbLkglk9BXTgDGOBQ3r.9D8zIW7XevyPO60dAvKA8V8Bnu
+preferences:
+  collections:
+    about_us_videos:
+      view: list
+    home_campaigns:
+      view: list
+    home_banners:
+      view: list
+    pages:
+      view: tree
+    home_owner_logos:
+      view: list
+    home_ctas:
+      view: list

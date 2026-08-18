@@ -1,7 +1,7 @@
-@include('partials.breadcrumb')
+@include('partials.breadcrumb', ['items' => [['label' => 'Nuestras empresas']]])
 <section class="page_title_section trabajo_en position-relative quienes_somos">
 <div class="d-flex">
-<div class="width50 bg_white d-none-767 d-none-991">&nbsp;</div>
+<div class="width50 bg_white d-none-767 d-none-991"> </div>
 <div class="width50 width100_767 width100_991 background_image">
 <div class="height_widht_over"><img class="object_fit_cover" src="/storage/pages/May2019/fundacion-grupo-social-encabezado-empresas-2.jpg" width="880" height="300"></div>
 </div>
@@ -17,7 +17,7 @@
 </div>
 </div>
 </div>
-<div class="title_under_line position-absolute position-center d-none-767 d-none-991">&nbsp;</div>
+<div class="title_under_line position-absolute position-center d-none-767 d-none-991"> </div>
 </div>
 <div class="container-fluid">
 <div class="left_right_padding_80"></div>
@@ -27,10 +27,10 @@
 <div class="container-fluid">
 <div class="inner_text left_right_padding_80">
 <div class="wow bounceInUp max_width robotfonts">
-<p class="center robotfonts">Desde hace m&aacute;s de un siglo, Fundaci&oacute;n Grupo Social ha creado empresas con el &uacute;nico prop&oacute;sito de promover la inclusi&oacute;n y el bienestar de los colombianos, especialmente los menos favorecidos. Esto hace parte de su esencia.</p>
-<p>Hoy Fundaci&oacute;n Grupo Social tiene un grupo de 10 empresas que son distintas, porque conocen las reales necesidades de la gente y act&uacute;an para encontrar soluciones concretas a esas problem&aacute;ticas.</p>
-<p>Este grupo de empresas tienen como objetivo la generaci&oacute;n de experiencias de una forma de organizaci&oacute;n diferente, orientada por la &eacute;tica, los valores trascendentes, el bien com&uacute;n, la solidaridad y la preocupaci&oacute;n por los m&aacute;s d&eacute;biles, en compatibilidad con la generaci&oacute;n de riqueza para la sociedad en su conjunto, la solvencia, la viabilidad econ&oacute;mica y el retorno justo para sus accionistas.</p>
-<div class="blank_space_60">&nbsp;</div>
+<p class="center robotfonts">Desde hace más de un siglo, Fundación Grupo Social ha creado empresas con el único propósito de promover la inclusión y el bienestar de los colombianos, especialmente los menos favorecidos. Esto hace parte de su esencia.</p>
+<p>Hoy Fundación Grupo Social tiene un grupo de 10 empresas que son distintas, porque conocen las reales necesidades de la gente y actúan para encontrar soluciones concretas a esas problemáticas.</p>
+<p>Este grupo de empresas tienen como objetivo la generación de experiencias de una forma de organización diferente, orientada por la ética, los valores trascendentes, el bien común, la solidaridad y la preocupación por los más débiles, en compatibilidad con la generación de riqueza para la sociedad en su conjunto, la solvencia, la viabilidad económica y el retorno justo para sus accionistas.</p>
+<div class="blank_space_60"> </div>
 </div>
 </div>
 </div>
@@ -38,10 +38,10 @@
 <section class="programas_sociales_directos co actuamos bg_white">
 <div class="container-fluid">
 <div class="inner_text left_right_padding_80">
-<h2 class="oswaldfonts position-relative">Empresas de Fundaci&oacute;n Grupo Social:</h2>
+<h2 class="oswaldfonts position-relative">Empresas de Fundación Grupo Social:</h2>
 </div>
 </div>
-<div class="blank_space_50">&nbsp;</div>
+<div class="blank_space_50"> </div>
 <div class="d-flex flex-wrap propietaria_section align-items-center justify-content-center">
     @foreach($social_foundation as $sf)
         <div class="propietaria_box">
@@ -65,7 +65,7 @@
 <h2 class="oswaldfonts position-relative">Empresas en las que comparte la propiedad con un aliado:</h2>
 </div>
 </div>
-<div class="blank_space_50">&nbsp;</div>
+<div class="blank_space_50"> </div>
 <div class="d-flex flex-wrap propietaria_section align-items-center justify-content-center">
 <div class="propietaria_box position-relative">
 <div class="image_logo"><img class="" src="/storage/participate-capitals/May2019/logo_vehigrupo.png"></div>
@@ -84,7 +84,7 @@
 <h2 class="oswaldfonts position-relative">Participa del capital de:</h2>
 </div>
 </div>
-<div class="blank_space_50">&nbsp;</div>
+<div class="blank_space_50"> </div>
 <div class="d-flex flex-wrap propietaria_section align-items-center justify-content-center">
     @php
         $participate_capital = \App\Support\Cms::entries('participate_capitals', fn ($q) => $q->orderBy('display_rank'));

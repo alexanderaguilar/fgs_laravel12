@@ -1,0 +1,72 @@
+title: Home Campaign
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Título de la tarjeta
+          -
+            handle: tag
+            field:
+              type: text
+              required: true
+              display: Etiqueta (badge)
+              instructions: 'Ej. BANCO CAJA SOCIAL'
+          -
+            handle: image
+            field:
+              type: assets
+              max_files: 1
+              container: assets
+              required: true
+              display: Imagen de fondo
+          -
+            handle: cta_text
+            field:
+              type: text
+              display: Texto del enlace
+              default: 'Ver campaña'
+          -
+            handle: cta_url
+            field:
+              type: text
+              display: URL del enlace
+              instructions: 'Ruta relativa (/ruta) o URL absoluta (https://...)'
+          -
+            handle: target
+            field:
+              type: select
+              display: Abrir en
+              options:
+                _self: Misma ventana
+                _blank: Nueva ventana
+              default: _self
+          -
+            handle: order
+            field:
+              type: integer
+              default: 0
+              display: Orden
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              from: title
+              required: true
+          -
+            handle: published
+            field:
+              type: toggle
+              default: true
+              display: Publicado

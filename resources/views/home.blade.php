@@ -11,10 +11,11 @@
 
 @section('content')
 
-    @include('components.extra-header')
     @include('components.banners')
     @include('components.home_module_opening')
     @include('components.home_module_impact')
+    @include('components.home_module_campaigns')
+    @include('components.home_module_ctas')
     @include('components.module_recent_news')
 
 @endsection

@@ -11,6 +11,26 @@ FGS.initSliders = function () {
         540: { edgePadding: 0, gutter: 0, items: 1 }
     };
 
+    if (document.querySelector('#all_banners .home-banners-slider')) {
+        tns({
+            container: '#all_banners .home-banners-slider',
+            items: 1,
+            slideBy: 1,
+            mouseDrag: true,
+            controls: false,
+            nav: true,
+            navPosition: 'bottom',
+            preventScrollOnTouch: 'auto',
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayButtonOutput: false,
+            autoHeight: false,
+            fixedWidth: false,
+            edgePadding: 0,
+            gutter: 0
+        });
+    }
+
     if (document.getElementById('big_video_slider')) {
         tns({
             container: '#big_video_slider',

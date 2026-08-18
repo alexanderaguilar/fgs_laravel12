@@ -6,12 +6,12 @@
 ])
 
 @push('styles')
-    <link href="{{ asset('assets/css/pages/territories.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/pages/impact.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/pages/territories.css') }}?v={{ filemtime(public_path('assets/css/pages/territories.css')) }}" rel="stylesheet">
 @endpush
 
 @section('content')
 
-    @include('components.extra-header')
     @include('components.territory_page')
    
 @endsection

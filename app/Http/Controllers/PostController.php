@@ -14,7 +14,7 @@ class PostController extends Controller
 
         $posts = Cms::paginatePostsByCategory('featured-news-and-news', 6);
 
-        if ($request->ajax()) {
+        if ($request->ajax() || $request->wantsJson()) {
             return response()->json([
                 'posts' => view('partials.posts', compact('posts'))->render(),
                 'next_page' => $posts->nextPageUrl(),

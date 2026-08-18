@@ -4,9 +4,14 @@ namespace App\Support;
 
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
+use Statamic\Entries\Entry as StatamicEntry;
 use Statamic\Facades\Entry;
 use Statamic\Facades\GlobalSet;
 use Statamic\Facades\Nav;
+use Statamic\Facades\Search;
 use Statamic\Facades\Term;
 
 class Cms
@@ -133,27 +138,81 @@ class Cms
         })->values();
     }
 
-    public static function search(string $query): Collection
+    public static function search(string $query, int $limit = 50): Collection
     {
-        $needle = mb_strtolower($query);
+        $needle = trim($query);
+        if (mb_strlen($needle) < 3) {
+            return collect();
+        }
 
-        $posts = Entry::query()->where('collection', 'posts')->whereStatus('published')->get();
-        $pages = Entry::query()->where('collection', 'pages')->whereStatus('published')->get();
+        $cacheKey = 'fgs.search.v2.'.md5(mb_strtolower($needle).'|'.$limit);
 
-        return $posts->merge($pages)
-            ->filter(function ($entry) use ($needle) {
-                $hay = mb_strtolower(($entry->get('title') ?? '').' '.strip_tags((string) $entry->get('body')));
+        return Cache::remember($cacheKey, 30, function () use ($needle, $limit) {
+            try {
+                $index = Search::index('site');
+                $index->ensureExists();
 
-                return $needle !== '' && str_contains($hay, $needle);
-            })
-            ->map(fn ($entry) => self::present($entry))
-            ->values();
+                return $index
+                    ->search($needle)
+                    ->whereStatus('published')
+                    ->limit($limit)
+                    ->get()
+                    ->map(function ($result) {
+                        $entry = $result->getSearchable();
+                        if (! $entry instanceof StatamicEntry) {
+                            return null;
+                        }
+
+                        $collection = $entry->collectionHandle();
+                        if (! in_array($collection, ['posts', 'territories'], true)) {
+                            return null;
+                        }
+
+                        $presented = self::present($entry);
+                        $presented->search_type = match ($collection) {
+                            'posts' => 'Noticia',
+                            'territories' => 'Territorio Progreso',
+                            default => 'Contenido',
+                        };
+
+                        $excerpt = self::plainText($entry->get('excerpt') ?? '');
+                        $answer = self::plainText($entry->get('answer') ?? '');
+                        $body = self::plainText($entry->get('body') ?? '');
+                        $description = self::plainText($entry->get('description') ?? '');
+                        $presented->search_excerpt = Str::limit(
+                            trim($excerpt !== '' ? $excerpt : ($answer !== '' ? $answer : ($description !== '' ? $description : $body))),
+                            140
+                        );
+
+                        return $presented;
+                    })
+                    ->filter()
+                    ->values();
+            } catch (\Throwable $e) {
+                Log::warning('Site search failed', [
+                    'q' => $needle,
+                    'message' => $e->getMessage(),
+                ]);
+
+                return collect();
+            }
+        });
+    }
+
+    public static function searchSuggest(string $query, int $limit = 8): Collection
+    {
+        return self::search($query, $limit)->map(fn ($item) => (object) [
+            'title' => $item->title,
+            'url' => $item->url,
+            'type' => $item->search_type ?? 'Contenido',
+            'excerpt' => $item->search_excerpt ?? '',
+        ]);
     }
 
     public static function present($entry): object
     {
         $data = $entry->data()->all();
-        foreach (['image', 'logo', 'thumbnail', 'thumbnail_mobile', 'listing_image', 'map_image', 'title_image', 'title_bg_image'] as $field) {
+        foreach (['image', 'logo', 'thumbnail', 'thumbnail_mobile', 'listing_image', 'map_image', 'title_image', 'title_bg_image', 'background_image'] as $field) {
             if (array_key_exists($field, $data)) {
                 $data[$field] = self::assetToPath($data[$field]);
             }
@@ -169,8 +228,9 @@ class Cms
             'name' => $data['title'] ?? $entry->slug(),
             'publish_date' => $date,
             'created_at' => $date,
-            'updated_at' => $entry->lastModified()
-                ? \Carbon\Carbon::parse($entry->lastModified())
+            // Solo la marca editorial de Statamic (CP). Evita lastModified/file mtime de imports.
+            'updated_at' => $entry->get('updated_at')
+                ? \Carbon\Carbon::createFromTimestamp((int) $entry->get('updated_at'), config('app.timezone'))
                 : $date,
             'status' => $data['status_legacy'] ?? 'PUBLISHED',
             'cat_name' => self::categoryTitle($entry),
@@ -210,18 +270,35 @@ class Cms
         }
 
         // SEO / content defaults (missing fields break Blade property access on stdClass)
-        $obj->title = $obj->title ?? ($entry->slug() ?? '');
-        $obj->seo_title = $obj->seo_title ?? $obj->title;
-        $obj->meta_description = $obj->meta_description ?? ($obj->excerpt ?? '');
-        $obj->meta_keywords = $obj->meta_keywords ?? '';
-        $obj->keywords = $obj->keywords ?? $obj->meta_keywords;
-        $obj->excerpt = $obj->excerpt ?? '';
-        $obj->sub_title = $obj->sub_title ?? '';
-        $obj->body = $obj->body ?? '';
+        $obj->title = self::decodeEntities($obj->title ?? ($entry->slug() ?? ''));
+        $obj->seo_title = self::decodeEntities($obj->seo_title ?? $obj->title);
+        $obj->meta_description = self::decodeEntities($obj->meta_description ?? ($obj->excerpt ?? ''));
+        $obj->meta_keywords = self::decodeEntities($obj->meta_keywords ?? '');
+        $obj->keywords = self::decodeEntities($obj->keywords ?? $obj->meta_keywords);
+        $obj->excerpt = self::decodeEntities($obj->excerpt ?? '');
+        $obj->sub_title = self::decodeEntities($obj->sub_title ?? '');
+        $obj->body = self::decodeEntities($obj->body ?? '');
+        $obj->description = self::decodeEntities($obj->description ?? '');
+        $obj->answer = self::decodeEntities($obj->answer ?? '');
         $obj->image = $obj->image ?? null;
         $obj->category = $obj->category ?? 'generales';
         $obj->order = $obj->order ?? 0;
-        $obj->answer = $obj->answer ?? '';
+
+        if (isset($obj->city_other_data) && is_string($obj->city_other_data)) {
+            $obj->city_other_data = self::decodeEntities($obj->city_other_data);
+        }
+        if (isset($obj->habitantes) && is_string($obj->habitantes)) {
+            $obj->habitantes = self::decodeEntities($obj->habitantes);
+        }
+        if (isset($obj->looking_for) && is_string($obj->looking_for)) {
+            $obj->looking_for = self::decodeEntities($obj->looking_for);
+        }
+        if (isset($obj->territory) && is_string($obj->territory)) {
+            $obj->territory = self::decodeEntities($obj->territory);
+        }
+        if (isset($obj->state) && is_string($obj->state)) {
+            $obj->state = self::decodeEntities($obj->state);
+        }
 
         // Canonical public URL (posts under /noticias/{slug})
         $obj->url = self::entryUrl($obj);
@@ -242,14 +319,46 @@ class Cms
     public static function entryUrl(object $entry): string
     {
         $slug = $entry->slug ?? '';
-        if (($entry->collection ?? '') === 'posts') {
+        $collection = $entry->collection ?? '';
+
+        if ($collection === 'posts') {
             return self::postUrl($slug);
         }
-        if (($entry->collection ?? '') === 'pages') {
+        if ($collection === 'pages') {
             return self::pageUrl($slug);
+        }
+        if ($collection === 'territories') {
+            return '/nuestros-territorios-progreso/'.ltrim($slug, '/');
+        }
+        if ($collection === 'faqs') {
+            return '/preguntas-frecuentes';
         }
 
         return $slug !== '' ? '/'.$slug : '#';
+    }
+
+    /**
+     * Decode HTML entities to UTF-8 (Voyager dumps often store &oacute; etc.).
+     */
+    public static function decodeEntities(?string $value): string
+    {
+        if ($value === null || $value === '') {
+            return '';
+        }
+
+        return html_entity_decode($value, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    }
+
+    /**
+     * Plain text for listings/search: strip tags + decode entities + collapse whitespace.
+     */
+    public static function plainText(?string $value): string
+    {
+        $decoded = self::decodeEntities($value);
+        $stripped = strip_tags($decoded);
+        $collapsed = preg_replace('/\s+/u', ' ', $stripped) ?? '';
+
+        return trim($collapsed);
     }
 
     private static function youtubeId(?string $url): string
