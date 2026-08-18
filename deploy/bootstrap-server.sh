@@ -135,9 +135,9 @@ ufw allow OpenSSH
 ufw allow 'Nginx Full'
 ufw --force enable
 
-echo "==> Placeholder current (hasta primer deploy)"
-mkdir -p "${APP_ROOT}/current/public"
-echo 'FGS — pendiente primer deploy desde rama main' > "${APP_ROOT}/current/public/index.html"
+echo "==> Placeholder hasta primer deploy"
+mkdir -p "${APP_ROOT}/releases"
+# No crear current/ como directorio (rompe ln -sfn en activate-release).
 chown -R "${DEPLOY_UNIX_USER}:${APP_USER}" "${APP_ROOT}"
 
 cat <<EOF

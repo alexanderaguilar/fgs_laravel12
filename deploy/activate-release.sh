@@ -6,6 +6,14 @@ APP_ROOT="/var/www/fgs"
 APP_USER="${APP_USER:-www-data}"
 PHP_BIN="${PHP_BIN:-php}"
 
+run_app() {
+  if command -v sudo >/dev/null 2>&1; then
+    sudo -u "${APP_USER}" "${PHP_BIN}" "$@"
+  else
+    "${PHP_BIN}" "$@"
+  fi
+}
+
 RELEASE_ID="${RELEASE_ID:-}"
 if [[ -z "$RELEASE_ID" ]]; then
   echo "RELEASE_ID requerido"
@@ -47,18 +55,26 @@ else
 fi
 
 echo "==> Laravel / Statamic"
-"${PHP_BIN}" artisan storage:link --force 2>/dev/null || true
-"${PHP_BIN}" artisan config:cache
-"${PHP_BIN}" artisan route:cache
-"${PHP_BIN}" artisan view:cache
-"${PHP_BIN}" artisan fgs:rewrite-content-urls 2>/dev/null || true
-"${PHP_BIN}" please stache:clear
-"${PHP_BIN}" please stache:warm
-"${PHP_BIN}" please search:update site
+run_app artisan storage:link --force 2>/dev/null || true
+run_app artisan config:cache
+run_app artisan route:cache
+run_app artisan view:cache
+run_app artisan fgs:rewrite-content-urls 2>/dev/null || true
+run_app please stache:clear
+run_app please stache:warm
+run_app please search:update site
 
 echo "==> Activar symlink"
+# Bootstrap crea current/ como directorio; hay que reemplazarlo por symlink al release.
+if [[ -e "${CURRENT_LINK}" && ! -L "${CURRENT_LINK}" ]]; then
+  rm -rf "${CURRENT_LINK}"
+fi
 ln -sfn "${RELEASE_DIR}" "${CURRENT_LINK}"
-chown -h "${APP_USER}:${APP_USER}" "${CURRENT_LINK}" 2>/dev/null || true
+if command -v sudo >/dev/null 2>&1; then
+  sudo chown -h "${APP_USER}:${APP_USER}" "${CURRENT_LINK}" 2>/dev/null || true
+else
+  chown -h "${APP_USER}:${APP_USER}" "${CURRENT_LINK}" 2>/dev/null || true
+fi
 
 echo "==> Limpiar releases antiguos (conservar 5)"
 ls -1dt "${APP_ROOT}/releases/"* 2>/dev/null | tail -n +6 | xargs -r rm -rf
