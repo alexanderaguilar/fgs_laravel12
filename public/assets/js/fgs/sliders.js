@@ -12,7 +12,7 @@ FGS.initSliders = function () {
     };
 
     if (document.querySelector('#all_banners .home-banners-slider')) {
-        tns({
+        var bannerSlider = tns({
             container: '#all_banners .home-banners-slider',
             items: 1,
             slideBy: 1,
@@ -22,13 +22,15 @@ FGS.initSliders = function () {
             navPosition: 'bottom',
             preventScrollOnTouch: 'auto',
             autoplay: true,
-            autoplayTimeout: 4000,
+            autoplayTimeout: 30000,
             autoplayButtonOutput: false,
             autoHeight: false,
             fixedWidth: false,
             edgePadding: 0,
             gutter: 0
         });
+
+        FGS.syncHomeBannerVideos(bannerSlider);
     }
 
     if (document.getElementById('big_video_slider')) {
@@ -143,4 +145,42 @@ FGS.initSliders = function () {
             responsive: { 640: { items: 2 }, 900: { items: 5 } }
         });
     }
+};
+
+/** Pausa embeds de YouTube fuera del slide activo; reanuda el visible (mute). */
+FGS.syncHomeBannerVideos = function (slider) {
+    if (!slider || typeof slider.getInfo !== 'function') {
+        return;
+    }
+
+    function post(iframe, func) {
+        if (!iframe || !iframe.contentWindow) {
+            return;
+        }
+        iframe.contentWindow.postMessage(
+            JSON.stringify({ event: 'command', func: func, args: [] }),
+            'https://www.youtube.com'
+        );
+    }
+
+    function sync() {
+        var info = slider.getInfo();
+        var slides = info.slideItems || [];
+        var index = info.index % (info.slideCount || 1);
+
+        Array.prototype.forEach.call(slides, function (slide, i) {
+            var iframe = slide.querySelector('.home-banner-video iframe');
+            if (!iframe) {
+                return;
+            }
+            if (i === index) {
+                post(iframe, 'playVideo');
+            } else {
+                post(iframe, 'pauseVideo');
+            }
+        });
+    }
+
+    sync();
+    slider.events.on('indexChanged', sync);
 };

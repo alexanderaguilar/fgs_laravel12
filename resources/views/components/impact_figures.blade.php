@@ -11,7 +11,7 @@
             <div class="internal-grid internal-grid-3">
                 <div class="stat-card">
                     <div class="stat-value">
-                        <i class="bi bi-stack stat-icon" aria-hidden="true"></i>
+                        <i class="bi bi-pie-chart stat-icon" aria-hidden="true"></i>
                         5
                     </div>
                     <div class="stat-label">sectores</div>
@@ -28,7 +28,7 @@
 
                 <div class="stat-card">
                     <div class="stat-value">
-                        <i class="bi bi-pie-chart stat-icon" aria-hidden="true"></i>
+                        <i class="bi bi-people stat-icon" aria-hidden="true"></i>
                         92<span class="small-unit">%</span>
                     </div>
                     <div class="stat-label">de la población colombiana</div>
@@ -57,7 +57,7 @@
 
                 <div class="stat-card">
                     <div class="stat-value text-orange">
-                        <i class="bi bi-person-check stat-icon" aria-hidden="true"></i>
+                        <i class="bi bi-chat-dots stat-icon" aria-hidden="true"></i>
                         +15<span class="small-unit">mil</span>
                     </div>
                     <div class="stat-label">participantes activos</div>
@@ -65,7 +65,7 @@
 
                 <div class="stat-card">
                     <div class="stat-value text-orange">
-                        <i class="bi bi-diagram-3 stat-icon" aria-hidden="true"></i>
+                        <i class="bi bi-handshake stat-icon" aria-hidden="true"></i>
                         +190
                     </div>
                     <div class="stat-label">organizaciones comunitarias involucradas</div>
@@ -111,7 +111,7 @@
             <div class="col-lg-7">
                 <div class="stat-card h-100 justify-content-center">
                     <div class="stat-value stat-value-large">
-                        <i class="bi bi-currency-dollar stat-icon" aria-hidden="true"></i>
+                        <i class="bi bi-cash stat-icon" aria-hidden="true"></i>
                         1,08<span class="small-unit">B</span>
                     </div>
                     <div class="stat-label">en desembolsos a microempresarios</div>
@@ -142,7 +142,7 @@
 
             <div class="stat-card">
                 <div class="stat-value">
-                    <i class="bi bi-buildings stat-icon" aria-hidden="true"></i>
+                    <i class="bi bi-file-earmark-text stat-icon" aria-hidden="true"></i>
                     +39<span class="small-unit">mil</span>
                 </div>
                 <div class="stat-label">micro y pequeñas empresas</div>
@@ -150,7 +150,7 @@
 
             <div class="stat-card">
                 <div class="stat-value">
-                    <i class="bi bi-building stat-icon" aria-hidden="true"></i>
+                    <i class="bi bi-buildings stat-icon" aria-hidden="true"></i>
                     +100<span class="small-unit">mil</span>
                 </div>
                 <div class="stat-label">microempresas y pymes aseguradas</div>
@@ -158,7 +158,7 @@
 
             <div class="stat-card">
                 <div class="stat-value">
-                    <i class="bi bi-person-badge stat-icon" aria-hidden="true"></i>
+                    <i class="bi bi-person-workspace stat-icon" aria-hidden="true"></i>
                     +86<span class="small-unit">%</span>
                 </div>
                 <div class="stat-label">trabajadores asegurados</div>

@@ -45,6 +45,64 @@
     z-index: 0;
 }
 
+/* Video YouTube: cover 16:9 centrado, responsive */
+#all_banners .home-banner-media--video {
+    background: #0b1c33;
+}
+
+#all_banners .home-banner-img--poster {
+    z-index: 0;
+    opacity: 0.35;
+}
+
+#all_banners .home-banner-video {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#all_banners .home-banner-video iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    border: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* Cover “object-fit” para 16:9 dentro del hero */
+@supports (width: 177.78%) {
+    #all_banners .home-banner-video iframe {
+        width: max(100%, 177.78vh);
+        height: max(100%, 56.25vw);
+        min-width: 0;
+        min-height: 0;
+    }
+}
+
+#all_banners .home-banner-video-hit {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: block;
+    cursor: pointer;
+}
+
+#all_banners .home-banner-slide.is-video::after {
+    background: linear-gradient(
+        to top,
+        rgba(22, 56, 99, 0.35) 0%,
+        rgba(22, 56, 99, 0.08) 40%,
+        rgba(22, 56, 99, 0) 70%
+    );
+}
+
 #all_banners .home-banner-slide::after {
     content: "";
     position: absolute;
@@ -56,41 +114,49 @@
         rgba(22, 56, 99, 0) 72%
     );
     pointer-events: none;
-    z-index: 1;
+    z-index: 2;
 }
 
 #all_banners .fgs_lines::before {
     height: 10px;
-    z-index: 3;
+    z-index: 4;
 }
 
+/* Texto tipo encabezado interior: info + infoExt (blur, izq) */
 #all_banners .home-banner-info {
     position: absolute;
-    left: 50%;
-    bottom: 12%;
-    transform: translateX(-50%);
-    z-index: 2;
-    width: min(920px, 88%);
-    max-width: 88%;
+    left: clamp(1rem, 4vw, 3.75rem);
+    bottom: clamp(2.5rem, 6vw, 3.75rem);
+    right: auto;
+    transform: none;
+    z-index: 5;
+    width: auto;
+    max-width: min(520px, 72%);
     margin: 0;
-    padding: 0;
-    text-align: center;
+    padding: clamp(1.1rem, 2.2vw, 1.85rem) clamp(1.15rem, 2.4vw, 1.9rem);
+    text-align: left;
+    background-color: var(--primary-color-alpha, #1637632b);
+    border-radius: 15px;
+    border: 0.5px solid var(--secondary-color, #f2a325);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 10px 28px rgba(11, 28, 51, 0.18);
 }
 
 #all_banners .home-banner-title {
     font-weight: 700;
-    font-size: clamp(1.75rem, 1.1rem + 2.8vw, 3.25rem);
+    font-size: clamp(1.45rem, 1rem + 2.2vw, 2.65rem);
     line-height: var(--lh-heading-snug, 1.2);
     letter-spacing: var(--tracking-heading, -0.02em);
     color: #fff;
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.45rem;
 }
 
 #all_banners .home-banner-desc,
 #all_banners .home-banner-desc p {
     color: #fff;
-    font-size: clamp(1.05rem, 1.6vw, 1.5rem);
-    line-height: 1.35;
+    font-size: clamp(0.95rem, 1.3vw, 1.2rem);
+    line-height: 1.4;
     margin: 0;
 }
 
@@ -102,6 +168,11 @@
     font-weight: 700;
 }
 
+#all_banners .home-banner-info.is-inverted {
+    background-color: rgba(255, 255, 255, 0.72);
+    border-color: rgba(22, 56, 99, 0.2);
+}
+
 #all_banners .home-banner-info.is-inverted .home-banner-title,
 #all_banners .home-banner-info.is-inverted .home-banner-desc,
 #all_banners .home-banner-info.is-inverted .home-banner-desc p {
@@ -110,17 +181,19 @@
 
 #all_banners .home-banner-actions {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.75rem 1.25rem;
-    margin-top: 1rem;
+    gap: 0.65rem 1rem;
+    margin-top: 0.85rem;
 }
 
 #all_banners .home-banner-cta {
     color: #fff;
     font-weight: 600;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
 }
 
 #all_banners .home-banner-cta:hover {
@@ -138,7 +211,7 @@
     right: 0;
     width: 100%;
     margin: 0;
-    z-index: 4;
+    z-index: 6;
 }
 
 #all_banners .tns-nav > [aria-controls] {
@@ -151,16 +224,19 @@
 
 @media (max-width: 767.98px) {
     #all_banners .home-banner-info {
-        bottom: 16%;
-        width: 90%;
-        max-width: 90%;
+        left: 0.85rem;
+        right: 0.85rem;
+        bottom: 3.25rem;
+        max-width: none;
+        width: auto;
+        padding: 1rem 1.1rem;
     }
 
     #all_banners .home-banner-title {
-        font-size: clamp(1.55rem, 1rem + 3.5vw, 1.85rem);
+        font-size: clamp(1.35rem, 1rem + 2.8vw, 1.75rem);
     }
 
     #all_banners .tns-nav {
-        bottom: 16px;
+        bottom: 14px;
     }
 }

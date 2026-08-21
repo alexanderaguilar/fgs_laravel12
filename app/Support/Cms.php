@@ -241,9 +241,16 @@ class Cms
         // Banner aliases (Voyager column names)
         $obj->redirect_link = $obj->cta_url ?? ($obj->redirect_link ?? '');
         $obj->button_text = $obj->cta_text ?? ($obj->button_text ?? '');
-        $obj->youtube_id = $obj->youtube_id ?? self::youtubeId($obj->youtube_url ?? null);
+        $obj->media_type = $obj->media_type ?? 'image';
+        $obj->youtube_url = $obj->youtube_url ?? '';
+        $obj->youtube_id = $obj->youtube_id ?? self::youtubeId($obj->youtube_url ?: null);
+        $obj->youtube_click_url = $obj->youtube_click_url ?? '';
         $obj->text_display = $obj->text_display ?? 'on';
         $obj->description = $obj->description ?? '';
+        $obj->thumbnail = $obj->thumbnail ?? '';
+        $obj->thumbnail_mobile = $obj->thumbnail_mobile ?? '';
+        $obj->inverted_text = $obj->inverted_text ?? false;
+        $obj->target = $obj->target ?? '_self';
 
         // Social / about video aliases
         $obj->website = $obj->website ?? ($legacyUrl ?? '');
@@ -251,6 +258,9 @@ class Cms
         $obj->video_thumbnail = $obj->video_thumbnail ?? ($obj->thumbnail ?? null);
         if (empty($obj->youtube_id)) {
             $obj->youtube_id = self::youtubeId($obj->youtube_url ?? null);
+        }
+        if (($obj->media_type ?? 'image') === 'youtube' && empty($obj->youtube_id) && ! empty($obj->youtube_url)) {
+            $obj->youtube_id = self::youtubeId($obj->youtube_url);
         }
 
         if (! isset($obj->image) || ! $obj->image) {

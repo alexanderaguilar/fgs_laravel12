@@ -501,11 +501,13 @@ valores.</p>
              TAB 4: NUESTRAS CIFRAS EN RESUMEN (BENTO GRID APLICADO AQUÍ)
              ============================================================== -->
         <div class="tab-pane fade" id="cifras" role="tabpanel" aria-labelledby="cifras-tab">
-            <section class="mb-5 impact-data-panel" data-aos="fade-up">
-                <h2 class="text-deepblue colored_lines position-relative pb-3 mb-3 we_700">Nuestro impacto en cifras</h2>
+            <section class="mb-5 impact-data-panel impact-data-panel--internal" data-aos="fade-up">
+                <h2 class="text-deepblue colored_lines position-relative pb-3 mb-3 we_700 ifi-page-title">
+                    Conoce nuestro <strong>Impacto Social en Cifras</strong>
+                </h2>
                 <p class="section-subtitle">Un resumen de los principales resultados de nuestra gestión a través de las empresas y los Territorios Progreso.</p>
 
-                @include('components.impact_figures', ['showReportCta' => true])
+                @include('components.impact_figures_internal')
             </section>
         </div>
 

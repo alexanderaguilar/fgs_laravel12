@@ -877,15 +877,15 @@
 }
 
 .dummy-logo {
-    height: 42px;
+    height: 50px;
     width: auto;
-    max-width: 160px;
+    max-width: 190px;
     object-fit: contain;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .dummy-logo--sm {
-    height: 34px;
+    height: 42px;
 }
 
 .impact-container:hover .dummy-logo {
@@ -1275,8 +1275,12 @@
     }
 
     .dummy-logo {
-        height: 34px;
-        max-width: min(42vw, 140px);
+        height: 40px;
+        max-width: min(48vw, 160px);
+    }
+
+    .dummy-logo--sm {
+        height: 36px;
     }
 
     .stat-card {
@@ -1450,5 +1454,520 @@
 @media (max-width: 767.98px) {
     .impact-two-ways .impact-card__body {
         padding: 1.35rem 1.5rem 1.75rem;
+    }
+}
+
+/* ==========================================================================
+   Cifras internas (/nuestro-impacto-social#cifras) — mockup 2026
+   ========================================================================== */
+
+.impact-data-panel--internal {
+    --ifi-navy: var(--primary-color, #163863);
+    --ifi-gold: #c9a02e;
+    --ifi-gold-hover: #b8921f;
+    --ifi-muted: #6b7280;
+    --ifi-surface: #eef4f9;
+    --ifi-page: #f5f7fa;
+    --ifi-card: #ffffff;
+    --ifi-radius: 1rem;
+    --ifi-radius-sm: 0.85rem;
+}
+
+.impact-data-panel--internal .ifi-page-title {
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+.impact-data-panel--internal .ifi-page-title strong {
+    font-weight: 800;
+}
+
+.impact-data-panel--internal .section-subtitle {
+    color: var(--ifi-muted);
+    font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+    line-height: 1.55;
+    max-width: 46rem;
+    margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.impact-figures-internal {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.15rem, 2.2vw, 1.5rem);
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.ifi-block {
+    background: var(--ifi-surface);
+    border-radius: var(--ifi-radius);
+    padding: clamp(0.85rem, 1.8vw, 1.25rem);
+    min-width: 0;
+}
+
+.ifi-block__header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    margin-bottom: clamp(0.85rem, 1.6vw, 1.1rem);
+    min-height: 2.5rem;
+}
+
+.ifi-block__header--brand {
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 0.65rem;
+    padding: 0.55rem 0.9rem;
+}
+
+.ifi-block__header--logos {
+    padding-inline: 0.15rem;
+}
+
+.ifi-block__header--title {
+    margin-bottom: 0.85rem;
+}
+
+.ifi-block__title {
+    margin: 0;
+    color: var(--ifi-navy);
+    font-weight: 800;
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    line-height: 1.25;
+}
+
+.ifi-logo {
+    height: 50px;
+    width: auto;
+    max-width: min(260px, 60vw);
+    object-fit: contain;
+    display: block;
+}
+
+.ifi-logo--fgs {
+    height: 46px;
+    max-width: min(300px, 75vw);
+}
+
+.ifi-logo--sm {
+    height: 42px;
+}
+
+.ifi-logo--deco {
+    height: 46px;
+}
+
+.ifi-grid {
+    display: grid;
+    gap: clamp(0.75rem, 1.5vw, 1rem);
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    min-width: 0;
+}
+
+.ifi-card {
+    background: var(--ifi-card);
+    border-radius: var(--ifi-radius-sm);
+    padding: clamp(1rem, 1.8vw, 1.25rem);
+    box-shadow: 0 2px 10px rgba(22, 56, 99, 0.05);
+    border: 1px solid rgba(22, 56, 99, 0.04);
+    min-width: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ifi-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(22, 56, 99, 0.1);
+}
+
+.ifi-card__top {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    min-width: 0;
+}
+
+.ifi-icon {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #e4edf6;
+    color: var(--ifi-navy);
+    font-size: 1.15rem;
+    line-height: 1;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.ifi-icon--lg {
+    width: 48px;
+    height: 48px;
+    font-size: 1.35rem;
+}
+
+.ifi-card:hover .ifi-icon {
+    background: var(--ifi-navy);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.ifi-card__value {
+    margin: 0;
+    color: var(--ifi-navy);
+    font-weight: 800;
+    font-size: clamp(2.15rem, 4.2vw, 3.05rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    min-width: 0;
+}
+
+.ifi-card__value--gold {
+    color: var(--ifi-gold);
+}
+
+.ifi-card__value--inline {
+    display: inline;
+    margin-right: 0.4rem;
+}
+
+.ifi-unit {
+    font-size: 0.58em;
+    font-weight: 700;
+    margin-left: 0.06em;
+    vertical-align: baseline;
+}
+
+.ifi-card__label {
+    margin: 0;
+    color: var(--ifi-navy);
+    font-weight: 700;
+    font-size: clamp(0.92rem, 1.25vw, 1.05rem);
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.ifi-card__label--inline {
+    display: inline;
+    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+}
+
+.ifi-card__hint {
+    margin: 0.5rem 0 0;
+    color: var(--ifi-muted);
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.ifi-card__hint--wide {
+    margin: 0;
+    text-align: right;
+    flex: 1 1 auto;
+    min-width: 8rem;
+}
+
+.ifi-card__hint--centered {
+    margin: 0.35rem 0 0;
+    text-align: center;
+    width: 100%;
+}
+
+.ifi-card--wide {
+    padding: clamp(1.25rem, 2.4vw, 1.65rem) clamp(1.25rem, 2.8vw, 2rem);
+}
+
+.ifi-card--centered {
+    text-align: center;
+}
+
+.ifi-card__wide-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.25rem;
+    width: 100%;
+}
+
+.ifi-card__wide-inner--centered {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.65rem 1rem;
+}
+
+.ifi-card__wide-inner--centered .ifi-card__hint--centered {
+    flex: 0 0 100%;
+}
+
+.ifi-card__wide-copy {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.3rem 0.5rem;
+    min-width: 0;
+}
+
+.ifi-grid--deco {
+    justify-items: center;
+}
+
+.ifi-grid--deco .ifi-card--wide {
+    width: 100%;
+    max-width: 36rem;
+}
+
+/* CTA Informe */
+.ifi-report {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    width: 100%;
+    padding: clamp(1.15rem, 2.2vw, 1.45rem) clamp(1.25rem, 2.8vw, 1.85rem);
+    border-radius: var(--ifi-radius);
+    text-decoration: none;
+    color: #fff;
+    background: var(--ifi-navy);
+    box-shadow: 0 10px 28px rgba(15, 45, 82, 0.22);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ifi-report:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(15, 45, 82, 0.3);
+}
+
+.ifi-report__left {
+    display: flex;
+    align-items: center;
+    gap: 0.95rem;
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.ifi-report__icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-size: 1.35rem;
+}
+
+.ifi-report__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+}
+
+.ifi-report__title {
+    font-weight: 700;
+    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+    line-height: 1.25;
+}
+
+.ifi-report__sub {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.35;
+}
+
+.ifi-report__right {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.2rem;
+    padding-left: 1.25rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.22);
+    text-align: right;
+}
+
+.ifi-report__label {
+    font-size: clamp(0.72rem, 1.1vw, 0.82rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.ifi-report__anos {
+    font-weight: 800;
+}
+
+.ifi-report__year {
+    display: flex;
+    gap: 0.35rem;
+    font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    line-height: 1;
+}
+
+.ifi-report__year span {
+    display: inline-block;
+}
+
+/* Tablet */
+@media (min-width: 576px) {
+    .ifi-grid--3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .ifi-grid--4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .ifi-grid--4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .ifi-card__hint--wide {
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .ifi-card__value {
+        font-size: clamp(1.85rem, 3.6vw, 2.45rem);
+    }
+
+    .ifi-card__label {
+        font-size: 0.92rem;
+    }
+
+    .ifi-logo {
+        height: 44px;
+    }
+
+    .ifi-logo--fgs,
+    .ifi-logo--deco {
+        height: 42px;
+    }
+
+    .ifi-logo--sm {
+        height: 38px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+    .ifi-block {
+        padding: 0.85rem;
+        border-radius: 0.9rem;
+    }
+
+    .ifi-block__header--brand {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .ifi-logo,
+    .ifi-logo--fgs,
+    .ifi-logo--sm,
+    .ifi-logo--deco {
+        height: 38px;
+        max-width: min(72vw, 220px);
+    }
+
+    .ifi-card {
+        padding: 1.05rem 1.1rem;
+    }
+
+    .ifi-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .ifi-card__value {
+        font-size: 2rem;
+    }
+
+    .ifi-card__wide-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.65rem;
+    }
+
+    .ifi-card__wide-inner--centered {
+        align-items: center;
+    }
+
+    .ifi-card__hint--wide,
+    .ifi-card__hint--centered {
+        text-align: center;
+        min-width: 0;
+    }
+
+    .ifi-grid--deco .ifi-card--wide {
+        max-width: 100%;
+    }
+
+    .ifi-report {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1.15rem 1.2rem;
+    }
+
+    .ifi-report__right {
+        width: 100%;
+        align-items: flex-start;
+        padding-left: 0;
+        padding-top: 0.85rem;
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.22);
+        text-align: left;
+    }
+
+    .ifi-report__label {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .ifi-card:hover {
+        transform: none;
+    }
+
+    .ifi-card:hover .ifi-icon {
+        transform: none;
+    }
+
+    .ifi-report:hover {
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ifi-card,
+    .ifi-icon,
+    .ifi-report {
+        transition: none;
+    }
+
+    .ifi-card:hover,
+    .ifi-report:hover {
+        transform: none;
     }
 }

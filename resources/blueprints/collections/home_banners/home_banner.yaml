@@ -4,66 +4,120 @@ tabs:
     display: Main
     sections:
       -
+        display: Contenido
         fields:
           -
             handle: title
             field:
               type: text
+              display: Título
               required: true
           -
             handle: description
             field:
               type: textarea
-          -
-            handle: youtube_url
-            field:
-              type: text
-          -
-            handle: youtube_id
-            field:
-              type: text
-              display: YouTube ID
-          -
-            handle: thumbnail
-            field:
-              type: assets
-              max_files: 1
-              container: assets
-          -
-            handle: thumbnail_mobile
-            field:
-              type: assets
-              max_files: 1
-              container: assets
-          -
-            handle: cta_text
-            field:
-              type: text
-          -
-            handle: cta_url
-            field:
-              type: text
-          -
-            handle: target
-            field:
-              type: text
+              display: Descripción
+              instructions: Texto del bloque info (HTML permitido).
           -
             handle: text_display
             field:
               type: select
+              display: Mostrar texto
               options:
-                on: On
-                off: Off
+                on: Sí
+                off: No
               default: on
           -
             handle: inverted_text
             field:
               type: toggle
+              display: Texto invertido (oscuro)
+              instructions: Úsalo si el fondo del banner es muy claro.
           -
             handle: order
             field:
               type: integer
+              display: Orden
+              instructions: Menor número = aparece primero en el home (máx. 5).
               default: 0
+      -
+        display: Medio (imagen o video)
+        fields:
+          -
+            handle: media_type
+            field:
+              type: select
+              display: Tipo de medio
+              options:
+                image: Imagen
+                youtube: Video YouTube (autoplay sin audio)
+              default: image
+              instructions: 'Video: se reproduce en silencio y cubre el banner. Al hacer clic se abre la URL de YouTube/canal.'
+          -
+            handle: thumbnail
+            field:
+              type: assets
+              display: Imagen desktop
+              max_files: 1
+              container: assets
+              instructions: Obligatoria si el tipo es Imagen. En video sirve como poster de respaldo.
+          -
+            handle: thumbnail_mobile
+            field:
+              type: assets
+              display: Imagen mobile
+              max_files: 1
+              container: assets
+              instructions: Si falta, se usa la imagen desktop.
+          -
+            handle: youtube_url
+            field:
+              type: text
+              display: URL del video YouTube
+              instructions: 'Ej. https://www.youtube.com/watch?v=2Nfa8my_0hI'
+              width: 66
+              if:
+                media_type: youtube
+          -
+            handle: youtube_id
+            field:
+              type: text
+              display: YouTube ID (opcional)
+              instructions: Se deduce de la URL. Solo completa si hace falta forzar el ID.
+              width: 33
+              if:
+                media_type: youtube
+          -
+            handle: youtube_click_url
+            field:
+              type: text
+              display: URL al hacer clic
+              instructions: Canal o video de destino. Si queda vacío, se usa la URL del video.
+              if:
+                media_type: youtube
+      -
+        display: Call to action
+        fields:
+          -
+            handle: cta_text
+            field:
+              type: text
+              display: Texto del botón
+          -
+            handle: cta_url
+            field:
+              type: text
+              display: URL del botón / enlace del banner
+              instructions: En banners de imagen, también envuelve la imagen. En video, el clic principal va a YouTube (campo anterior).
+          -
+            handle: target
+            field:
+              type: select
+              display: Target del enlace
+              options:
+                _self: Misma ventana
+                _blank: Nueva ventana
+              default: _self
   sidebar:
     display: Sidebar
     sections:
@@ -73,3 +127,4 @@ tabs:
             handle: slug
             field:
               type: slug
+              from: title

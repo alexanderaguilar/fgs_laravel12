@@ -105,7 +105,7 @@
     <link href="{{ asset('assets/css/components/breadcrumb.css') }}?v={{ filemtime(public_path('assets/css/components/breadcrumb.css')) }}" rel="stylesheet">
     <link href="{{ asset('assets/css/components/highlighted-banner.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/components/page-title-hero.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/components/banners.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/components/banners.css') }}?v={{ filemtime(public_path('assets/css/components/banners.css')) }}" rel="stylesheet">
     <link href="{{ asset('assets/css/components/tabs.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/components/faq-accordion.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/components/bento-kpi.css') }}" rel="stylesheet">

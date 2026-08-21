@@ -3,7 +3,7 @@
 <script defer src="/assets/js/aos.js"></script>
 <script defer src="/assets/js/fgs/core.js"></script>
 <script defer src="/assets/js/fgs/nav.js"></script>
-<script defer src="/assets/js/fgs/sliders.js"></script>
+<script defer src="/assets/js/fgs/sliders.js?v={{ filemtime(public_path('assets/js/fgs/sliders.js')) }}"></script>
 <script defer src="/assets/js/fgs/video-modal.js"></script>
 <script defer src="/assets/js/fgs/cookies.js"></script>
 <script defer src="/assets/js/fgs/history-back.js"></script>
