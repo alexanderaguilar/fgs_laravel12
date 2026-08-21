@@ -23,6 +23,7 @@ rsync -az --delete \
   --exclude 'node_modules' \
   --exclude 'vendor' \
   --exclude '.env' \
+  --exclude 'public/storage' \
   --exclude 'storage/logs/*' \
   --exclude 'storage/framework/cache/data/*' \
   --exclude 'storage/framework/sessions/*' \

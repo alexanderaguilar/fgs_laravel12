@@ -41,9 +41,9 @@ ln -sfn "${APP_ROOT}/shared/.env" .env
 mkdir -p bootstrap/cache
 chown -R "${APP_USER}:${APP_USER}" bootstrap/cache 2>/dev/null || true
 
-if [[ ! -L public/storage ]]; then
-  ln -sfn "${APP_ROOT}/shared/storage/app/public" public/storage
-fi
+# Siempre recrear: rsync puede traer un symlink local (ruta de Mac) inválido en el server.
+rm -f public/storage
+ln -sfn "${APP_ROOT}/shared/storage/app/public" public/storage
 
 echo "==> Permisos storage"
 if command -v sudo >/dev/null 2>&1; then
@@ -55,7 +55,7 @@ else
 fi
 
 echo "==> Laravel / Statamic"
-run_app artisan storage:link --force 2>/dev/null || true
+# No usar artisan storage:link: el release ya tiene el symlink a shared.
 run_app artisan config:cache
 run_app artisan route:cache
 run_app artisan view:cache
