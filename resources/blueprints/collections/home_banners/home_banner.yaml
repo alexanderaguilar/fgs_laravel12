@@ -38,7 +38,7 @@ tabs:
             field:
               type: integer
               display: Orden
-              instructions: Menor número = aparece primero en el home (máx. 5).
+              instructions: Menor número = aparece primero en el home (máx. 4).
               default: 0
       -
         display: Medio (imagen o video)
@@ -51,8 +51,9 @@ tabs:
               options:
                 image: Imagen
                 youtube: Video YouTube (autoplay sin audio)
+                video: Video MP4 local (autoplay sin audio)
               default: image
-              instructions: 'Video: se reproduce en silencio y cubre el banner. Al hacer clic se abre la URL de YouTube/canal.'
+              instructions: 'Video: se reproduce en silencio y cubre el banner. YouTube: clic abre canal/video. MP4: el CTA usa cta_url.'
           -
             handle: thumbnail
             field:
@@ -69,6 +70,14 @@ tabs:
               max_files: 1
               container: assets
               instructions: Si falta, se usa la imagen desktop.
+          -
+            handle: video_url
+            field:
+              type: text
+              display: Ruta del video MP4
+              instructions: 'Ej. /assets/video/compressed-xhEKzNf9.mp4 (ruta pública bajo public/).'
+              if:
+                media_type: video
           -
             handle: youtube_url
             field:
@@ -108,7 +117,7 @@ tabs:
             field:
               type: text
               display: URL del botón / enlace del banner
-              instructions: En banners de imagen, también envuelve la imagen. En video, el clic principal va a YouTube (campo anterior).
+              instructions: En banners de imagen y MP4, también puede envolver el medio. En YouTube, el clic principal va a youtube_click_url.
           -
             handle: target
             field:

@@ -147,7 +147,7 @@ FGS.initSliders = function () {
     }
 };
 
-/** Pausa embeds de YouTube fuera del slide activo; reanuda el visible (mute). */
+/** Pausa YouTube/MP4 fuera del slide activo; reanuda el visible (mute). */
 FGS.syncHomeBannerVideos = function (slider) {
     if (!slider || typeof slider.getInfo !== 'function') {
         return;
@@ -169,14 +169,22 @@ FGS.syncHomeBannerVideos = function (slider) {
         var index = info.index % (info.slideCount || 1);
 
         Array.prototype.forEach.call(slides, function (slide, i) {
+            var active = i === index;
             var iframe = slide.querySelector('.home-banner-video iframe');
-            if (!iframe) {
-                return;
+            var video = slide.querySelector('.home-banner-video-el');
+
+            if (iframe) {
+                post(iframe, active ? 'playVideo' : 'pauseVideo');
             }
-            if (i === index) {
-                post(iframe, 'playVideo');
-            } else {
-                post(iframe, 'pauseVideo');
+            if (video) {
+                if (active) {
+                    var playPromise = video.play();
+                    if (playPromise && typeof playPromise.catch === 'function') {
+                        playPromise.catch(function () {});
+                    }
+                } else {
+                    video.pause();
+                }
             }
         });
     }

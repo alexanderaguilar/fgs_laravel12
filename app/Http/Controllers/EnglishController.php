@@ -11,7 +11,7 @@ class EnglishController extends Controller
     {
         Carbon::setLocale('en');
 
-        $banners = Cms::entries('home_banners', fn ($q) => $q->orderBy('order')->limit(5));
+        $banners = Cms::entries('home_banners', fn ($q) => $q->orderBy('order')->limit(4));
         $posts = Cms::entries('posts', fn ($q) => $q->orderBy('date', 'desc')->limit(8));
         $mapLogo = Cms::entries('home_maplogos', fn ($q) => $q->orderBy('display_rank'));
 

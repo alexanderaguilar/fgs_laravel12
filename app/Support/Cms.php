@@ -242,6 +242,7 @@ class Cms
         $obj->redirect_link = $obj->cta_url ?? ($obj->redirect_link ?? '');
         $obj->button_text = $obj->cta_text ?? ($obj->button_text ?? '');
         $obj->media_type = $obj->media_type ?? 'image';
+        $obj->video_url = $obj->video_url ?? '';
         $obj->youtube_url = $obj->youtube_url ?? '';
         $obj->youtube_id = $obj->youtube_id ?? self::youtubeId($obj->youtube_url ?: null);
         $obj->youtube_click_url = $obj->youtube_click_url ?? '';

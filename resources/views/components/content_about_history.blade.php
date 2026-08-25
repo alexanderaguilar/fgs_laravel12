@@ -93,18 +93,25 @@
                 </div>
             </div>
 
-            <!-- 1972 -->
+            <!-- 1972 — Expansión empresarial -->
             <div class="timeline-container right">
                 <div class="timeline-content">
                     <span class="timeline-year">1972</span>
-                    <img class="timeline-img" src="/assets/img/2026/2026_content_history_006.jpg" onerror="this.src='https://placehold.co/600x400?text=1972'" alt="Expansión empresarial Grupo Social">
                     <p>Aparece la figura del Grupo Social e inicia la expansión empresarial de la organización con la creación de nuevas empresas en diferentes sectores.</p>
+                </div>
+            </div>
+
+            <!-- 1972 — Caja Social de Ahorros -->
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <span class="timeline-year">1972</span>
+                    <img class="timeline-img" src="/assets/img/2026/2026_content_history_006.jpg" onerror="this.src='https://placehold.co/600x400?text=1972'" alt="Caja Social de Ahorros">
                     <p>La Caja de Ahorros del Círculo de Obreros se convierte en Caja Social de Ahorros, consolidándose como una entidad de ahorro y crédito.</p>
                 </div>
             </div>
 
             <!-- 1974 -->
-            <div class="timeline-container left">
+            <div class="timeline-container right">
                 <div class="timeline-content">
                     <span class="timeline-year">1974</span>
                     <img class="timeline-img" src="/assets/img/2026/2026_content_history_007.jpg" onerror="this.src='https://placehold.co/600x400?text=1974'" alt="Constructora Colmena">
@@ -114,7 +121,7 @@
             </div>
 
             <!-- 1980 -->
-            <div class="timeline-container right">
+            <div class="timeline-container left">
                 <div class="timeline-content">
                     <span class="timeline-year">1980</span>
                     <img class="timeline-img" src="/assets/img/2026/2026_content_history_008.jpg" onerror="this.src='https://placehold.co/600x400?text=1980'" alt="Seguros Colmena">
@@ -124,7 +131,7 @@
             </div>
 
             <!-- 1981 -->
-            <div class="timeline-container left">
+            <div class="timeline-container right">
                 <div class="timeline-content">
                     <span class="timeline-year">1981</span>
                     <img class="timeline-img" src="/assets/img/2026/2026_content_history_009.jpg" onerror="this.src='https://placehold.co/600x400?text=1981'" alt="Cenpro Comunicaciones">
@@ -134,7 +141,7 @@
             </div>
 
             <!-- 1984 -->
-            <div class="timeline-container right">
+            <div class="timeline-container left">
                 <div class="timeline-content">
                     <span class="timeline-year">1984</span>
                     <img class="timeline-img" src="/assets/img/2026/2026_content_history_010.jpg" onerror="this.src='https://placehold.co/600x400?text=1984'" alt="Buen Vecino">
@@ -143,7 +150,7 @@
             </div>
 
             <!-- 1985 -->
-            <div class="timeline-container left">
+            <div class="timeline-container right">
                 <div class="timeline-content">
                     <span class="timeline-year">1985</span>
                     <img class="timeline-img" src="/assets/img/2026/2026_content_history_011.jpg" onerror="this.src='https://placehold.co/600x400?text=1985'" alt="Minero Félix — Colmena">
@@ -152,7 +159,7 @@
             </div>
 
             <!-- 1986 -->
-            <div class="timeline-container right">
+            <div class="timeline-container left">
                 <div class="timeline-content">
                     <span class="timeline-year">1986</span>
                     
@@ -161,7 +168,7 @@
             </div>
 
             <!-- 1988 -->
-            <div class="timeline-container left">
+            <div class="timeline-container right">
                 <div class="timeline-content">
                     <span class="timeline-year">1988</span>
                     
@@ -171,7 +178,7 @@
             </div>
 
             <!-- 1990 -->
-            <div class="timeline-container right">
+            <div class="timeline-container left">
                 <div class="timeline-content">
                     <span class="timeline-year">1990</span>
                     <img class="timeline-img" src="/assets/img/2026/2026_content_history_014.jpg" onerror="this.src='https://placehold.co/600x400?text=1990'" alt="Colmena Capitalizadora">
@@ -179,12 +186,20 @@
                 </div>
             </div>
 
-            <!-- 1991 -->
-            <div class="timeline-container left">
+            <!-- 1991 — Cesantías y Pensiones Colmena -->
+            <div class="timeline-container right">
                 <div class="timeline-content">
                     <span class="timeline-year">1991</span>
                     <img class="timeline-img" src="/assets/img/2026/2026_content_history_015.jpg" onerror="this.src='https://placehold.co/600x400?text=1991'" alt="Cesantías y Pensiones Colmena">
                     <p>Se crea Cesantías y Pensiones Colmena.</p>
+                </div>
+            </div>
+
+            <!-- 1991 — Caja Social como banco -->
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <span class="timeline-year">1991</span>
+                    <img class="timeline-img" src="/assets/img/2026/033_1991_.jpg" onerror="this.src='https://placehold.co/600x400?text=1991'" alt="Caja Social — establecimiento bancario">
                     <p>La Caja Social de Ahorros se convierte en establecimiento bancario y cambia su nombre a Caja Social.</p>
                 </div>
             </div>
@@ -307,8 +322,8 @@
                 <div class="timeline-content">
                     <span class="timeline-year">2011</span>
                     <img class="timeline-img" src="/assets/img/2026/2026_content_history_028.jpg" onerror="this.src='https://placehold.co/600x400?text=2011'" alt="Centenario Banco Caja Social">
-                    <p>Se cumple el centenario de Fundación Grupo Social (en ese entonces Fundación Social).</p>
                     <p>El Banco Caja Social, en su centenario, unifica las marcas, renueva su identidad gráfica y pasa de ser BCSC a Banco Caja Social, Más banco, más amigo.</p>
+                    <p>Se cumple el centenario de Fundación Grupo Social (en ese entonces Fundación Social).</p>
                     <p>Los programas sociales se desarrollaban en: Bogotá (Patiobonito, Kennedy y Bosa); en el Corredor Oriental de Pasto (Comuna 3 y corregimientos de Buesaquillo, Cabrera, La Laguna y Mocondino), Norte de Nariño, Taminango, San Lorenzo y La Unión; en el Valle de Aburrá en Caldas, Copacabana, Girardota, Barbosa y Bello; y en Ibagué (Comunas 6, 7 y 8) y en los corregimientos de San Bernardo y El Salado.</p>
                 </div>
             </div>

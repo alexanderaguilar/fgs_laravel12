@@ -40,7 +40,6 @@
         bottom: 0;
         width: 40px;
         background-color: var(--primary-color);
-        transform: skewX(-5deg);
         z-index: 1;
     }
 

@@ -95,7 +95,7 @@ Rotar en producción: reCAPTCHA, GTM y demás valores importados en Globals `sit
 | `posts` + taxonomía `categories` | `posts`, `categories` | Sí (`/noticias`, detalle `/noticias/{slug}` + JSON-LD `NewsArticle`; `/testimonios?fuente=empresas|territorios` filtra `companies-testimonials` / `work-in-communities-testimonials`) |
 | `pages` | `pages` | Parcial (catch-all; About/FAQ/EN suelen ser Blade) |
 | `territories` | `city_details` | Sí |
-| `home_banners` | `home_banner_videos` | Sí (home: 5 por `order`; `media_type` imagen o `youtube`; `thumbnail` ≥768px / `thumbnail_mobile` &lt;768px; video: autoplay mute + clic a `youtube_click_url`) |
+| `home_banners` | `home_banner_videos` | Sí (home: 4 por `order`; `media_type` imagen, `youtube` o `video` MP4 local vía `video_url`; `thumbnail` ≥768px / `thumbnail_mobile` &lt;768px; YouTube: autoplay mute + clic a `youtube_click_url`; MP4: autoplay mute loop + CTA `cta_url`) |
 | `home_campaigns` | nuevo | Sí (home: hasta 4 tarjetas “Así abrimos puertas…”; `image`, `tag`, `cta_*`, `order`) |
 | `home_owner_logos` | nuevo | Sí (home: franja “Dueña de”; PNG blanco/transparente + `display_rank`) |
 | `home_ctas` | nuevo | Sí (home: CTAs tras logos — Historias / Informe; `block_type`, textos, imagen, URL) |

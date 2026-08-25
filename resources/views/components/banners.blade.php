@@ -1,11 +1,14 @@
-{{-- Home hero banners: imagen o YouTube + bloque infoExt --}}
+{{-- Home hero banners: imagen, MP4 local o YouTube + bloque infoExt --}}
 <section id="all_banners" data-aos="fade-up">
     <div class="home-banners-slider">
         @foreach($banners as $banner)
             @php
                 $mediaType = $banner->media_type ?? 'image';
                 $ytId = $banner->youtube_id ?? '';
-                $isVideo = $mediaType === 'youtube' && $ytId !== '';
+                $videoUrl = $banner->video_url ?? '';
+                $isYoutube = $mediaType === 'youtube' && $ytId !== '';
+                $isLocalVideo = $mediaType === 'video' && $videoUrl !== '';
+                $isVideo = $isYoutube || $isLocalVideo;
                 $desktop = ! empty($banner->thumbnail) ? '/storage/'.ltrim($banner->thumbnail, '/') : '';
                 $mobile = ! empty($banner->thumbnail_mobile)
                     ? '/storage/'.ltrim($banner->thumbnail_mobile, '/')
@@ -18,7 +21,7 @@
                 if ($ytClick === '') {
                     $ytClick = $ytUrl !== '' ? $ytUrl : ($ytId !== '' ? 'https://www.youtube.com/watch?v='.$ytId : '');
                 }
-                $embedSrc = $isVideo
+                $embedSrc = $isYoutube
                     ? 'https://www.youtube.com/embed/'.$ytId.'?autoplay=1&mute=1&controls=0&playsinline=1&rel=0&modestbranding=1&loop=1&playlist='.$ytId.'&enablejsapi=1'
                     : '';
                 $buttonText = $banner->button_text ?? '';
@@ -26,9 +29,11 @@
             @endphp
 
             <div class="home-banner-slide fgs_lines{{ $isVideo ? ' is-video' : '' }}"
-                 @if($isVideo) data-banner-video="1" data-youtube-id="{{ $ytId }}" @endif>
+                 @if($isYoutube) data-banner-video="1" data-youtube-id="{{ $ytId }}"
+                 @elseif($isLocalVideo) data-banner-video="1" data-local-video="1"
+                 @endif>
 
-                @if($isVideo)
+                @if($isYoutube)
                     <div class="home-banner-media home-banner-media--video">
                         @if($desktop)
                             <img src="{{ $desktop }}" alt="" class="home-banner-img home-banner-img--poster d-none d-md-block" aria-hidden="true">
@@ -52,6 +57,34 @@
                                target="_blank"
                                rel="noopener noreferrer"
                                aria-label="Ver en YouTube: {{ $banner->title }}"></a>
+                        @endif
+                    </div>
+                @elseif($isLocalVideo)
+                    <div class="home-banner-media home-banner-media--video">
+                        @if($desktop)
+                            <img src="{{ $desktop }}" alt="" class="home-banner-img home-banner-img--poster d-none d-md-block" aria-hidden="true">
+                        @endif
+                        @if($mobile)
+                            <img src="{{ $mobile }}" alt="" class="home-banner-img home-banner-img--poster d-block d-md-none" aria-hidden="true">
+                        @endif
+                        <div class="home-banner-video" data-local-embed>
+                            <video
+                                class="home-banner-video-el"
+                                src="{{ $videoUrl }}"
+                                muted
+                                autoplay
+                                loop
+                                playsinline
+                                preload="auto"
+                                @if($desktop) poster="{{ $desktop }}" @endif
+                                aria-label="{{ $banner->title }}"
+                            ></video>
+                        </div>
+                        @if($href !== '')
+                            <a href="{{ $href }}"
+                               class="home-banner-video-hit"
+                               target="{{ $target }}"
+                               aria-label="{{ $banner->title }}"></a>
                         @endif
                     </div>
                 @else
@@ -79,13 +112,13 @@
                         @if(($banner->description ?? '') !== '')
                             <div class="home-banner-desc">{!! $banner->description !!}</div>
                         @endif
-                        @if(($href !== '' && $buttonText !== '') || ($isVideo && $ytClick !== ''))
+                        @if(($href !== '' && $buttonText !== '') || ($isYoutube && $ytClick !== ''))
                             <div class="home-banner-actions">
                                 @if($href !== '' && $buttonText !== '')
                                     <a href="{{ $href }}" class="home-banner-cta" target="{{ $target }}">
                                         {{ $buttonText }} <i class="bi bi-arrow-right ms-2"></i>
                                     </a>
-                                @elseif($isVideo && $ytClick !== '')
+                                @elseif($isYoutube && $ytClick !== '')
                                     <a href="{{ $ytClick }}" class="home-banner-cta" target="_blank" rel="noopener noreferrer">
                                         Ver en YouTube <i class="bi bi-youtube ms-2"></i>
                                     </a>

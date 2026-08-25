@@ -11,7 +11,7 @@ class HomeController extends Controller
     {
         Carbon::setLocale('es');
 
-        $banners = Cms::entries('home_banners', fn ($q) => $q->orderBy('order')->limit(5));
+        $banners = Cms::entries('home_banners', fn ($q) => $q->orderBy('order')->limit(4));
         $posts = Cms::postsByCategorySlug('featured-news-and-news', 8);
         $mapLogo = Cms::entries('home_maplogos', fn ($q) => $q->orderBy('display_rank'));
         $campaigns = Cms::entries('home_campaigns', fn ($q) => $q->orderBy('order')->limit(4));

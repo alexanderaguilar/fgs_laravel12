@@ -63,7 +63,8 @@
     pointer-events: none;
 }
 
-#all_banners .home-banner-video iframe {
+#all_banners .home-banner-video iframe,
+#all_banners .home-banner-video-el {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -74,6 +75,11 @@
     border: 0;
     transform: translate(-50%, -50%);
     pointer-events: none;
+}
+
+#all_banners .home-banner-video-el {
+    object-fit: cover;
+    max-width: none;
 }
 
 /* Cover “object-fit” para 16:9 dentro del hero */
